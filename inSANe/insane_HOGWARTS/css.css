@@ -1,0 +1,698 @@
+/* Reset */
+.charsheet select,
+.charsheet div,
+.charsheet button,
+.charsheet textarea,
+.charsheet span,
+.charsheet input,
+.charsheet img,
+.charsheet label{box-sizing: border-box; outline:0;}
+.ui-dialog .charsheet {padding:0;}
+.charsheet .sheet-hogwarts-wrap:before {content:"Made by. @tateck_trpg"; display:block; position:absolute; top:258px; right:135px; font-size:11px; color:#000; opacity:.5; z-index:9999;}
+.charsheet .sheet-hogwarts-wrap p {margin:0;}
+.charsheet .sheet-hogwarts-wrap input,
+.charsheet .sheet-hogwarts-wrap textarea,
+.charsheet .sheet-hogwarts-wrap select,
+.charsheet .sheet-hogwarts-wrap .uneditable-input {margin:0;}
+.charsheet .sheet-hogwarts-wrap input[type="checkbox"],
+.charsheet .sheet-hogwarts-wrap input[type="radio"] {display:block; position:absolute; top:0; left:0; opacity:0;}
+.charsheet .sheet-hogwarts-wrap input[type="text"],
+.charsheet .sheet-hogwarts-wrap input[type="number"] {border:none; height:30px; border-radius:8px; background:transparent; padding:0 5px; font-size:12px; width:100%; color:#301f10;}
+.charsheet .sheet-hogwarts-wrap select {border:none; height:30px; padding:0 5px; font-size:12px; width:100%; background:transparent; color:#301f10}
+.charsheet .sheet-hogwarts-wrap input[type="number"]::-webkit-outer-spin-button,
+.charsheet .sheet-hogwarts-wrap input[type="number"]::-webkit-inner-spin-button {appearance:none; -webkit-appearance:none; margin:0;}
+.charsheet .sheet-hogwarts-wrap select,
+.charsheet .sheet-hogwarts-wrap input[type="checkbox"],
+.charsheet .sheet-hogwarts-wrap input[type="radio"],
+.charsheet .sheet-hogwarts-wrap button {cursor:pointer;}
+.charsheet .sheet-hogwarts-wrap input:-internal-autofill-selected {background-color:transparent !important; appearance:none !important; -webkit-appearance:none !important;}
+.charsheet .sheet-hogwarts-wrap input[type="number"] {font-family:Impact;}
+.charsheet .sheet-hogwarts-wrap select * {color:#000 !important;}
+
+.charsheet .sheet-hogwarts-wrap .sheet-hogwarts-roll {display:inline-block; vertical-align:middle; border:none; padding:0; width:34px; height:34px; border-radius:100%; background:url('https://i.imgur.com/nx8RhbO.png') no-repeat 40% 50% Rgba(0,0,0,.5); appearance:none; -webkit-appearance:none; transition:.3s all; -webkit-transition:.3s all;}
+.charsheet .sheet-hogwarts-wrap .sheet-hogwarts-roll:before {display:none !important;}
+.charsheet .sheet-hogwarts-wrap .sheet-hogwarts-roll:hover {background-color:rgba(255,255,255,.3);}
+
+.charsheet .sheet-hogwarts-wrap .sheet-old-roll {margin:0 !important; padding:0 !important; width:20px; height:20px; overflow:hidden; color:#301f10 !important; font-weight: 600 !important;} 
+.charsheet .sheet-hogwarts-wrap .sheet-old-roll.sheet-ty2 {color:#fff !important; background:red; border-color:red;}
+.charsheet .sheet-hogwarts-wrap .sheet-old-roll.sheet-ty2:hover {background:#9c0e0e; border-color:#9c0e0e;}
+
+
+/* Layout */
+.charsheet .sheet-hogwarts-wrap {position:relative; width:850px; min-height:400px; margin:0 -10px; padding:0 10px; font-size:12px; font-family:'Malgun Gothic'; color:#222; padding-bottom:30px; line-height:1.2;}
+.charsheet .sheet-hogwarts-wrap {background:url('https://i.imgur.com/MElq4Gx.jpg') no-repeat 50% 0;}
+.charsheet .sheet-hogwarts-wrap * {font-family:'Malgun Gothic';}
+
+.charsheet .sheet-roomArea {position:absolute; top:7px; left:10px; width:189px; height:186px;}
+.charsheet .sheet-roomArea .sheet-room {position:absolute; top:0; left:0; width:189px; height:186px; background:url('https://i.imgur.com/Yiopd1V.png') no-repeat 50% 50%;}
+.charsheet .sheet-roomArea .sheet-room-select {position:absolute; top:100%; left:64px; right:55px; font-size:13px;}
+.charsheet .sheet-roomArea .sheet-room-select select {appearance:none; -webkit-appearance:none; height:38px; text-align:center; color:#000; background:transparent; font-weight:800;}
+
+.charsheet .sheet-element-room-style[value="1"] ~ * .sheet-roomArea .sheet-room {background-image:url('https://i.imgur.com/RhzHOuU.png');}
+.charsheet .sheet-element-room-style[value="2"] ~ * .sheet-roomArea .sheet-room {background-image:url('https://i.imgur.com/v7iYXnR.png');}
+.charsheet .sheet-element-room-style[value="3"] ~ * .sheet-roomArea .sheet-room {background-image:url('https://i.imgur.com/xdywec2.png');}
+.charsheet .sheet-element-room-style[value="4"] ~ * .sheet-roomArea .sheet-room {background-image:url('https://i.imgur.com/fybCNhR.png');}
+
+
+/* Profile */
+.charsheet .sheet-profileArea {position:relative; height:340px; margin-left:210px;}
+.charsheet .sheet-profileArea > * {display:block; position:absolute;}
+.charsheet .sheet-profileArea input,
+.charsheet .sheet-profileArea select {color:#301f10 !important;}
+.charsheet .sheet-profileArea .sheet-name {top:23px; left:59px; width:230px;}
+.charsheet .sheet-profileArea .sheet-name input {font-size:14px; font-weight:800;}
+.charsheet .sheet-profileArea .sheet-blood {top:23px; left:350px; width:120px;}
+.charsheet .sheet-profileArea .sheet-blood input {font-size:13px; font-weight:800;}
+.charsheet .sheet-profileArea .sheet-age {top:23px; left:524px; width:55px;}
+.charsheet .sheet-profileArea .sheet-age input {font-size:13px; font-weight:800;}
+.charsheet .sheet-profileArea .sheet-heart {left:85px; top:68px; width:160px;}
+.charsheet .sheet-profileArea .sheet-fear {left:295px; top:68px; width:280px;}
+.charsheet .sheet-profileArea .sheet-item01 {top:128px; left:84px; width:23px;}
+.charsheet .sheet-profileArea .sheet-item01 input {text-align:center;  font-size:13px;}
+.charsheet .sheet-profileArea .sheet-item02 {top:128px; left:145px; width:23px;}
+.charsheet .sheet-profileArea .sheet-item02 input {text-align:center;  font-size:13px;}
+.charsheet .sheet-profileArea .sheet-item03 {top:128px; left:208px; width:23px;}
+.charsheet .sheet-profileArea .sheet-item03 input {text-align:center;  font-size:13px;}
+
+.charsheet .sheet-profileArea .sheet-hp {top:205px; left:5px; width:27px;}
+.charsheet .sheet-profileArea .sheet-hp input {text-align:center; font-size:14px; padding:0;}
+.charsheet .sheet-profileArea .sheet-maxhp {top:205px; left:32px; width:27px;}
+.charsheet .sheet-profileArea .sheet-maxhp input {text-align:center; font-size:14px; padding:0; color:#b50000 !important;}
+
+.charsheet .sheet-profileArea .sheet-san {top:205px; left:88px; width:27px;}
+.charsheet .sheet-profileArea .sheet-san input {text-align:center; font-size:14px; padding:0;}
+.charsheet .sheet-profileArea .sheet-maxsan {top:205px; left:115px; width:27px;}
+.charsheet .sheet-profileArea .sheet-maxsan input {text-align:center; font-size:14px; padding:0; color:#b50000 !important;}
+.charsheet .sheet-profileArea .sheet-grade {top:205px; left:169px; width:55px;}
+.charsheet .sheet-profileArea .sheet-grade input {text-align:center; font-size:14px; padding:0;}
+
+.charsheet .sheet-profileArea .sheet-scene {top:113px; left:327px; width:250px; padding-right:50px;}
+.charsheet .sheet-profileArea .sheet-scene .sheet-hogwarts-roll {position:absolute; top:4px; right:0; width:32px; height:32px;}
+.charsheet .sheet-profileArea .sheet-scene select {height:37px; color:#fff !important; font-weight:800;}
+
+.charsheet .sheet-profileArea .sheet-fearCheck {top:156px; left:365px; width:210px; padding-right:110px;}
+.charsheet .sheet-profileArea .sheet-fearCheck select {height:37px; color:#fff !important; font-weight:800;}
+.charsheet .sheet-profileArea .sheet-fearCheck .sheet-gm {display:block; position:absolute; height:37px; top:0; right:0; width:105px;}
+.charsheet .sheet-profileArea .sheet-fearCheck .sheet-gm em {display:block; position:absolute; top:4px; left:0; width:62px; height:30px; line-height:30px; border-radius:5px; background:rgba(255,255,255,.1); font-style:normal; text-align:center; z-index:0; color:#fff; font-weight:800;}
+.charsheet .sheet-profileArea .sheet-fearCheck .sheet-gm input[type="checkbox"] {display:block; position:relative; width:62px; height:100%; z-index:1; opacity:0; cursor:pointer; float:left;}
+.charsheet .sheet-profileArea .sheet-fearCheck .sheet-gm input[type="checkbox"]:checked + em {background:rgba(0,0,0,.7);}
+.charsheet .sheet-profileArea .sheet-fearCheck .sheet-gm .sheet-hogwarts-roll {position:absolute; top:3px; right:0; width:32px; height:32px;}
+.charsheet .sheet-profileArea .sheet-fearCheck .sheet-gm .sheet-gm-dice {display:none;}
+.charsheet .sheet-profileArea .sheet-fearCheck .sheet-gm input[type="checkbox"]:checked ~ .sheet-hogwarts-roll {display:none;}
+.charsheet .sheet-profileArea .sheet-fearCheck .sheet-gm input[type="checkbox"]:checked ~ .sheet-gm-dice {display:block;}
+
+.charsheet .sheet-profileArea .sheet-randomCheck {top:199px; left:327px; width:150px; padding-right:50px;}
+.charsheet .sheet-profileArea .sheet-randomCheck .sheet-hogwarts-roll {position:absolute; top:4px; right:0; width:32px; height:32px;}
+.charsheet .sheet-profileArea .sheet-randomCheck select {height:37px; color:#fff !important; font-weight:800;}
+
+/* Spec Table */
+.charsheet .sheet-spectable {height:354px;}
+.charsheet .sheet-spectable:after {content:""; display:block; clear:both;}
+.charsheet .sheet-spec-table {display:block; position:relative; border:1px solid #1a1818; border-radius:10px; overflow:hidden; background:rgba(255,255,255,.5);}
+.charsheet .sheet-spectable table {width:100%; font-size:12px; border-spacing:0; border-collapse:collapse;}
+.charsheet .sheet-spectable table td {border:1px solid #1a1818;}
+.charsheet .sheet-spectable table th {border:1px solid #cdb896; background:#1a1818; color:#cdb896; text-align:center;}
+.charsheet .sheet-spectable table tr > *:first-child {border-left-width:0 !important;}
+.charsheet .sheet-spectable table tr > *:last-child {border-right-width:0 !important;}
+.charsheet .sheet-spectable table thead th {padding:5px 0; border-top-width:0;}
+.charsheet .sheet-spectable table tbody > tr:last-child > * {border-bottom-width:0 !important;}
+.charsheet .sheet-spectable .sheet-ins-style-Z {display:none; background:#1a1818;}
+
+.charsheet .sheet-spectable p {display:block; position:relative; width:119px; height:26px; box-sizing:border-box; padding: 0 20px 0 0; z-index:0;}
+.charsheet .sheet-spectable p input[type="checkbox"] {display:block; position:absolute; top:0; left:0; width:20px; height:26px; border:none; background:#cdb896; margin:0; opacity:0; z-index:1; cursor:pointer;}
+.charsheet .sheet-spectable p input[type="text"] {display:block; position:absolute; top:0; right:0; width:20px; height:26px; border:none; background:transparent; border-radius:0; text-align:right; padding:2px; text-align:center; border-left:1px solid rgba(0,0,0,.2); color:#666; font-size:11px;}
+.charsheet .sheet-spectable .sheet-spec-roll {display:block; position:relative; width:100% !important; height:100% !important; padding:0 0 0 20px !important; border:none !important; background:transparent !important; z-index:0; margin:0 !important; font-size:12px !important; color:#301f10 !important; font-weight:600 !important; text-shadow: none;}
+.charsheet .sheet-spectable .sheet-spec-roll:before {content:"" !important; display:block; position:absolute; top:50%; left:3px; width:14px; height:14px; box-sizing:border-box; margin-top:-7px; border:2px solid #333; border-radius:100%;}
+.charsheet .sheet-spectable .sheet-spec-roll:after {content:"" !important; display:block; position:absolute; top:0; bottom:0; left:0px; width:20px; background:rgba(0,0,0,.2); opacity:0;}
+.charsheet .sheet-spectable p input[type="checkbox"]:checked + .sheet-spec-roll:before {background:#d20000; border-color:#d20000;}
+.charsheet .sheet-spectable p input[type="checkbox"]:hover + .sheet-spec-roll:after {opacity:1;}
+
+
+.charsheet .sheet-element-room-style[value="1"] ~ * .sheet-spectable p input[type="checkbox"]:checked + .sheet-spec-roll:before {background:#cb2228; border-color:#cb2228;}
+.charsheet .sheet-element-room-style[value="2"] ~ * .sheet-spectable p input[type="checkbox"]:checked + .sheet-spec-roll:before {background:#26a049; border-color:#26a049;}
+.charsheet .sheet-element-room-style[value="3"] ~ * .sheet-spectable p input[type="checkbox"]:checked + .sheet-spec-roll:before {background:#036b99; border-color:#036b99;}
+.charsheet .sheet-element-room-style[value="4"] ~ * .sheet-spectable p input[type="checkbox"]:checked + .sheet-spec-roll:before {background:#d8a000; border-color:#d8a000;}
+
+
+.charsheet .sheet-spectable .sheet-dice {display:block; float:right; text-align:right; padding:10px 0;}
+.charsheet .sheet-spectable .sheet-dice > * {display:inline-block; vertical-align:middle;}
+.charsheet .sheet-spectable .sheet-dice input[type="text"] {width:50px; height:20px; text-align:center; margin-left:5px; background:rgba(0,0,0,.3);}
+
+
+.charsheet .sheet-element-to-determine-style-Z[value='1'] ~ div .sheet-ins-style-Z {display:table-cell;}
+.charsheet .sheet-element-to-determine-style-A[value='1'] ~ div .sheet-ins-style-A {background:#1a1818;}
+.charsheet .sheet-element-to-determine-style-B[value='1'] ~ div .sheet-ins-style-B {background:#1a1818;}
+.charsheet .sheet-element-to-determine-style-C[value='1'] ~ div .sheet-ins-style-C {background:#1a1818;}
+.charsheet .sheet-element-to-determine-style-D[value='1'] ~ div .sheet-ins-style-D {background:#1a1818;}
+.charsheet .sheet-element-to-determine-style-E[value='1'] ~ div .sheet-ins-style-E {background:#1a1818;}
+
+.charsheet .sheet-element-to-fear-style-A2[value='1'] ~ div .sheet-ins-style-A2,
+	.sheet-element-to-fear-style-B2[value='1'] ~ div .sheet-ins-style-B2,
+	.sheet-element-to-fear-style-C2[value='1'] ~ div .sheet-ins-style-C2,
+	.sheet-element-to-fear-style-D2[value='1'] ~ div .sheet-ins-style-D2,
+	.sheet-element-to-fear-style-E2[value='1'] ~ div .sheet-ins-style-E2,
+	.sheet-element-to-fear-style-F2[value='1'] ~ div .sheet-ins-style-F2,
+	.sheet-element-to-fear-style-A3[value='1'] ~ div .sheet-ins-style-A3,
+	.sheet-element-to-fear-style-B3[value='1'] ~ div .sheet-ins-style-B3,
+	.sheet-element-to-fear-style-C3[value='1'] ~ div .sheet-ins-style-C3,
+	.sheet-element-to-fear-style-D3[value='1'] ~ div .sheet-ins-style-D3,
+	.sheet-element-to-fear-style-E3[value='1'] ~ div .sheet-ins-style-E3,
+	.sheet-element-to-fear-style-F3[value='1'] ~ div .sheet-ins-style-F3,
+	.sheet-element-to-fear-style-A4[value='1'] ~ div .sheet-ins-style-A4,
+	.sheet-element-to-fear-style-B4[value='1'] ~ div .sheet-ins-style-B4,
+	.sheet-element-to-fear-style-C4[value='1'] ~ div .sheet-ins-style-C4,
+	.sheet-element-to-fear-style-D4[value='1'] ~ div .sheet-ins-style-D4,
+	.sheet-element-to-fear-style-E4[value='1'] ~ div .sheet-ins-style-E4,
+	.sheet-element-to-fear-style-F4[value='1'] ~ div .sheet-ins-style-F4,
+	.sheet-element-to-fear-style-A5[value='1'] ~ div .sheet-ins-style-A5,
+	.sheet-element-to-fear-style-B5[value='1'] ~ div .sheet-ins-style-B5,
+	.sheet-element-to-fear-style-C5[value='1'] ~ div .sheet-ins-style-C5,
+	.sheet-element-to-fear-style-D5[value='1'] ~ div .sheet-ins-style-D5,
+	.sheet-element-to-fear-style-E5[value='1'] ~ div .sheet-ins-style-E5,
+	.sheet-element-to-fear-style-F5[value='1'] ~ div .sheet-ins-style-F5,
+	.sheet-element-to-fear-style-A6[value='1'] ~ div .sheet-ins-style-A6,
+	.sheet-element-to-fear-style-B6[value='1'] ~ div .sheet-ins-style-B6,
+	.sheet-element-to-fear-style-C6[value='1'] ~ div .sheet-ins-style-C6,
+	.sheet-element-to-fear-style-D6[value='1'] ~ div .sheet-ins-style-D6,
+	.sheet-element-to-fear-style-E6[value='1'] ~ div .sheet-ins-style-E6,
+	.sheet-element-to-fear-style-F6[value='1'] ~ div .sheet-ins-style-F6,
+	.sheet-element-to-fear-style-A7[value='1'] ~ div .sheet-ins-style-A7,
+	.sheet-element-to-fear-style-B7[value='1'] ~ div .sheet-ins-style-B7,
+	.sheet-element-to-fear-style-C7[value='1'] ~ div .sheet-ins-style-C7,
+	.sheet-element-to-fear-style-D7[value='1'] ~ div .sheet-ins-style-D7,
+	.sheet-element-to-fear-style-E7[value='1'] ~ div .sheet-ins-style-E7,
+	.sheet-element-to-fear-style-F7[value='1'] ~ div .sheet-ins-style-F7,
+	.sheet-element-to-fear-style-A8[value='1'] ~ div .sheet-ins-style-A8,
+	.sheet-element-to-fear-style-B8[value='1'] ~ div .sheet-ins-style-B8,
+	.sheet-element-to-fear-style-C8[value='1'] ~ div .sheet-ins-style-C8,
+	.sheet-element-to-fear-style-D8[value='1'] ~ div .sheet-ins-style-D8,
+	.sheet-element-to-fear-style-E8[value='1'] ~ div .sheet-ins-style-E8,
+	.sheet-element-to-fear-style-F8[value='1'] ~ div .sheet-ins-style-F8,
+	.sheet-element-to-fear-style-A9[value='1'] ~ div .sheet-ins-style-A9,
+	.sheet-element-to-fear-style-B9[value='1'] ~ div .sheet-ins-style-B9,
+	.sheet-element-to-fear-style-C9[value='1'] ~ div .sheet-ins-style-C9,
+	.sheet-element-to-fear-style-D9[value='1'] ~ div .sheet-ins-style-D9,
+	.sheet-element-to-fear-style-E9[value='1'] ~ div .sheet-ins-style-E9,
+	.sheet-element-to-fear-style-F9[value='1'] ~ div .sheet-ins-style-F9,
+	.sheet-element-to-fear-style-A10[value='1'] ~ div .sheet-ins-style-A10,
+	.sheet-element-to-fear-style-B10[value='1'] ~ div .sheet-ins-style-B10,
+	.sheet-element-to-fear-style-C10[value='1'] ~ div .sheet-ins-style-C10,
+	.sheet-element-to-fear-style-D10[value='1'] ~ div .sheet-ins-style-D10,
+	.sheet-element-to-fear-style-E10[value='1'] ~ div .sheet-ins-style-E10,
+	.sheet-element-to-fear-style-F10[value='1'] ~ div .sheet-ins-style-F10,
+	.sheet-element-to-fear-style-A11[value='1'] ~ div .sheet-ins-style-A11,
+	.sheet-element-to-fear-style-B11[value='1'] ~ div .sheet-ins-style-B11,
+	.sheet-element-to-fear-style-C11[value='1'] ~ div .sheet-ins-style-C11,
+	.sheet-element-to-fear-style-D11[value='1'] ~ div .sheet-ins-style-D11,
+	.sheet-element-to-fear-style-E11[value='1'] ~ div .sheet-ins-style-E11,
+	.sheet-element-to-fear-style-F11[value='1'] ~ div .sheet-ins-style-F11,
+	.sheet-element-to-fear-style-A12[value='1'] ~ div .sheet-ins-style-A12,
+	.sheet-element-to-fear-style-B12[value='1'] ~ div .sheet-ins-style-B12,
+	.sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12,
+	.sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12,
+	.sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12,
+	.sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12
+{background:#999;}
+
+.charsheet .sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-A2[value='1'] ~ div .sheet-ins-style-A2,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-B2[value='1'] ~ div .sheet-ins-style-B2,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-C2[value='1'] ~ div .sheet-ins-style-C2,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-D2[value='1'] ~ div .sheet-ins-style-D2,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-E2[value='1'] ~ div .sheet-ins-style-E2,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-F2[value='1'] ~ div .sheet-ins-style-F2,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-A3[value='1'] ~ div .sheet-ins-style-A3,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-B3[value='1'] ~ div .sheet-ins-style-B3,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-C3[value='1'] ~ div .sheet-ins-style-C3,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-D3[value='1'] ~ div .sheet-ins-style-D3,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-E3[value='1'] ~ div .sheet-ins-style-E3,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-F3[value='1'] ~ div .sheet-ins-style-F3,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-A4[value='1'] ~ div .sheet-ins-style-A4,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-B4[value='1'] ~ div .sheet-ins-style-B4,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-C4[value='1'] ~ div .sheet-ins-style-C4,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-D4[value='1'] ~ div .sheet-ins-style-D4,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-E4[value='1'] ~ div .sheet-ins-style-E4,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-F4[value='1'] ~ div .sheet-ins-style-F4,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-A5[value='1'] ~ div .sheet-ins-style-A5,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-B5[value='1'] ~ div .sheet-ins-style-B5,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-C5[value='1'] ~ div .sheet-ins-style-C5,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-D5[value='1'] ~ div .sheet-ins-style-D5,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-E5[value='1'] ~ div .sheet-ins-style-E5,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-F5[value='1'] ~ div .sheet-ins-style-F5,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-A6[value='1'] ~ div .sheet-ins-style-A6,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-B6[value='1'] ~ div .sheet-ins-style-B6,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-C6[value='1'] ~ div .sheet-ins-style-C6,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-D6[value='1'] ~ div .sheet-ins-style-D6,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-E6[value='1'] ~ div .sheet-ins-style-E6,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-F6[value='1'] ~ div .sheet-ins-style-F6,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-A7[value='1'] ~ div .sheet-ins-style-A7,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-B7[value='1'] ~ div .sheet-ins-style-B7,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-C7[value='1'] ~ div .sheet-ins-style-C7,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-D7[value='1'] ~ div .sheet-ins-style-D7,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-E7[value='1'] ~ div .sheet-ins-style-E7,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-F7[value='1'] ~ div .sheet-ins-style-F7,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-A8[value='1'] ~ div .sheet-ins-style-A8,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-B8[value='1'] ~ div .sheet-ins-style-B8,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-C8[value='1'] ~ div .sheet-ins-style-C8,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-D8[value='1'] ~ div .sheet-ins-style-D8,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-E8[value='1'] ~ div .sheet-ins-style-E8,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-F8[value='1'] ~ div .sheet-ins-style-F8,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-A9[value='1'] ~ div .sheet-ins-style-A9,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-B9[value='1'] ~ div .sheet-ins-style-B9,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-C9[value='1'] ~ div .sheet-ins-style-C9,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-D9[value='1'] ~ div .sheet-ins-style-D9,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-E9[value='1'] ~ div .sheet-ins-style-E9,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-F9[value='1'] ~ div .sheet-ins-style-F9,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-A10[value='1'] ~ div .sheet-ins-style-A10,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-B10[value='1'] ~ div .sheet-ins-style-B10,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-C10[value='1'] ~ div .sheet-ins-style-C10,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-D10[value='1'] ~ div .sheet-ins-style-D10,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-E10[value='1'] ~ div .sheet-ins-style-E10,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-F10[value='1'] ~ div .sheet-ins-style-F10,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-A11[value='1'] ~ div .sheet-ins-style-A11,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-B11[value='1'] ~ div .sheet-ins-style-B11,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-C11[value='1'] ~ div .sheet-ins-style-C11,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-D11[value='1'] ~ div .sheet-ins-style-D11,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-E11[value='1'] ~ div .sheet-ins-style-E11,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-F11[value='1'] ~ div .sheet-ins-style-F11,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-A12[value='1'] ~ div .sheet-ins-style-A12,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-B12[value='1'] ~ div .sheet-ins-style-B12,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12,
+	.sheet-element-room-style[value="1"] ~ .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12
+{background:#ffb3b5;}
+
+.charsheet .sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-A2[value='1'] ~ div .sheet-ins-style-A2,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-B2[value='1'] ~ div .sheet-ins-style-B2,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-C2[value='1'] ~ div .sheet-ins-style-C2,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-D2[value='1'] ~ div .sheet-ins-style-D2,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-E2[value='1'] ~ div .sheet-ins-style-E2,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-F2[value='1'] ~ div .sheet-ins-style-F2,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-A3[value='1'] ~ div .sheet-ins-style-A3,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-B3[value='1'] ~ div .sheet-ins-style-B3,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-C3[value='1'] ~ div .sheet-ins-style-C3,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-D3[value='1'] ~ div .sheet-ins-style-D3,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-E3[value='1'] ~ div .sheet-ins-style-E3,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-F3[value='1'] ~ div .sheet-ins-style-F3,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-A4[value='1'] ~ div .sheet-ins-style-A4,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-B4[value='1'] ~ div .sheet-ins-style-B4,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-C4[value='1'] ~ div .sheet-ins-style-C4,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-D4[value='1'] ~ div .sheet-ins-style-D4,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-E4[value='1'] ~ div .sheet-ins-style-E4,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-F4[value='1'] ~ div .sheet-ins-style-F4,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-A5[value='1'] ~ div .sheet-ins-style-A5,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-B5[value='1'] ~ div .sheet-ins-style-B5,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-C5[value='1'] ~ div .sheet-ins-style-C5,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-D5[value='1'] ~ div .sheet-ins-style-D5,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-E5[value='1'] ~ div .sheet-ins-style-E5,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-F5[value='1'] ~ div .sheet-ins-style-F5,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-A6[value='1'] ~ div .sheet-ins-style-A6,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-B6[value='1'] ~ div .sheet-ins-style-B6,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-C6[value='1'] ~ div .sheet-ins-style-C6,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-D6[value='1'] ~ div .sheet-ins-style-D6,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-E6[value='1'] ~ div .sheet-ins-style-E6,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-F6[value='1'] ~ div .sheet-ins-style-F6,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-A7[value='1'] ~ div .sheet-ins-style-A7,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-B7[value='1'] ~ div .sheet-ins-style-B7,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-C7[value='1'] ~ div .sheet-ins-style-C7,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-D7[value='1'] ~ div .sheet-ins-style-D7,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-E7[value='1'] ~ div .sheet-ins-style-E7,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-F7[value='1'] ~ div .sheet-ins-style-F7,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-A8[value='1'] ~ div .sheet-ins-style-A8,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-B8[value='1'] ~ div .sheet-ins-style-B8,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-C8[value='1'] ~ div .sheet-ins-style-C8,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-D8[value='1'] ~ div .sheet-ins-style-D8,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-E8[value='1'] ~ div .sheet-ins-style-E8,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-F8[value='1'] ~ div .sheet-ins-style-F8,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-A9[value='1'] ~ div .sheet-ins-style-A9,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-B9[value='1'] ~ div .sheet-ins-style-B9,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-C9[value='1'] ~ div .sheet-ins-style-C9,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-D9[value='1'] ~ div .sheet-ins-style-D9,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-E9[value='1'] ~ div .sheet-ins-style-E9,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-F9[value='1'] ~ div .sheet-ins-style-F9,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-A10[value='1'] ~ div .sheet-ins-style-A10,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-B10[value='1'] ~ div .sheet-ins-style-B10,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-C10[value='1'] ~ div .sheet-ins-style-C10,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-D10[value='1'] ~ div .sheet-ins-style-D10,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-E10[value='1'] ~ div .sheet-ins-style-E10,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-F10[value='1'] ~ div .sheet-ins-style-F10,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-A11[value='1'] ~ div .sheet-ins-style-A11,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-B11[value='1'] ~ div .sheet-ins-style-B11,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-C11[value='1'] ~ div .sheet-ins-style-C11,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-D11[value='1'] ~ div .sheet-ins-style-D11,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-E11[value='1'] ~ div .sheet-ins-style-E11,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-F11[value='1'] ~ div .sheet-ins-style-F11,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-A12[value='1'] ~ div .sheet-ins-style-A12,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-B12[value='1'] ~ div .sheet-ins-style-B12,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12,
+	.sheet-element-room-style[value="2"] ~ .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12
+{background:#b5c7ba;}
+
+.charsheet .sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-A2[value='1'] ~ div .sheet-ins-style-A2,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-B2[value='1'] ~ div .sheet-ins-style-B2,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-C2[value='1'] ~ div .sheet-ins-style-C2,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-D2[value='1'] ~ div .sheet-ins-style-D2,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-E2[value='1'] ~ div .sheet-ins-style-E2,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-F2[value='1'] ~ div .sheet-ins-style-F2,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-A3[value='1'] ~ div .sheet-ins-style-A3,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-B3[value='1'] ~ div .sheet-ins-style-B3,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-C3[value='1'] ~ div .sheet-ins-style-C3,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-D3[value='1'] ~ div .sheet-ins-style-D3,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-E3[value='1'] ~ div .sheet-ins-style-E3,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-F3[value='1'] ~ div .sheet-ins-style-F3,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-A4[value='1'] ~ div .sheet-ins-style-A4,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-B4[value='1'] ~ div .sheet-ins-style-B4,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-C4[value='1'] ~ div .sheet-ins-style-C4,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-D4[value='1'] ~ div .sheet-ins-style-D4,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-E4[value='1'] ~ div .sheet-ins-style-E4,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-F4[value='1'] ~ div .sheet-ins-style-F4,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-A5[value='1'] ~ div .sheet-ins-style-A5,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-B5[value='1'] ~ div .sheet-ins-style-B5,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-C5[value='1'] ~ div .sheet-ins-style-C5,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-D5[value='1'] ~ div .sheet-ins-style-D5,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-E5[value='1'] ~ div .sheet-ins-style-E5,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-F5[value='1'] ~ div .sheet-ins-style-F5,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-A6[value='1'] ~ div .sheet-ins-style-A6,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-B6[value='1'] ~ div .sheet-ins-style-B6,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-C6[value='1'] ~ div .sheet-ins-style-C6,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-D6[value='1'] ~ div .sheet-ins-style-D6,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-E6[value='1'] ~ div .sheet-ins-style-E6,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-F6[value='1'] ~ div .sheet-ins-style-F6,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-A7[value='1'] ~ div .sheet-ins-style-A7,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-B7[value='1'] ~ div .sheet-ins-style-B7,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-C7[value='1'] ~ div .sheet-ins-style-C7,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-D7[value='1'] ~ div .sheet-ins-style-D7,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-E7[value='1'] ~ div .sheet-ins-style-E7,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-F7[value='1'] ~ div .sheet-ins-style-F7,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-A8[value='1'] ~ div .sheet-ins-style-A8,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-B8[value='1'] ~ div .sheet-ins-style-B8,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-C8[value='1'] ~ div .sheet-ins-style-C8,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-D8[value='1'] ~ div .sheet-ins-style-D8,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-E8[value='1'] ~ div .sheet-ins-style-E8,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-F8[value='1'] ~ div .sheet-ins-style-F8,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-A9[value='1'] ~ div .sheet-ins-style-A9,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-B9[value='1'] ~ div .sheet-ins-style-B9,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-C9[value='1'] ~ div .sheet-ins-style-C9,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-D9[value='1'] ~ div .sheet-ins-style-D9,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-E9[value='1'] ~ div .sheet-ins-style-E9,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-F9[value='1'] ~ div .sheet-ins-style-F9,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-A10[value='1'] ~ div .sheet-ins-style-A10,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-B10[value='1'] ~ div .sheet-ins-style-B10,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-C10[value='1'] ~ div .sheet-ins-style-C10,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-D10[value='1'] ~ div .sheet-ins-style-D10,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-E10[value='1'] ~ div .sheet-ins-style-E10,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-F10[value='1'] ~ div .sheet-ins-style-F10,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-A11[value='1'] ~ div .sheet-ins-style-A11,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-B11[value='1'] ~ div .sheet-ins-style-B11,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-C11[value='1'] ~ div .sheet-ins-style-C11,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-D11[value='1'] ~ div .sheet-ins-style-D11,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-E11[value='1'] ~ div .sheet-ins-style-E11,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-F11[value='1'] ~ div .sheet-ins-style-F11,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-A12[value='1'] ~ div .sheet-ins-style-A12,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-B12[value='1'] ~ div .sheet-ins-style-B12,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12,
+	.sheet-element-room-style[value="3"] ~ .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12
+{background:#5cb5ce;}
+
+.charsheet .sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-A2[value='1'] ~ div .sheet-ins-style-A2,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-B2[value='1'] ~ div .sheet-ins-style-B2,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-C2[value='1'] ~ div .sheet-ins-style-C2,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-D2[value='1'] ~ div .sheet-ins-style-D2,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-E2[value='1'] ~ div .sheet-ins-style-E2,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-F2[value='1'] ~ div .sheet-ins-style-F2,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-A3[value='1'] ~ div .sheet-ins-style-A3,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-B3[value='1'] ~ div .sheet-ins-style-B3,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-C3[value='1'] ~ div .sheet-ins-style-C3,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-D3[value='1'] ~ div .sheet-ins-style-D3,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-E3[value='1'] ~ div .sheet-ins-style-E3,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-F3[value='1'] ~ div .sheet-ins-style-F3,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-A4[value='1'] ~ div .sheet-ins-style-A4,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-B4[value='1'] ~ div .sheet-ins-style-B4,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-C4[value='1'] ~ div .sheet-ins-style-C4,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-D4[value='1'] ~ div .sheet-ins-style-D4,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-E4[value='1'] ~ div .sheet-ins-style-E4,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-F4[value='1'] ~ div .sheet-ins-style-F4,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-A5[value='1'] ~ div .sheet-ins-style-A5,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-B5[value='1'] ~ div .sheet-ins-style-B5,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-C5[value='1'] ~ div .sheet-ins-style-C5,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-D5[value='1'] ~ div .sheet-ins-style-D5,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-E5[value='1'] ~ div .sheet-ins-style-E5,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-F5[value='1'] ~ div .sheet-ins-style-F5,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-A6[value='1'] ~ div .sheet-ins-style-A6,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-B6[value='1'] ~ div .sheet-ins-style-B6,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-C6[value='1'] ~ div .sheet-ins-style-C6,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-D6[value='1'] ~ div .sheet-ins-style-D6,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-E6[value='1'] ~ div .sheet-ins-style-E6,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-F6[value='1'] ~ div .sheet-ins-style-F6,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-A7[value='1'] ~ div .sheet-ins-style-A7,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-B7[value='1'] ~ div .sheet-ins-style-B7,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-C7[value='1'] ~ div .sheet-ins-style-C7,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-D7[value='1'] ~ div .sheet-ins-style-D7,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-E7[value='1'] ~ div .sheet-ins-style-E7,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-F7[value='1'] ~ div .sheet-ins-style-F7,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-A8[value='1'] ~ div .sheet-ins-style-A8,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-B8[value='1'] ~ div .sheet-ins-style-B8,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-C8[value='1'] ~ div .sheet-ins-style-C8,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-D8[value='1'] ~ div .sheet-ins-style-D8,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-E8[value='1'] ~ div .sheet-ins-style-E8,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-F8[value='1'] ~ div .sheet-ins-style-F8,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-A9[value='1'] ~ div .sheet-ins-style-A9,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-B9[value='1'] ~ div .sheet-ins-style-B9,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-C9[value='1'] ~ div .sheet-ins-style-C9,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-D9[value='1'] ~ div .sheet-ins-style-D9,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-E9[value='1'] ~ div .sheet-ins-style-E9,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-F9[value='1'] ~ div .sheet-ins-style-F9,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-A10[value='1'] ~ div .sheet-ins-style-A10,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-B10[value='1'] ~ div .sheet-ins-style-B10,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-C10[value='1'] ~ div .sheet-ins-style-C10,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-D10[value='1'] ~ div .sheet-ins-style-D10,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-E10[value='1'] ~ div .sheet-ins-style-E10,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-F10[value='1'] ~ div .sheet-ins-style-F10,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-A11[value='1'] ~ div .sheet-ins-style-A11,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-B11[value='1'] ~ div .sheet-ins-style-B11,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-C11[value='1'] ~ div .sheet-ins-style-C11,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-D11[value='1'] ~ div .sheet-ins-style-D11,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-E11[value='1'] ~ div .sheet-ins-style-E11,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-F11[value='1'] ~ div .sheet-ins-style-F11,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-A12[value='1'] ~ div .sheet-ins-style-A12,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-B12[value='1'] ~ div .sheet-ins-style-B12,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12,
+	.sheet-element-room-style[value="4"] ~ .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12
+{background:#ffe894;}
+
+.charsheet .sheet-hogwarts-wrap .sheet-fightArea {position:relative; height:125px;}
+.charsheet .sheet-hogwarts-wrap .sheet-plot-pannel {position:absolute; top:46px; left:80px; width:380px; height:40px;}
+.charsheet .sheet-hogwarts-wrap .sheet-evas-pannel {position:absolute; top:46px; left:590px; width:240px; height:40px;}
+.charsheet .sheet-hogwarts-wrap .sheet-evas-pannel .sheet-hogwarts-roll {float:right; margin-right:30px;}
+
+
+.charsheet .sheet-plot-pannel {}
+.charsheet .sheet-plot-pannel span {display:block; float:left; position:relative; width:55px; height:40px; z-index:0;}
+.charsheet .sheet-plot-pannel em {display:block; text-align:center; padding-bottom:5px; position:relative; font-style:normal; font-weight:800; line-height:1.2; font-size:16px; color:#fff;}
+.charsheet .sheet-plot-pannel i {display:block; text-align:center; position:relative; font-style:normal; line-height:1.2; font-size:11px; color:#999;}
+.charsheet .sheet-plot-pannel span input[type="radio"] {display:block; position:absolute; top:0; left:0; right:0; bottom:0; width:100%; height:100%; border:none; background:#fff; margin:0; opacity:0; z-index:1; cursor:pointer;}
+.charsheet .sheet-plot-pannel span input[type="radio"]:checked ~ em,
+.charsheet .sheet-plot-pannel span input[type="radio"]:checked ~ i {color:#ff5656;}
+.charsheet .sheet-plot-pannel span input[type="radio"]:checked ~ em {font-size:20px; margin-top:-4px;}
+.charsheet .sheet-plot-pannel span input[type="radio"]:checked ~ i {font-size:13px;}
+.charsheet .sheet-plot-pannel .sheet-hogwarts-roll {position:absolute; top:0; right:0;}
+
+.charsheet .sheet-element-room-style[value="1"] ~ * .sheet-plot-pannel span input[type="radio"]:checked ~ em,
+.charsheet .sheet-element-room-style[value="1"] ~ * .sheet-plot-pannel span input[type="radio"]:checked ~ i {color:#ff7d95;}
+.charsheet .sheet-element-room-style[value="2"] ~ * .sheet-plot-pannel span input[type="radio"]:checked ~ em,
+.charsheet .sheet-element-room-style[value="2"] ~ * .sheet-plot-pannel span input[type="radio"]:checked ~ i {color:#6db782;}
+.charsheet .sheet-element-room-style[value="3"] ~ * .sheet-plot-pannel span input[type="radio"]:checked ~ em,
+.charsheet .sheet-element-room-style[value="3"] ~ * .sheet-plot-pannel span input[type="radio"]:checked ~ i {color:#5cb5ce;}
+.charsheet .sheet-element-room-style[value="4"] ~ * .sheet-plot-pannel span input[type="radio"]:checked ~ em,
+.charsheet .sheet-element-room-style[value="4"] ~ * .sheet-plot-pannel span input[type="radio"]:checked ~ i {color:#ddb527;}
+
+.charsheet .sheet-evas-pannel > * {display:inline-block; vertical-align:middle; color:#fff;}
+.charsheet .sheet-evas-pannel input[type="number"] {width:45px; font-size:15px; text-align:center; color:#fff; border-bottom:2px solid #fff; border-radius:0; font-family:'Malgun Gothic';}
+.charsheet .sheet-abilltyList {position:relative; width:460px; float:left; padding-top:75px;}
+.charsheet .sheet-relationList {position:relative; width:315px; float:right; padding-top:75px; margin-right:35px;}
+.charsheet .sheet-relationList .sheet-emotionDice {position:absolute; right:0px; top:28px;}
+
+.charsheet .sheet-dataList {display:block; position:relative;}
+.charsheet .sheet-ab-item {display:block; position:relative; z-index:0;}
+.charsheet .sheet-ab-item input[type="text"],
+.charsheet .sheet-ab-item input[type="number"],
+.charsheet .sheet-ab-item select {height:30px; background:rgba(255,255,255,.5); font-size:12px; border:none;}
+.charsheet .sheet-ab-item select option {color:#fff;}
+.charsheet .sheet-ab-item:after {content:""; display:block; clear:both;}
+.charsheet .sheet-ab-item + * {margin-top:10px !important;}
+.charsheet .sheet-ab-item > * {float:left; position:relative;}
+.charsheet .sheet-ab-item > input[type="checkbox"] {display:block; position:absolute; top:0; left:0; width:30px; height:30px; border:none; margin:0; opacity:0; z-index:1; cursor:pointer;}
+.charsheet .sheet-ab-item > input[type="checkbox"] + * {display:block; position:relative; min-height:30px; padding-left:30px !important; box-sizing:content-box; z-index:0;}
+.charsheet .sheet-ab-item > input[type="checkbox"] + *:before {content:""; display:block; position:absolute; top:50%; left:3px; width:20px; height:20px; box-sizing:border-box; margin-top:-10px; background:url('https://i.imgur.com/gbCThUN.png') no-repeat 50% 50%;}
+.charsheet .sheet-ab-item > input[type="checkbox"]:checked + *:before {background-image:url('https://i.imgur.com/b0F6erg.png');}
+.charsheet .sheet-ab-item > input[type="checkbox"]:checked ~ .sheet-effect {display:block;}
+.charsheet .sheet-ab-item .sheet-effect {display:none; padding-left:30px; position:relative; clear:both; float:none; padding-top:5px;}
+.charsheet .sheet-ab-item .sheet-effect textarea {display:block; width:100%; border-radius:3px; background:rgba(255,255,255,.5); height:100px; resize:none; border:none; padding:10px; box-sizing:border-box; line-height:1.5; border:none; outline:0;}
+.charsheet .sheet-ab-item .sheet-control {width:29px;}
+.charsheet .sheet-ab-item .sheet-control button {width:29px; height:29px; color:#fff !important; font-size:17px; font-weight:800; line-height:29px; background:#4c4439; border:none;}
+.charsheet .sheet-ab-item .sheet-control button:before {font-weight:100;}
+.charsheet .sheet-ab-item .sheet-name {padding:0 5px; width:190px; float:left;}
+.charsheet .sheet-ab-item .sheet-type {width:70px;}
+.charsheet .sheet-ab-item .sheet-type select {width:100%; border-radius:8px;}
+.charsheet .sheet-ab-item .sheet-spec {width:80px; padding:0 5px; text-align:center;}
+.charsheet .sheet-ab-item .sheet-spec input {text-align:center;}
+.charsheet .sheet-ab-item .sheet-mod {width:60px; text-align:center;}
+.charsheet .sheet-ab-item .sheet-mod * {text-align:center;}
+.charsheet .sheet-ab-item .sheet-option {width:50px; text-align:center; margin-right:10px;}
+.charsheet .sheet-ab-item .sheet-option input[type="checkbox"] {display:block; position:absolute; top:0; left:0; right:0; bottom:0; width:100%; height:100%; border:none; background:#fff; margin:0; opacity:0; z-index:1; cursor:pointer;}
+.charsheet .sheet-ab-item .sheet-option input[type="checkbox"] + span {display:block; position:relative; padding-left:20px; line-height:30px; font-weight:600; font-size:12px;}
+.charsheet .sheet-ab-item .sheet-option input[type="checkbox"] + span:before {content:""; display:block; position:absolute; top:50%; left:3px; width:14px; height:14px; box-sizing:border-box; margin-top:-7px; border:2px solid rgba(255,255,255,.5); border-radius:100%;}
+.charsheet .sheet-ab-item .sheet-option input[type="checkbox"]:checked + span:before {background:#d20000; border-color:#d20000;}
+.charsheet .sheet-ab-item .sheet-emotion {width:80px;}
+.repcontainer .repitem {margin-top:8px;}
+.charsheet .sheet-relationList .sheet-ab-item .sheet-name {width:140px;}
+
+.charsheet .sheet-element-room-style[value="1"] ~ * .sheet-ab-item .sheet-option input[type="checkbox"]:checked + span:before {background:#cb2228; border-color:#cb2228;}
+.charsheet .sheet-element-room-style[value="2"] ~ * .sheet-ab-item .sheet-option input[type="checkbox"]:checked + span:before {background:#26a049; border-color:#26a049;}
+.charsheet .sheet-element-room-style[value="3"] ~ * .sheet-ab-item .sheet-option input[type="checkbox"]:checked + span:before {background:#036b99; border-color:#036b99;}
+.charsheet .sheet-element-room-style[value="4"] ~ * .sheet-ab-item .sheet-option input[type="checkbox"]:checked + span:before {background:#d8a000; border-color:#d8a000;}
+
+.charsheet .sheet-memo {clear:both; padding:20px 0 0;}
+.charsheet .sheet-memo textarea {display:block; background:rgba(39,35,28,.5); width:100%; padding:15px; color:#fff; line-height:1.5; font-size:13px; border-radius:10px; height:200px; resize:none;}
+
+.charsheet .sheet-hogwarts-box {position:relative; border:1px solid #301f10; border-radius:10px; border-bottom-width:2px; background:url('https://i.imgur.com/vrNAgXI.jpg') #e5d6b5 repeat 50% 50%; max-width:850px; margin:0 auto; color:#301f10; font-size:13px; line-height:1.5; letter-spacing:-0.02em; text-align:center; font-family:'Malgun Gothic';}
+.charsheet .sheet-hogwarts-box {margin:20px auto; max-width:250px;}
+.charsheet .sheet-hogwarts-box .sheet-acc {display:block; margin-top:-1px; text-align:center;}
+.charsheet .sheet-hogwarts-box .sheet-acc img {width:80px;}
+.charsheet .sheet-hogwarts-box .sheet-acc + * {padding-top:0 !important;}
+.charsheet .sheet-hogwarts-box .sheet-line {position:relative; margin:0; height:0px; border-top:1px solid #301f10; z-index:1;}
+.charsheet .sheet-hogwarts-box .sheet-line img {display:block; position:absolute; top:-3px; left:50%; margin-left:-33px;}
+.charsheet .sheet-hogwarts-box .sheet-sub {font-size:.95em; padding:10px;}
+.charsheet .sheet-hogwarts-box .sheet-subject {font-size:1.2em; font-weight:800; padding:10px;}
+.charsheet .sheet-hogwarts-box .sheet-subject em {font-style:normal; color:#8a0000;}
+.charsheet .sheet-hogwarts-box .sheet-subject img {height:25px; vertical-align:middle;}
+.charsheet .sheet-hogwarts-box .sheet-sub + .sheet-subject {margin-top:-20px;}
+.charsheet .sheet-hogwarts-box .sheet-con {padding:10px; word-break:keep-all;}
+.charsheet .sheet-hogwarts-box .sheet-bak {padding:10px; word-break:keep-all; background:rgba(39,35,28,.5); color:#fff;}
+.charsheet .sheet-hogwarts-box .sheet-left {text-align:left;}
+.charsheet .sheet-hogwarts-box .sheet-dice {text-align:center; padding:10px; font-size:2em;}
+.charsheet .sheet-hogwarts-box .inlinerollresult {display:inline; text-align:center; margin:0 !important; border:none !important; background:transparent !important; padding:0 !important; font-weight:800;}
+.charsheet .sheet-hogwarts-box .sheet-mod,
+.charsheet .sheet-hogwarts-box .sheet-mod .inlinerollresult {color:#d6755f;}
+.charsheet .sheet-hogwarts-box .sheet-dice p {display:block; margin:5px -10px 0; font-size:13px; background:#666; color:#fff; font-weight:800; padding:5px 10px;}
+.charsheet .sheet-hogwarts-box .sheet-dice p.sheet-fumble {background:#8a0000;}
+.charsheet .sheet-hogwarts-box .sheet-dice p.sheet-special {background:#3ca252;}
+
+.sheet-rolltemplate-HogwartsDefault .sheet-hogwarts-box {position:relative; border:1px solid #301f10; border-radius:10px; border-bottom-width:2px; background:url('https://i.imgur.com/vrNAgXI.jpg') #e5d6b5 repeat 50% 50%; max-width:850px; margin:0 auto; color:#301f10; font-size:13px; line-height:1.5; letter-spacing:-0.02em; text-align:center; font-family:'Malgun Gothic';}
+.sheet-rolltemplate-HogwartsDefault .sheet-hogwarts-box .sheet-acc {display:block; margin-top:-1px; text-align:center;}
+.sheet-rolltemplate-HogwartsDefault .sheet-hogwarts-box .sheet-acc img {width:80px;}
+.sheet-rolltemplate-HogwartsDefault .sheet-hogwarts-box .sheet-acc + * {padding-top:0 !important;}
+.sheet-rolltemplate-HogwartsDefault .sheet-hogwarts-box .sheet-line {position:relative; margin:0; height:0px; border-top:1px solid #301f10; z-index:1;}
+.sheet-rolltemplate-HogwartsDefault .sheet-hogwarts-box .sheet-line img {display:block; position:absolute; top:-3px; left:50%; margin-left:-33px;}
+.sheet-rolltemplate-HogwartsDefault .sheet-hogwarts-box .sheet-sub {font-size:.95em; padding:10px;}
+.sheet-rolltemplate-HogwartsDefault .sheet-hogwarts-box .sheet-subject {font-size:1.2em; font-weight:800; padding:10px;}
+.sheet-rolltemplate-HogwartsDefault .sheet-hogwarts-box .sheet-subject em {font-style:normal; color:#8a0000;}
+.sheet-rolltemplate-HogwartsDefault .sheet-hogwarts-box .sheet-subject img {height:25px; vertical-align:middle;}
+.sheet-rolltemplate-HogwartsDefault .sheet-hogwarts-box .sheet-sub + .sheet-subject {margin-top:-20px;}
+.sheet-rolltemplate-HogwartsDefault .sheet-hogwarts-box .sheet-con {padding:10px; word-break:keep-all;}
+.sheet-rolltemplate-HogwartsDefault .sheet-hogwarts-box .sheet-left {text-align:left;}
+.sheet-rolltemplate-HogwartsDefault .sheet-hogwarts-box .inlinerollresult {display:inline; text-align:center; margin:0 !important; border:none !important; background:transparent !important; padding:0 !important; font-weight:800;}
+
+.sheet-rolltemplate-HogwartsScene .sheet-hogwarts-box {position:relative; border:1px solid #301f10; border-radius:10px; border-bottom-width:2px; background:url('https://i.imgur.com/vrNAgXI.jpg') #e5d6b5 repeat 50% 50%; max-width:850px; margin:0 auto; color:#301f10; font-size:13px; line-height:1.5; letter-spacing:-0.02em; text-align:center; font-family:'Malgun Gothic';}
+.sheet-rolltemplate-HogwartsScene .sheet-hogwarts-box .sheet-acc {display:block; margin-top:-1px; text-align:center;}
+.sheet-rolltemplate-HogwartsScene .sheet-hogwarts-box .sheet-acc img {width:80px;}
+.sheet-rolltemplate-HogwartsScene .sheet-hogwarts-box .sheet-acc + * {padding-top:0 !important;}
+.sheet-rolltemplate-HogwartsScene .sheet-hogwarts-box .sheet-line {position:relative; margin:0; height:0px; border-top:1px solid #301f10; z-index:1;}
+.sheet-rolltemplate-HogwartsScene .sheet-hogwarts-box .sheet-line img {display:block; position:absolute; top:-3px; left:50%; margin-left:-33px;}
+.sheet-rolltemplate-HogwartsScene .sheet-hogwarts-box .sheet-sub {font-size:.95em; padding:10px;}
+.sheet-rolltemplate-HogwartsScene .sheet-hogwarts-box .sheet-subject {font-size:1.2em; font-weight:800; padding:10px;}
+.sheet-rolltemplate-HogwartsScene .sheet-hogwarts-box .sheet-sub + .sheet-subject {margin-top:-20px;}
+.sheet-rolltemplate-HogwartsScene .sheet-hogwarts-box .sheet-con {padding:10px; word-break:keep-all;}
+.sheet-rolltemplate-HogwartsScene .sheet-hogwarts-box .sheet-bak {padding:10px; word-break:keep-all; background:rgba(39,35,28,.5); color:#fff;}
+.sheet-rolltemplate-HogwartsScene .sheet-hogwarts-box .sheet-left {text-align:left;}
+
+.sheet-rolltemplate-HogwartsRandom .sheet-hogwarts-box {position:relative; border:1px solid #301f10; border-radius:10px; border-bottom-width:2px; background:url('https://i.imgur.com/vrNAgXI.jpg') #e5d6b5 repeat 50% 50%; max-width:850px; margin:0 auto; color:#301f10; font-size:13px; line-height:1.5; letter-spacing:-0.02em; text-align:center; font-family:'Malgun Gothic';}
+.sheet-rolltemplate-HogwartsRandom .sheet-hogwarts-box .sheet-acc {display:block; margin-top:-1px; text-align:center;}
+.sheet-rolltemplate-HogwartsRandom .sheet-hogwarts-box .sheet-acc img {width:80px;}
+.sheet-rolltemplate-HogwartsRandom .sheet-hogwarts-box .sheet-acc + * {padding-top:0 !important;}
+.sheet-rolltemplate-HogwartsRandom .sheet-hogwarts-box .sheet-line {position:relative; margin:0; height:0px; border-top:1px solid #301f10; z-index:1;}
+.sheet-rolltemplate-HogwartsRandom .sheet-hogwarts-box .sheet-line img {display:block; position:absolute; top:-3px; left:50%; margin-left:-33px;}
+.sheet-rolltemplate-HogwartsRandom .sheet-hogwarts-box .sheet-sub {font-size:.95em; padding:10px;}
+.sheet-rolltemplate-HogwartsRandom .sheet-hogwarts-box .sheet-subject {font-size:1.2em; font-weight:800; padding:10px;}
+.sheet-rolltemplate-HogwartsRandom .sheet-hogwarts-box .sheet-subject em {font-style:normal; color:#8a0000;}
+.sheet-rolltemplate-HogwartsRandom .sheet-hogwarts-box .sheet-sub + .sheet-subject {margin-top:-20px;}
+
+.sheet-rolltemplate-HogwartsDice .sheet-hogwarts-box {position:relative; border:1px solid #301f10; border-radius:10px; border-bottom-width:2px; background:url('https://i.imgur.com/vrNAgXI.jpg') #e5d6b5 repeat 50% 50%; max-width:850px; margin:0 auto; color:#301f10; font-size:13px; line-height:1.5; letter-spacing:-0.02em; text-align:center; font-family:'Malgun Gothic';}
+.sheet-rolltemplate-HogwartsDice .sheet-hogwarts-box .sheet-acc {display:block; margin-top:-1px; text-align:center;}
+.sheet-rolltemplate-HogwartsDice .sheet-hogwarts-box .sheet-acc img {width:80px;}
+.sheet-rolltemplate-HogwartsDice .sheet-hogwarts-box .sheet-acc + * {padding-top:0 !important;}
+.sheet-rolltemplate-HogwartsDice .sheet-hogwarts-box .sheet-line {position:relative; margin:0; height:0px; border-top:1px solid #301f10; z-index:1;}
+.sheet-rolltemplate-HogwartsDice .sheet-hogwarts-box .sheet-line img {display:block; position:absolute; top:-3px; left:50%; margin-left:-33px;}
+.sheet-rolltemplate-HogwartsDice .sheet-hogwarts-box .sheet-sub {font-size:.95em; padding:10px;}
+.sheet-rolltemplate-HogwartsDice .sheet-hogwarts-box .sheet-subject {font-size:1.2em; font-weight:800; padding:10px;}
+.sheet-rolltemplate-HogwartsDice .sheet-hogwarts-box .sheet-sub + .sheet-subject {margin-top:-20px;}
+.sheet-rolltemplate-HogwartsDice .sheet-hogwarts-box .inlinerollresult {display:inline; text-align:center; margin:0 !important; border:none !important; background:transparent !important; padding:0 !important; font-weight:800;}
+.sheet-rolltemplate-HogwartsDice .sheet-hogwarts-box .sheet-mod,
+.sheet-rolltemplate-HogwartsDice .sheet-hogwarts-box .sheet-mod .inlinerollresult {color:#d6755f;}
+.sheet-rolltemplate-HogwartsDice .sheet-hogwarts-box .sheet-dice {text-align:center; padding:10px; font-size:2em;}
+.sheet-rolltemplate-HogwartsDice .sheet-hogwarts-box .sheet-dice p {display:block; margin:5px -10px 0; font-size:13px; background:#666; color:#fff; font-weight:800; padding:5px 10px;}
+.sheet-rolltemplate-HogwartsDice .sheet-hogwarts-box .sheet-dice p.sheet-fumble {background:#8a0000;}
+.sheet-rolltemplate-HogwartsDice .sheet-hogwarts-box .sheet-dice p.sheet-special {background:#3ca252;}
+.sheet-rolltemplate-HogwartsDice .sheet-hogwarts-box .sheet-con {padding:10px; word-break:keep-all;}
+.sheet-rolltemplate-HogwartsDice .sheet-hogwarts-box .sheet-bak {padding:10px; word-break:keep-all; background:rgba(39,35,28,.5); color:#fff;}
+.sheet-rolltemplate-HogwartsDice .sheet-hogwarts-box .sheet-left {text-align:left;}
+
+.sheet-rolltemplate-HogwartsSimple .sheet-hogwarts-box {position:relative; border:1px solid #301f10; border-radius:10px; border-bottom-width:2px; background:url('https://i.imgur.com/vrNAgXI.jpg') #e5d6b5 repeat 50% 50%; max-width:850px; margin:0 auto; color:#301f10; font-size:13px; line-height:1.5; letter-spacing:-0.02em; text-align:center; font-family:'Malgun Gothic';}
+.sheet-rolltemplate-HogwartsSimple .sheet-hogwarts-box .sheet-acc {display:block; margin-top:-1px; text-align:center;}
+.sheet-rolltemplate-HogwartsSimple .sheet-hogwarts-box .sheet-acc img {width:80px;}
+.sheet-rolltemplate-HogwartsSimple .sheet-hogwarts-box .sheet-acc + * {padding-top:0 !important;}
+.sheet-rolltemplate-HogwartsSimple .sheet-hogwarts-box .sheet-line {position:relative; margin:0; height:0px; border-top:1px solid #301f10; z-index:1;}
+.sheet-rolltemplate-HogwartsSimple .sheet-hogwarts-box .sheet-line img {display:block; position:absolute; top:-3px; left:50%; margin-left:-33px;}
+.sheet-rolltemplate-HogwartsSimple .sheet-hogwarts-box .sheet-sub {font-size:.95em; padding:10px;}
+.sheet-rolltemplate-HogwartsSimple .sheet-hogwarts-box .sheet-subject {font-size:1.2em; font-weight:800; padding:10px;}
+.sheet-rolltemplate-HogwartsSimple .sheet-hogwarts-box .sheet-sub + .sheet-subject {margin-top:-20px;}
+.sheet-rolltemplate-HogwartsSimple .sheet-hogwarts-box .sheet-dice {text-align:center; padding:10px; font-size:2em;}
+.sheet-rolltemplate-HogwartsSimple .sheet-hogwarts-box .inlinerollresult {display:inline; text-align:center; margin:0 !important; border:none !important; background:transparent !important; padding:0 !important; font-weight:800;}
+.sheet-rolltemplate-HogwartsSimple .sheet-hogwarts-box .sheet-mod,
+.sheet-rolltemplate-HogwartsSimple .sheet-hogwarts-box .sheet-mod .inlinerollresult {color:#d6755f;}
+
+.sheet-rolltemplate-HogwartsEmotion .sheet-hogwarts-box {position:relative; border:1px solid #301f10; border-radius:10px; border-bottom-width:2px; background:url('https://i.imgur.com/vrNAgXI.jpg') #e5d6b5 repeat 50% 50%; max-width:850px; margin:0 auto; color:#301f10; font-size:13px; line-height:1.5; letter-spacing:-0.02em; text-align:center; font-family:'Malgun Gothic';}
+.sheet-rolltemplate-HogwartsEmotion .sheet-hogwarts-box .sheet-acc {display:block; margin-top:-1px; text-align:center;}
+.sheet-rolltemplate-HogwartsEmotion .sheet-hogwarts-box .sheet-acc img {width:80px;}
+.sheet-rolltemplate-HogwartsEmotion .sheet-hogwarts-box .sheet-acc + * {padding-top:0 !important;}
+.sheet-rolltemplate-HogwartsEmotion .sheet-hogwarts-box .sheet-line {position:relative; margin:0; height:0px; border-top:1px solid #301f10; z-index:1;}
+.sheet-rolltemplate-HogwartsEmotion .sheet-hogwarts-box .sheet-line img {display:block; position:absolute; top:-3px; left:50%; margin-left:-33px;}
+.sheet-rolltemplate-HogwartsEmotion .sheet-hogwarts-box .sheet-sub {font-size:.95em; padding:10px;}
+.sheet-rolltemplate-HogwartsEmotion .sheet-hogwarts-box .sheet-subject {font-size:1.2em; font-weight:800; padding:10px;}
+.sheet-rolltemplate-HogwartsEmotion .sheet-hogwarts-box .sheet-subject em {font-style:normal; color:#bb0707;}
+.sheet-rolltemplate-HogwartsEmotion .sheet-hogwarts-box .sheet-subject img {height:25px; vertical-align:middle;}
+.sheet-rolltemplate-HogwartsEmotion .sheet-hogwarts-box .sheet-sub + .sheet-subject {margin-top:-20px;}
+
+.sheet-rolltemplate-HogwartsAbility .sheet-hogwarts-box {position:relative; border:1px solid #301f10; border-radius:10px; border-bottom-width:2px; background:url('https://i.imgur.com/vrNAgXI.jpg') #e5d6b5 repeat 50% 50%; max-width:850px; margin:0 auto; color:#301f10; font-size:13px; line-height:1.5; letter-spacing:-0.02em; text-align:center; font-family:'Malgun Gothic';}
+.sheet-rolltemplate-HogwartsAbility .sheet-hogwarts-box .sheet-acc {display:block; margin-top:-1px; text-align:center;}
+.sheet-rolltemplate-HogwartsAbility .sheet-hogwarts-box .sheet-acc img {width:80px;}
+.sheet-rolltemplate-HogwartsAbility .sheet-hogwarts-box .sheet-acc + * {padding-top:0 !important;}
+.sheet-rolltemplate-HogwartsAbility .sheet-hogwarts-box .sheet-line {position:relative; margin:0; height:0px; border-top:1px solid #301f10; z-index:1;}
+.sheet-rolltemplate-HogwartsAbility .sheet-hogwarts-box .sheet-line img {display:block; position:absolute; top:-3px; left:50%; margin-left:-33px;}
+.sheet-rolltemplate-HogwartsAbility .sheet-hogwarts-box .sheet-sub {font-size:.95em; padding:10px;}
+.sheet-rolltemplate-HogwartsAbility .sheet-hogwarts-box .sheet-subject {font-size:1.2em; font-weight:800; padding:10px;}
+.sheet-rolltemplate-HogwartsAbility .sheet-hogwarts-box .sheet-sub + .sheet-subject {margin-top:-20px;}
+.sheet-rolltemplate-HogwartsAbility .sheet-hogwarts-box .inlinerollresult {display:inline; text-align:center; margin:0 !important; border:none !important; background:transparent !important; padding:0 !important; font-weight:800;}
+.sheet-rolltemplate-HogwartsAbility .sheet-hogwarts-box .sheet-mod,
+.sheet-rolltemplate-HogwartsAbility .sheet-hogwarts-box .sheet-mod .inlinerollresult {color:#d6755f;}
+.sheet-rolltemplate-HogwartsAbility .sheet-hogwarts-box .sheet-dice {text-align:center; padding:10px; font-size:2em;}
+.sheet-rolltemplate-HogwartsAbility .sheet-hogwarts-box .sheet-dice p {display:block; margin:5px -10px 0; font-size:13px; background:#666; color:#fff; font-weight:800; padding:5px 10px;}
+.sheet-rolltemplate-HogwartsAbility .sheet-hogwarts-box .sheet-dice p.sheet-fumble {background:#8a0000;}
+.sheet-rolltemplate-HogwartsAbility .sheet-hogwarts-box .sheet-dice p.sheet-special {background:#3ca252;}
+.sheet-rolltemplate-HogwartsAbility .sheet-hogwarts-box .sheet-con {padding:10px; word-break:keep-all;}
+.sheet-rolltemplate-HogwartsAbility .sheet-hogwarts-box .sheet-type {display:inline-block; background:#000; color:#fff; font-size:.9em; padding:2px 5px; border-radius:2px; vertical-algin:middle;}
+.sheet-rolltemplate-HogwartsAbility .sheet-hogwarts-box .sheet-bak {padding:10px; word-break:keep-all; background:rgba(39,35,28,.5); color:#fff;}
+.sheet-rolltemplate-HogwartsAbility .sheet-hogwarts-box .sheet-left {text-align:left;}
+
+.sheet-rolltemplate-HogwartsPlot .sheet-hogwarts-simpleBox {display:table; width:100%; position:relative; border:1px solid #301f10; border-radius:10px; border-bottom-width:2px; background:url('https://i.imgur.com/vrNAgXI.jpg') #e5d6b5 repeat 50% 50%; max-width:850px; margin:0 auto; color:#301f10; font-size:13px; line-height:1.5; letter-spacing:-0.02em; overflow:hidden; font-family:'Malgun Gothic';}
+.sheet-rolltemplate-HogwartsPlot .sheet-hogwarts-simpleBox > * {display:table-cell;}
+.sheet-rolltemplate-HogwartsPlot .sheet-hogwarts-simpleBox .sheet-acc {width:20px;}
+.sheet-rolltemplate-HogwartsPlot .sheet-hogwarts-simpleBox .sheet-acc img {display:block; position:absolute; width:50px; top:50%; margin-top:-8px; left:-17px; transform:rotate(-90deg);}
+.sheet-rolltemplate-HogwartsPlot .sheet-hogwarts-simpleBox .sheet-name {font-size:15px; font-weight:800; padding:10px;}
+.sheet-rolltemplate-HogwartsPlot .sheet-hogwarts-simpleBox .sheet-plot {width:10%; padding:10px; text-align:center; font-size:20px; font-weight:800; color:#fff; background:#301f10;}

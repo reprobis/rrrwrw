@@ -1,0 +1,242 @@
+
+/* ------------------------------------------
+	Reset : 모든 시트에 공통적으로 들어가는 리셋 코드
+------------------------------------------ */
+
+.charsheet select,
+.charsheet div,
+.charsheet button,
+.charsheet textarea,
+.charsheet span,
+.charsheet input,
+.charsheet img,
+.charsheet label {box-sizing: border-box; outline:0;}
+.ui-dialog .charsheet {padding:0;}
+.inlinerollresult{background-color:#FEF68E;border:2px solid #FEF68E;padding:0 3px 0 3px; font-weight:bold;cursor:help;font-size:1.1em}
+.inlinerollresult.fullcrit{border:none;}
+.inlinerollresult.fullfail{border:none;}
+.inlinerollresult.importantroll{border:none;}
+.inlineqroll{width:18px;height:18px;vertical-align:bottom}
+.charsheet .sheet-wrap p {margin:0;}
+.charsheet .sheet-wrap input[type="radio"],
+.charsheet .sheet-wrap input[type="checkbox"] {cursor:pointer;}
+.charsheet .sheet-wrap input[type="number"]::-webkit-outer-spin-button,
+.charsheet .sheet-wrap input[type="number"]::-webkit-inner-spin-button {appearance:none; -webkit-appearance:none; margin:0;}
+.charsheet .sheet-wrap select {cursor:pointer; appearance:none; -webkit-appearance:none; margin:0;}
+.charsheet .sheet-wrap button[type="roll"] {border:none; background:transparent; margin:0 !important; padding:0 !important; text-shadow:none !important; box-shadow:none !important;}
+.charsheet .sheet-wrap button:before {display:none !important;}
+.repcontainer.editmode .repitem .itemcontrol {z-index:999;}
+
+/* ------------------------------------------
+	Layout
+------------------------------------------ */
+
+/** 공통 input 스타일 **/
+.charsheet .sheet-wrap input[type="text"],
+.charsheet .sheet-wrap input[type="number"],
+.charsheet .sheet-wrap select {width:100%; height:30px; border-radius:5px; box-sizing:border-box; border:none; background:rgba(0,0,0,.5); color:#fff; font-size:13px; padding:0 8px; font-family:'맑은고딕', 'Malgun Gothic';}
+.charsheet .sheet-wrap textarea {width:100%; height:150px;border-radius:5px; box-sizing:border-box; border:none; background:rgba(0,0,0,.5); color:#fff; font-size:13px; padding:8px; line-height:1.5; font-family:'맑은고딕', 'Malgun Gothic';}
+.charsheet .sheet-wrap button {cursor:pointer;}
+.charsheet .sheet-wrap select {background-image:url('https://i.imgur.com/WzoPzUc.png') !important; background-repeat:no-repeat !important; background-position: right 10px top 50% !important;}
+.charsheet .sheet-wrap input[type="text"],
+.charsheet .sheet-wrap input[type="number"],
+.charsheet .sheet-wrap select,
+.charsheet .sheet-wrap textarea {border:1px solid rgba(255,255,255,.2);}
+
+
+/** 기본 배경 **/
+.charsheet .sheet-wrap {position:relative; width:860px; min-height:500px; margin:0 -10px; background:url('https://i.imgur.com/aU9gGif.jpg'); font-family:'맑은고딕', 'Malgun Gothic'; z-index:0;}
+.charsheet .sheet-wrap:before {content:"Made by. @tateck_trpg";
+	display:block; position:absolute; top:5px; right:10px; font-size:11px; color:#fff; opacity:.5; z-index:9999;}
+.charsheet .sheet-wrap:after {content:""; display:block; position:absolute; left:0; right:0; bottom:0; height:408px; background:url('https://i.imgur.com/PhtswsE.png') no-repeat 50% 100%; z-index:-1;}
+
+
+/** 탭 **/
+.charsheet .sheet-bringer, .sheet-sheath, .sheet-bringer-label, .sheet-sheath-label {display:block; position:absolute; top:16px; width:94px; height:43px !important;}
+.charsheet .sheet-bringer, .sheet-sheath {opacity:0; z-index:999;}
+.charsheet .sheet-bringer {left:11px;}
+.charsheet .sheet-sheath {right:11px; left:auto;}
+.charsheet .sheet-bringer-label, .sheet-sheath-label {z-index:99; opacity:.3;}
+.charsheet .sheet-bringer-label {left:11px;}
+.charsheet .sheet-sheath-label {right:11px;}
+
+/** 박스 **/
+.charsheet .sheet-character-box {display:none; position:relative; padding-top:105px; min-height:500px; background:no-repeat 50% 0; color:#fff;}
+.charsheet .sheet-skillbox {display:none; margin-top: -30px;}
+.charsheet .sheet-bringer-box {background-image:url('https://i.imgur.com/kUyWxNu.png');}
+.charsheet .sheet-sheath-box {background-image:url('https://i.imgur.com/gjc90rB.png'); padding-bottom:350px;}
+.charsheet .sheet-settingbox {display:none;}
+
+/** 탭 선택에 따른 효과 **/
+.charsheet .sheet-bringer:checked ~ .sheet-bringer-label {opacity:1;}
+.charsheet .sheet-sheath:checked ~ .sheet-sheath-label {opacity:1;}
+.charsheet .sheet-bringer:checked ~ .sheet-bringer-box {display:block;}
+.charsheet .sheet-bringer:checked ~ .sheet-skillbox {display:block;}
+.charsheet .sheet-sheath:checked ~ .sheet-sheath-box {display:block;}
+
+/* GM Setting 과 탭이 함께 체크 시 */
+.charsheet .sheet-bringer:checked ~ .sheet-setting:checked ~ .sheet-skillbox {margin-top:0 !important;}
+.charsheet .sheet-sheath:checked ~ .sheet-setting:checked ~ .sheet-sheath-box {padding-bottom:0 !important;}
+
+/** GM 셋팅 **/
+.charsheet .sheet-setting, .sheet-setting-label {display:block; position:absolute; top:360px; right:26px; width:55px; height:25px !important;;}
+.charsheet .sheet-setting {z-index:99; opacity:0;}
+.charsheet .sheet-setting-label {z-index:90; border-radius:9em; background:rgba(0,0,0,.7); opacity:.4;}
+.charsheet .sheet-setting-label span {display:block; position:absolute; width:17px; height:17px; border-radius:100%; background:#fff; top:4px; left:4px; transition:.3s all; -webkit-transition:.3s all;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,228,255,0.63);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,228,255,0.63);
+	box-shadow: 0px 0px 5px 0px rgba(0,228,255,0.63);
+}
+.charsheet .sheet-setting:checked ~ .sheet-setting-label {opacity:1;}
+.charsheet .sheet-setting:checked ~ .sheet-setting-label span {left:30px;}
+
+.charsheet .sheet-setting:checked  ~ .sheet-settingbox {display:block;}
+.charsheet .sheet-bringer:checked ~ .sheet-setting:checked  ~ .sheet-settingbox {margin-top:-30px;}
+.charsheet .sheet-sheath:checked ~ .sheet-setting:checked  ~ .sheet-settingbox {padding-bottom:300px !important; margin-top:-120px;}
+
+/** 캐릭터(시트) 이름 **/
+.charsheet .sheet-character-name {display:block; position:absolute; top:105px; left:50px; width:256px; z-index:99;}
+.charsheet .sheet-character-name p {padding:16px 0 8px; height:38px; box-sizing:border-box;}
+.charsheet .sheet-sheath:checked ~ .sheet-character-name {width:304px;}
+
+/** 프로필 데이터 박스 **/
+.charsheet .sheet-databox {position:relative; margin:0 50px; height:220px;}
+.charsheet .sheet-bringer-box .sheet-databox {margin-right:168px;}
+.charsheet .sheet-databox p {padding:16px 0 8px; height:38px; box-sizing:border-box;}
+.charsheet .sheet-databox > * {position:relative; float:left; margin-right:.5%; box-sizing:border-box;}
+.charsheet .sheet-databox .sheet-name {width:40%;}
+.charsheet .sheet-databox .sheet-age {width:15%;}
+.charsheet .sheet-databox .sheet-gender {width:15%;}
+.charsheet .sheet-databox .sheet-group {width:28%;}
+.charsheet .sheet-databox .sheet-story {width:30%;}
+.charsheet .sheet-databox .sheet-back {width:34%;}
+.charsheet .sheet-databox .sheet-wish {width:34.5%;}
+.charsheet .sheet-databox .sheet-emo {width:31%;}
+.charsheet .sheet-databox .sheet-mark {width:30%;}
+.charsheet .sheet-databox .sheet-table {width:37.5%; padding-right:35px;}
+.charsheet .sheet-databox .sheet-table button {display:block; position:absolute; bottom:0; right:0; width:30px; height:30px; background:url('https://i.imgur.com/vDLE395.png') no-repeat left 4px top 5px rgba(255,255,255,.2); padding:0; border-radius:5px; border:none; transition:.3s all; -webkit-transition:.3s all;}
+.charsheet .sheet-databox .sheet-table button:hover {background-color:rgba(255,255,255,.5);}
+.charsheet .sheet-databox .sheet-grade-box {position:absolute; right:-118px; top:0; bottom:0; width:73px; text-align:center;}
+.charsheet .sheet-databox .sheet-grade-box:before {content:""; display:block; position:absolute; left:-22px; top:0; bottom:0; width:9px; background:url('https://i.imgur.com/NBBeGnR.png') no-repeat 0 50%;}
+.charsheet .sheet-databox .sheet-grade-box .sheet-top {display:block; position:absolute; top:0; left:0; right:0;}
+.charsheet .sheet-databox .sheet-grade-box .sheet-bottom {display:block; position:absolute; bottom:10px; left:0; right:0;}
+.charsheet .sheet-databox .sheet-grade-box .sheet-mid {display:block; position:absolute; top:45px; left:0; right:0; height:136px; background:url('https://i.imgur.com/dWBgtc3.png') no-repeat 50% 50%;}
+.charsheet .sheet-databox .sheet-grade-box .sheet-mid input {height:57px; background:transparent; text-align:center; font-size:20px; border:none;}
+.charsheet .sheet-databox .sheet-grade-box .sheet-mid input + input {margin-top:21px;}
+
+/** 코스트(스탯) 박스 **/
+.charsheet .sheet-costbox {display:block; position:relative; width:369px; height:58px; margin:75px auto 0; background:url('https://i.imgur.com/7NjBQd9.png') no-repeat 50% 50%; text-align:center; z-index:2;}
+.charsheet .sheet-costbox > * {display:block; position:relative; width:57px; float:left;}
+.charsheet .sheet-costbox > * + * {margin-left:21px;}
+.charsheet .sheet-costbox p,
+.charsheet .sheet-costbox button {display:block;}
+.charsheet .sheet-costbox input[type="number"] {padding:0; height:54px; margin-bottom:10px; border:none; background:transparent; text-align:center; font-size:20px;}
+.charsheet .sheet-costbox .sheet-charge input[type="number"],
+.charsheet .sheet-costbox .sheet-attack input[type="number"] {color:#47fdf5;}
+
+/** 세트 루틴 박스 **/
+.charsheet .sheet-settingbox {position:relative; clear:both; padding:0 10px 0; overflow:hidden;}
+.charsheet .sheet-settingbox .sheet-left {width:49%; float:left;}
+.charsheet .sheet-settingbox .sheet-right {width:49%; float:right;}
+.charsheet .sheet-settingbox .sheet-title {text-align:center; overflow:hidden;}
+.charsheet .sheet-settingbox .sheet-title img {max-width:300%;}
+.charsheet .sheet-set-item {position:relative; padding-left:130px; padding-right:10px; margin-bottom:15px;}
+.charsheet .sheet-set-item textarea {display:block; height:75px; resize:none; padding:10px;}
+.charsheet .sheet-set-item .sheet-setflag,
+.charsheet .sheet-set-item .sheet-setflag-label {display:block; position:absolute; top:0; left:0; margin:0; width:91px; height:30px !important;}
+.charsheet .sheet-set-item .sheet-setflag {opacity:0; z-index:99;}
+.charsheet .sheet-set-item .sheet-setflag-label {background:url('https://i.imgur.com/XzS7CY6.png') no-repeat 18px -254px;}
+.charsheet .sheet-set-item .sheet-setflag:checked + .sheet-setflag-label {background-image:url('https://i.imgur.com/28HOfwH.png')}
+.charsheet .sheet-action .sheet-set-item .sheet-setflag-label {background-image:url('https://i.imgur.com/t8FZ5wu.png');}
+.charsheet .sheet-action .sheet-set-item .sheet-setflag:checked + .sheet-setflag-label {background-image:url('https://i.imgur.com/ZsKzdFK.png')}
+.charsheet .sheet-set-item .sheet-setflag-label.sheet-ty1 {background-position:18px 8px;}
+.charsheet .sheet-set-item .sheet-setflag-label.sheet-ty2 {background-position:18px -38px;}
+.charsheet .sheet-set-item .sheet-setflag-label.sheet-ty3 {background-position:18px -82px;}
+.charsheet .sheet-set-item .sheet-setflag-label.sheet-ty4 {background-position:18px -124px;}
+.charsheet .sheet-set-item .sheet-setflag-label.sheet-ty5 {background-position:18px -168px;}
+.charsheet .sheet-set-item .sheet-setflag-label.sheet-ty6 {background-position:18px -211px;}
+.charsheet .sheet-set-item .sheet-setflag-label.sheet-ty7 {background-position:18px -255px;}
+.charsheet .sheet-set-item .sheet-setflag ~ .sheet-set-data .sheet-effect {display:none;}
+.charsheet .sheet-set-item .sheet-setflag:checked ~ .sheet-set-data .sheet-effect {display:block;}
+.charsheet .sheet-set-item .sheet-use,
+.charsheet .sheet-set-item .sheet-use-label {display:block; position:absolute; top:0; left:0; width:30px; height:30px !important;}
+.charsheet .sheet-set-item .sheet-use {opacity:0; z-index:99;}
+.charsheet .sheet-set-item .sheet-use-label {background:url('https://i.imgur.com/FS4gTuM.png') no-repeat 50% 50%; opacity:.2;}
+.charsheet .sheet-set-item .sheet-use:checked + .sheet-use-label {opacity:1;}
+.charsheet .sheet-set-item button {display:block; position:absolute; width:30px; height:30px; left:95px; top:0; opacity:.4;}
+.charsheet .sheet-set-item button:hover {opacity:1;}
+.charsheet .sheet-set-item .sheet-set-data {display:block; position:relative;}
+.charsheet .sheet-set-item .sheet-name {padding-left:35px;}
+.charsheet .sheet-set-item .sheet-effect {clear:both; margin-top:5px; margin-left:-110px; padding:5px; border-radius:5px; background:rgba(0,0,0,.5); border:1px solid rgba(255,255,255,.2);}
+.charsheet .sheet-set-item .sheet-effect textarea {height:50px; background:transparent; border:none; border-bottom:1px solid rgba(255,255,255,.2); border-radius:0;}
+.charsheet .sheet-set-item .sheet-effect textarea + textarea {height:90px; border-bottom:none;}
+
+/** 스킬 박스 **/
+.charsheet .sheet-skillbox {position:relative; padding:0 10px 300px;}
+.charsheet .sheet-skillbox .sheet-title {text-align:center;}
+.charsheet .sheet-skill-item {position:relative; padding-left:115px; padding-right:10px; margin-bottom:15px;}
+.charsheet .sheet-skill-item textarea {display:block; height:75px; resize:none; padding:10px;}
+.charsheet .sheet-skill-item .sheet-skillflag,
+.charsheet .sheet-skill-item .sheet-skillflag-label {display:block; position:absolute; top:0; left:0; margin:0; width:75px; height:30px !important;}
+.charsheet .sheet-skill-item .sheet-skillflag {opacity:0; z-index:99;}
+.charsheet .sheet-skill-item .sheet-skillflag-label {background:url('https://i.imgur.com/E5lcU0r.png') no-repeat 18px 12px;}
+.charsheet .sheet-skill-item .sheet-skillflag:checked + .sheet-skillflag-label {background-image:url('https://i.imgur.com/krf2Tuv.png')}
+.charsheet .sheet-skill-item .sheet-skillflag-label.sheet-ty1 {background-position:18px 8px;}
+.charsheet .sheet-skill-item .sheet-skillflag-label.sheet-ty2 {background-position:18px -38px;}
+.charsheet .sheet-skill-item .sheet-skillflag-label.sheet-ty3 {background-position:18px -82px;}
+.charsheet .sheet-skill-item .sheet-skillflag-label.sheet-ty4 {background-position:18px -124px;}
+.charsheet .sheet-skill-item .sheet-skillflag-label.sheet-ty5 {background-position:18px -168px;}
+.charsheet .sheet-skill-item .sheet-skillflag-label.sheet-ty6 {background-position:18px -211px;}
+.charsheet .sheet-skill-item .sheet-skillflag-label.sheet-ty7 {background-position:18px -255px;}
+.charsheet .sheet-skill-item .sheet-skillflag ~ .sheet-skill-data .sheet-effect {display:none;}
+.charsheet .sheet-skill-item .sheet-skillflag:checked ~ .sheet-skill-data .sheet-effect {display:block;}
+.charsheet .sheet-skill-item button {display:block; position:absolute; width:30px; height:30px; left:80px; top:0; opacity:.4;}
+.charsheet .sheet-skill-item button:hover {opacity:1;}
+.charsheet .sheet-skill-item .sheet-skill-data {display:block; position:relative; overflow:hidden;}
+.charsheet .sheet-skill-item .sheet-effect {clear:both; padding-top:5px;}
+.charsheet .sheet-skill-item .sheet-name {width:200px; float:left; margin-right:5px;}
+.charsheet .sheet-skill-item .sheet-subname {width:145px; float:left; margin-right:5px;}
+.charsheet .sheet-skill-item .sheet-type {width:110px; float:left; margin-right:5px;}
+.charsheet .sheet-skill-item .sheet-timing {width:120px; float:left; margin-right:5px;}
+.charsheet .sheet-skill-item .sheet-attack {width:120px; line-height:30px; float:left; font-size:12px; color:#fff; letter-spacing:-0.02em; text-align:right;}
+.charsheet .sheet-skill-item .sheet-attack input {display:inline-block; vertical-align:middle; width:40px;}
+.charsheet .sheet-skill-item .sheet-effect {clear:both; margin-top:5px; padding:5px; border-radius:5px; background:rgba(0,0,0,.5); border:1px solid rgba(255,255,255,.2);}
+.charsheet .sheet-skill-item .sheet-effect textarea {height:40px; background:transparent; border:none; border-bottom:1px solid rgba(255,255,255,.2); border-radius:0; font-size:12px;}
+.charsheet .sheet-skill-item .sheet-effect textarea + textarea {height:80px; border-bottom:none;}
+
+.charsheet .sheet-memobox {position:absolute; bottom:0; left:0; right:0; padding:20px 15px 15px;}
+.charsheet .sheet-memobox textarea {height:257px; resize:none; padding:15px;}
+
+.sheet-rolltemplate-stellaDice {display:block; position:relative; max-width:500px; padding:10px 0; margin:0px auto;}
+.sheet-rolltemplate-stellaDice .sheet-templateBox {display:block; position:relative; padding:3px;}
+.sheet-rolltemplate-stellaDice .sheet-templateBox img {display:block; margin:0 auto;}
+.sheet-rolltemplate-stellaDice .sheet-templateBox *[class^="sheet-acc-"] {display:block; position:absolute; max-width:50%; z-index:1;}
+.sheet-rolltemplate-stellaDice .sheet-templateBox *[class^="sheet-acc-"] img {max-width:100%;}
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-acc-01 {top:0px; left:0;}
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-acc-02 {top:0; right:0;}
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-acc-03 {bottom:0; right:0;}
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-acc-04 {bottom:0; left:0;}
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-name {display:block; position:absolute; left:0; right:0; text-align:center; top:-8px; z-index:2;}
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-name span {display:block; position:absolute; line-height:20px; left:0; right:0; white-space:nowrap; font-size:11px; color:#fff; letter-spacing:-0.03em;}
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-con {display:block; position:relative; border:1px solid #443f3c; z-index:0;}
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-con-inner {display:block; position:relative; padding:10px 15px; box-sizing:border-box; border:1px solid #bdb8b6; min-height:66px; background:url('https://i.imgur.com/aU9gGif.jpg'); color:#fff; font-family:'맑은고딕', 'Malgun Gothic'; font-size:12px; line-height:1.5;}
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-name ~ * .sheet-number {margin-top:-3px;}
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-number {display:block; position:relative; margin-top:-11px; text-align:center; border:none !important; padding:0 !important;}
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-con-inner > * {padding:10px 0; border-top:1px solid rgba(255,255,255,.3);}
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-con-inner > *:first-child,
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-con-inner > .sheet-number + * {border-top:none;}
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-subject {text-align:center; font-size:16px; font-weight:800; text-shadow: 0px 0px 5px rgba(0, 228, 255, 0.63); word-break:keep-all;}
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-subject span {display:block; text-align:center; font-size:.8em;}
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-subject span:before {content:"~";}
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-subject span:after {content:"~";}
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-info {text-align:center;}
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-info > * {display:inline-block; vertical-align:middle;}
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-info > * + *:before {content:"◆ "; opacity:.5; font-size:.5em;}
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-txt {}
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-txt.sheet-bak {margin:0 -15px; text-align:center; padding-left:15px; padding-right:15px; border:none; background:Rgba(0,0,0,.5);}
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-txt.sheet-bak + * {border-top:none;}
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-dice {padding:10px 0; text-align:center;}
+
+/* Dice Style */
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-dice .inlinerollresult{display:inline-block; position:relative; width:30px; height:30px; margin:7px; vertical-align:middle; text-align:center; line-height:30px; vertical-align:middle; background-color:transparent !important; border:0 !important; padding:0 !important; font-weight:bold; cursor:default; font-size:20px; z-index:0;}
+.sheet-rolltemplate-stellaDice .sheet-templateBox .sheet-dice .inlinerollresult:before {content:""; display:block; position:absolute; width:100%; height:100%; transform:rotate(-45deg); border-radius:8px; border:1px solid rgba(255,255,255,.5); background:rgba(0,0,0,.5); z-index:-1;}

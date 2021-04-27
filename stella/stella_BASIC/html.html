@@ -1,0 +1,1178 @@
+
+<div class="sheet-wrap">
+	<input type="radio" name="attr_tab" value="1" class="sheet-bringer" checked/>
+	<span class="sheet-bringer-label"><img src="https://i.imgur.com/lR8cPEJ.png" /></span>
+
+	<input type="radio" name="attr_tab" value="2" class="sheet-sheath" />
+	<span class="sheet-sheath-label"><img src="https://i.imgur.com/eqXBDJ9.png" /></span>
+
+	<input type="checkbox" name="attr_setting" value="1" class="sheet-setting" />
+	<span class="sheet-setting-label"><span></span></span>
+
+	<div class="sheet-character-name">
+		<p><img src="https://i.imgur.com/vy0qsci.png" alt="이름" /></p>
+		<input type="text" name="attr_character_name" />
+	</div>
+
+	<div class="sheet-character-box sheet-bringer-box">
+		<div class="sheet-databox">
+			<div class="sheet-name">&nbsp;</div>
+			<div class="sheet-age">
+				<p><img src="https://i.imgur.com/YJ6kJ81.png" alt="나이" /></p>
+				<input type="text" name="attr_b_age" />
+			</div>
+			<div class="sheet-gender">
+				<p><img src="https://i.imgur.com/vR8nphd.png" alt="성별" /></p>
+				<input type="text" name="attr_b_gender" />
+			</div>
+			<div class="sheet-group">
+				<p><img src="https://i.imgur.com/rk6piJI.png" alt="소속조직" /></p>
+				<input type="text" name="attr_b_group" />
+			</div>
+			<div class="sheet-story">
+				<p><img src="https://i.imgur.com/zGTT851.png" alt="당신의 이야기" /></p>
+				<input type="text" name="attr_b_story" />
+			</div>
+			<div class="sheet-back">
+				<p><img src="https://i.imgur.com/UirFVko.png" alt="희망절망" /></p>
+				<input type="text" name="attr_b_back" />
+			</div>
+			<div class="sheet-wish">
+				<p><img src="https://i.imgur.com/MRK1oza.png" alt="소원" /></p>
+				<input type="text" name="attr_b_wish" />
+			</div>
+			<div class="sheet-emo">
+				<p><img src="https://i.imgur.com/Yw4yD0q.png" alt="성격" /></p>
+				<input type="text" name="attr_b_emo" />
+			</div>
+			<div class="sheet-mark">
+				<p><img src="https://i.imgur.com/PzQayqE.png" alt="꽃의 문장" /></p>
+				<input type="text" name="attr_b_mark" />
+			</div>
+			<div class="sheet-table">
+				<p><img src="https://i.imgur.com/nEWPIpC.png" alt="각종 표" /></p>
+				
+				<input type="hidden" name="attr_b_tit_table" value="">
+				<select name="attr_b_table">
+					<option value="0">-</option>
+					<option value="1">희망 표</option>
+					<option value="2">절망 표</option>
+					<option value="3">당신의 이야기 표</option>
+					<option value="4">당신의 이야기 표(이세계)</option>
+					<option value="5">소원 표</option>
+				</select>
+				<button type="roll" class="sheet-btn-dice" value="&{template:stellaDice}{{name=@{character_name}}}{{title=@{b_tit_table}}}{{table=[[@{b_table}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}"
+				></button>
+			</div>
+
+			<div class="sheet-grade-box">
+				<div class="sheet-top">
+					<img src="https://i.imgur.com/jZJ8yjm.png" alt="왜곡의 공명" />
+				</div>
+				<div class="sheet-mid">
+					<input type="number" name="attr_crick" class="sheet-crick" placeholder="0" />
+					<input type="number" name="attr_grade" class="sheet-grade" placeholder="0" />
+				</div>
+				<div class="sheet-bottom">
+					<img src="https://i.imgur.com/OFaJG05.png" alt="훈장" />
+				</div>
+			</div>
+		</div>
+
+		<div class="sheet-costbox">
+			<div class="sheet-hpmax">
+				<input type="number" name="attr_hp_max" placeholder="0" />
+				<p><img src="https://i.imgur.com/pdUU6RI.png" alt="최대내구력" /></p>
+			</div>
+			<div class="sheet-hp">
+				<input type="number" name="attr_hp" placeholder="0" />
+				<p><img src="https://i.imgur.com/v7SNT4b.png" alt="현재내구력" /></p>
+			</div>
+			<div class="sheet-ac">
+				<input type="number" name="attr_ac" placeholder="0" />
+				<p><img src="https://i.imgur.com/H3pLJKu.png" alt="방어력" /></p>
+			</div>
+			<div class="sheet-charge">
+				<input type="number" name="attr_charge" placeholder="0" min="0" max="10" />
+				<button type="roll" value="/r (@{charge} + ?{라운드 수})d6s
+				&{template:stellaDice}{{name=@{character_name}}}{{title=차지주사위}}"><img src="https://i.imgur.com/yhs9KhP.png" alt="차지주사위" /></button>
+			</div>
+			<div class="sheet-attack">
+				<input type="number" name="attr_attack" placeholder="0" min="0" max="10" />
+				<button type="roll" value="&{template:stellaDice}{{name=@{character_name}}}{{title=공격주사위}}{{counter=[[@{attack}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}"><img src="https://i.imgur.com/pCaPhdP.png" alt="공격주사위" /></button>
+			</div>
+		</div>
+	</div>
+
+	<div class="sheet-character-box sheet-sheath-box">
+		<div class="sheet-databox">
+			<div class="sheet-name">&nbsp;</div>
+			<div class="sheet-age">
+				<p><img src="https://i.imgur.com/YJ6kJ81.png" alt="나이" /></p>
+				<input type="text" name="attr_s_age" />
+			</div>
+			<div class="sheet-gender">
+				<p><img src="https://i.imgur.com/vR8nphd.png" alt="성별" /></p>
+				<input type="text" name="attr_s_gender" />
+			</div>
+			<div class="sheet-group">
+				<p><img src="https://i.imgur.com/rk6piJI.png" alt="소속조직" /></p>
+				<input type="text" name="attr_s_group" />
+			</div>
+			<div class="sheet-story">
+				<p><img src="https://i.imgur.com/zGTT851.png" alt="당신의 이야기" /></p>
+				<input type="text" name="attr_s_story" />
+			</div>
+			<div class="sheet-back">
+				<p><img src="https://i.imgur.com/UirFVko.png" alt="희망절망" /></p>
+				<input type="text" name="attr_s_back" />
+			</div>
+			<div class="sheet-wish">
+				<p><img src="https://i.imgur.com/MRK1oza.png" alt="소원" /></p>
+				<input type="text" name="attr_s_wish" />
+			</div>
+			<div class="sheet-emo">
+				<p><img src="https://i.imgur.com/Yw4yD0q.png" alt="성격" /></p>
+				<input type="text" name="attr_s_emo" />
+			</div>
+			<div class="sheet-mark">
+				<p><img src="https://i.imgur.com/PzQayqE.png" alt="꽃의 문장" /></p>
+				<input type="text" name="attr_s_mark" />
+			</div>
+			<div class="sheet-table">
+				<p><img src="https://i.imgur.com/nEWPIpC.png" alt="각종 표" /></p>
+
+				<input type="hidden" name="attr_s_tit_table" value="">
+				<select name="attr_s_table">
+					<option value="1">희망 표</option>
+					<option value="2">절망 표</option>
+					<option value="3">당신의 이야기 표</option>
+					<option value="4">당신의 이야기 표(이세계)</option>
+					<option value="5">소원 표</option>
+				</select>
+				<button type="roll" class="sheet-btn-dice" value="&{template:stellaDice}{{name=@{character_name}}}{{title=@{s_tit_table}}}{{table=[[@{s_table}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}"></button>
+			</div>
+		</div>
+	</div>
+
+	<div class="sheet-settingbox">
+		<div class="sheet-left">
+			<div class="sheet-title">
+				<img src="https://i.imgur.com/ynKqKL2.png" alt="세트루틴 리스트" />
+			</div>
+			<div class="sheet-setting-list">
+				<div class="sheet-set-item">
+					<input type="checkbox" name="attr_set01_flag" class="sheet-setflag" value="1"/>
+					<span class="sheet-setflag-label sheet-ty1"></span>
+					
+					<button type="roll" value="&{template:stellaDice}{{name=세트루틴}}{{number=[[1]]}}{{title=@{set01_name}}}{{subtitle=@{set01_type}}}{{content=@{set01_effect}}}"><img src="https://i.imgur.com/3vFgJdR.png" alt="다이스" /></button>
+					
+					<div class="sheet-set-data">
+						<input type="checkbox" name="attr_set01_use" class="sheet-use" value="1"/>
+						<span class="sheet-use-label"></span>
+						
+						<div class="sheet-name">
+							<input type="text" name="attr_set01_name" placeholder="명칭" value="" />
+						</div>
+						<div class="sheet-effect">
+							<textarea name="attr_set01_type" placeholder="묘사"></textarea>
+							<textarea name="attr_set01_effect" placeholder="효과"></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="sheet-set-item">
+					<input type="checkbox" name="attr_set02_flag" class="sheet-setflag" value="1"/>
+					<span class="sheet-setflag-label sheet-ty2"></span>
+					
+					<button type="roll" value="&{template:stellaDice}{{name=세트루틴}}{{number=[[2]]}}{{title=@{set02_name}}}{{subtitle=@{set02_type}}}{{content=@{set02_effect}}}"><img src="https://i.imgur.com/3vFgJdR.png" alt="다이스" /></button>
+					
+					<div class="sheet-set-data">
+						<input type="checkbox" name="attr_set02_use" class="sheet-use" value="1"/>
+						<span class="sheet-use-label"></span>
+						
+						<div class="sheet-name">
+							<input type="text" name="attr_set02_name" placeholder="명칭" value="" />
+						</div>
+						<div class="sheet-effect">
+							<textarea name="attr_set02_type" placeholder="묘사"></textarea>
+							<textarea name="attr_set02_effect" placeholder="효과"></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="sheet-set-item">
+					<input type="checkbox" name="attr_set03_flag" class="sheet-setflag" value="1"/>
+					<span class="sheet-setflag-label sheet-ty3"></span>
+					
+					<button type="roll" value="&{template:stellaDice}{{name=세트루틴}}{{number=[[3]]}}{{title=@{set03_name}}}{{subtitle=@{set03_type}}}{{content=@{set03_effect}}}"><img src="https://i.imgur.com/3vFgJdR.png" alt="다이스" /></button>
+					
+					<div class="sheet-set-data">
+						<input type="checkbox" name="attr_set03_use" class="sheet-use" value="1"/>
+						<span class="sheet-use-label"></span>
+						
+						<div class="sheet-name">
+							<input type="text" name="attr_set03_name" placeholder="명칭" value="" />
+						</div>
+						<div class="sheet-effect">
+							<textarea name="attr_set03_type" placeholder="묘사"></textarea>
+							<textarea name="attr_set03_effect" placeholder="효과"></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="sheet-set-item">
+					<input type="checkbox" name="attr_set04_flag" class="sheet-setflag" value="1"/>
+					<span class="sheet-setflag-label sheet-ty4"></span>
+					
+					<button type="roll" value="&{template:stellaDice}{{name=세트루틴}}{{number=[[4]]}}{{title=@{set04_name}}}{{subtitle=@{set04_type}}}{{content=@{set04_effect}}}"><img src="https://i.imgur.com/3vFgJdR.png" alt="다이스" /></button>
+					
+					<div class="sheet-set-data">
+						<input type="checkbox" name="attr_set04_use" class="sheet-use" value="1"/>
+						<span class="sheet-use-label"></span>
+						
+						<div class="sheet-name">
+							<input type="text" name="attr_set04_name" placeholder="명칭" value="" />
+						</div>
+						<div class="sheet-effect">
+							<textarea name="attr_set04_type" placeholder="묘사"></textarea>
+							<textarea name="attr_set04_effect" placeholder="효과"></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="sheet-set-item">
+					<input type="checkbox" name="attr_set05_flag" class="sheet-setflag" value="1"/>
+					<span class="sheet-setflag-label sheet-ty5"></span>
+					
+					<button type="roll" value="&{template:stellaDice}{{name=세트루틴}}{{number=[[5]]}}{{title=@{set05_name}}}{{subtitle=@{set05_type}}}{{content=@{set05_effect}}}"><img src="https://i.imgur.com/3vFgJdR.png" alt="다이스" /></button>
+					
+					<div class="sheet-set-data">
+						<input type="checkbox" name="attr_set05_use" class="sheet-use" value="1"/>
+						<span class="sheet-use-label"></span>
+						
+						<div class="sheet-name">
+							<input type="text" name="attr_set05_name" placeholder="명칭" value="" />
+						</div>
+						<div class="sheet-effect">
+							<textarea name="attr_set05_type" placeholder="묘사"></textarea>
+							<textarea name="attr_set05_effect" placeholder="효과"></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="sheet-set-item">
+					<input type="checkbox" name="attr_set06_flag" class="sheet-setflag" value="1"/>
+					<span class="sheet-setflag-label sheet-ty6"></span>
+					
+					<button type="roll" value="&{template:stellaDice}{{name=세트루틴}}{{number=[[6]]}}{{title=@{set06_name}}}{{subtitle=@{set06_type}}}{{content=@{set06_effect}}}"><img src="https://i.imgur.com/3vFgJdR.png" alt="다이스" /></button>
+					
+					<div class="sheet-set-data">
+						<input type="checkbox" name="attr_set06_use" class="sheet-use" value="1"/>
+						<span class="sheet-use-label"></span>
+						
+						<div class="sheet-name">
+							<input type="text" name="attr_set06_name" placeholder="명칭" value="" />
+						</div>
+						<div class="sheet-effect">
+							<textarea name="attr_set06_type" placeholder="묘사"></textarea>
+							<textarea name="attr_set06_effect" placeholder="효과"></textarea>
+						</div>
+					</div>
+				</div>
+
+				<fieldset class="repeating_setItems">
+					<div class="sheet-set-item">
+						<input type="checkbox" name="attr_set_flag" class="sheet-setflag" value="1"/>
+						<span class="sheet-setflag-label"></span>
+						
+						<button type="roll" value="&{template:stellaDice}{{name=세트루틴}}{{number=[[8]]}}{{title=@{set_name}}}{{subtitle=@{set_type}}}{{content=@{set_effect}}}"><img src="https://i.imgur.com/3vFgJdR.png" alt="다이스" /></button>
+						
+						<div class="sheet-set-data">
+							<input type="checkbox" name="attr_set_use" class="sheet-use" value="1"/>
+							<span class="sheet-use-label"></span>
+							
+							<div class="sheet-name">
+								<input type="text" name="attr_set_name" placeholder="명칭" value="" />
+							</div>
+							<div class="sheet-effect">
+								<textarea name="attr_set_type" placeholder="묘사"></textarea>
+								<textarea name="attr_set_effect" placeholder="효과"></textarea>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+		<div class="sheet-right">
+			<div class="sheet-title">
+				<img src="https://i.imgur.com/lePe7vo.png" alt="액션루틴 리스트" />
+			</div>
+			<div class="sheet-setting-list sheet-action">
+				<div class="sheet-set-item">
+					<input type="checkbox" name="attr_act01_flag" class="sheet-setflag" value="1"/>
+					<span class="sheet-setflag-label sheet-ty1"></span>
+					
+					<button type="roll" value="&{template:stellaDice}{{name=액션루틴}}{{number=[[1]]}}{{title=@{act01_name}}}{{subtitle=@{act01_type}}}{{content=@{act01_effect}}}"><img src="https://i.imgur.com/3vFgJdR.png" alt="다이스" /></button>
+					
+					<div class="sheet-set-data">
+						<input type="checkbox" name="attr_act01_use" class="sheet-use" value="1"/>
+						<span class="sheet-use-label"></span>
+						
+						<div class="sheet-name">
+							<input type="text" name="attr_act01_name" placeholder="명칭" value="" />
+						</div>
+						<div class="sheet-effect">
+							<textarea name="attr_act01_type" placeholder="묘사"></textarea>
+							<textarea name="attr_act01_effect" placeholder="효과"></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="sheet-set-item">
+					<input type="checkbox" name="attr_act02_flag" class="sheet-setflag" value="1"/>
+					<span class="sheet-setflag-label sheet-ty2"></span>
+					
+					<button type="roll" value="&{template:stellaDice}{{name=액션루틴}}{{number=[[2]]}}{{title=@{act02_name}}}{{subtitle=@{act02_type}}}{{content=@{act02_effect}}}"><img src="https://i.imgur.com/3vFgJdR.png" alt="다이스" /></button>
+					
+					<div class="sheet-set-data">
+						<input type="checkbox" name="attr_act02_use" class="sheet-use" value="1"/>
+						<span class="sheet-use-label"></span>
+						
+						<div class="sheet-name">
+							<input type="text" name="attr_act02_name" placeholder="명칭" value="" />
+						</div>
+						<div class="sheet-effect">
+							<textarea name="attr_act02_type" placeholder="묘사"></textarea>
+							<textarea name="attr_act02_effect" placeholder="효과"></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="sheet-set-item">
+					<input type="checkbox" name="attr_act03_flag" class="sheet-setflag" value="1"/>
+					<span class="sheet-setflag-label sheet-ty3"></span>
+					
+					<button type="roll" value="&{template:stellaDice}{{name=액션루틴}}{{number=[[3]]}}{{title=@{act03_name}}}{{subtitle=@{act03_type}}}{{content=@{act03_effect}}}"><img src="https://i.imgur.com/3vFgJdR.png" alt="다이스" /></button>
+					
+					<div class="sheet-set-data">
+						<input type="checkbox" name="attr_act03_use" class="sheet-use" value="1"/>
+						<span class="sheet-use-label"></span>
+						
+						<div class="sheet-name">
+							<input type="text" name="attr_act03_name" placeholder="명칭" value="" />
+						</div>
+						<div class="sheet-effect">
+							<textarea name="attr_act03_type" placeholder="묘사"></textarea>
+							<textarea name="attr_act03_effect" placeholder="효과"></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="sheet-set-item">
+					<input type="checkbox" name="attr_act04_flag" class="sheet-setflag" value="1"/>
+					<span class="sheet-setflag-label sheet-ty4"></span>
+					
+					<button type="roll" value="&{template:stellaDice}{{name=액션루틴}}{{number=[[4]]}}{{title=@{act04_name}}}{{subtitle=@{act04_type}}}{{content=@{act04_effect}}}"><img src="https://i.imgur.com/3vFgJdR.png" alt="다이스" /></button>
+					
+					<div class="sheet-set-data">
+						<input type="checkbox" name="attr_act04_use" class="sheet-use" value="1"/>
+						<span class="sheet-use-label"></span>
+						
+						<div class="sheet-name">
+							<input type="text" name="attr_act04_name" placeholder="명칭" value="" />
+						</div>
+						<div class="sheet-effect">
+							<textarea name="attr_act04_type" placeholder="묘사"></textarea>
+							<textarea name="attr_act04_effect" placeholder="효과"></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="sheet-set-item">
+					<input type="checkbox" name="attr_act05_flag" class="sheet-setflag" value="1"/>
+					<span class="sheet-setflag-label sheet-ty5"></span>
+					
+					<button type="roll" value="&{template:stellaDice}{{name=액션루틴}}{{number=[[5]]}}{{title=@{act05_name}}}{{subtitle=@{act05_type}}}{{content=@{act05_effect}}}"><img src="https://i.imgur.com/3vFgJdR.png" alt="다이스" /></button>
+					
+					<div class="sheet-set-data">
+						<input type="checkbox" name="attr_act05_use" class="sheet-use" value="1"/>
+						<span class="sheet-use-label"></span>
+						
+						<div class="sheet-name">
+							<input type="text" name="attr_act05_name" placeholder="명칭" value="" />
+						</div>
+						<div class="sheet-effect">
+							<textarea name="attr_act05_type" placeholder="묘사"></textarea>
+							<textarea name="attr_act05_effect" placeholder="효과"></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="sheet-set-item">
+					<input type="checkbox" name="attr_act06_flag" class="sheet-setflag" value="1"/>
+					<span class="sheet-setflag-label sheet-ty6"></span>
+					
+					<button type="roll" value="&{template:stellaDice}{{name=액션루틴}}{{number=[[6]]}}{{title=@{act06_name}}}{{subtitle=@{act06_type}}}{{content=@{act06_effect}}}"><img src="https://i.imgur.com/3vFgJdR.png" alt="다이스" /></button>
+					
+					<div class="sheet-set-data">
+						<input type="checkbox" name="attr_act06_use" class="sheet-use" value="1"/>
+						<span class="sheet-use-label"></span>
+						
+						<div class="sheet-name">
+							<input type="text" name="attr_act06_name" placeholder="명칭" value="" />
+						</div>
+						<div class="sheet-effect">
+							<textarea name="attr_act06_type" placeholder="묘사"></textarea>
+							<textarea name="attr_act06_effect" placeholder="효과"></textarea>
+						</div>
+					</div>
+				</div>
+
+				<fieldset class="repeating_actItems">
+					<div class="sheet-set-item">
+						<input type="checkbox" name="attr_act_flag" class="sheet-setflag" value="1"/>
+						<span class="sheet-setflag-label"></span>
+						
+						<button type="roll" value="&{template:stellaDice}{{name=액션루틴}}{{number=[[8]]}}{{title=@{act_name}}}{{subtitle=@{act_type}}}{{content=@{act_effect}}}"><img src="https://i.imgur.com/3vFgJdR.png" alt="다이스" /></button>
+						
+						<div class="sheet-set-data">
+							<input type="checkbox" name="attr_act_use" class="sheet-use" value="1"/>
+							<span class="sheet-use-label"></span>
+							
+							<div class="sheet-name">
+								<input type="text" name="attr_act_name" placeholder="명칭" value="" />
+							</div>
+							<div class="sheet-effect">
+								<textarea name="attr_act_type" placeholder="묘사"></textarea>
+								<textarea name="attr_act_effect" placeholder="효과"></textarea>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+	</div>
+
+	<div class="sheet-skillbox">
+		<div class="sheet-title">
+			<img src="https://i.imgur.com/gGAFxr1.png" alt="스킬 리스트" />
+		</div>
+
+		<div class="sheet-skill-list">
+			<div class="sheet-skill-item">
+				<input type="checkbox" name="attr_skill01_flag" class="sheet-skillflag" value="1"/>
+				<span class="sheet-skillflag-label sheet-ty1"></span>
+				
+				<button type="roll" value="&{template:stellaDice}{{name=@{character_name}}}{{title=@{skill01_name}}}{{sub=@{skill01_subname}}}{{number=[[1]]}}{{timing=@{skill01_timing}}}{{subtitle=@{skill01_view}}}{{effect=@{skill01_effect}}}{{type=@{skill01_type}}}{{counter=[[@{skill01_attack}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}"><img src="https://i.imgur.com/3vFgJdR.png" alt="다이스" /></button>
+				
+				<div class="sheet-skill-data">
+					<div class="sheet-name">
+						<input type="text" name="attr_skill01_name" placeholder="스킬명" value="기사의 소양" readonly />
+					</div>
+					<div class="sheet-subname">
+						<input type="text" name="attr_skill01_subname" placeholder="이명" value="" />
+					</div>
+					<div class="sheet-type">
+						<input type="text" name="attr_skill01_type" placeholder="종류" value="공격/이동" readonly />
+					</div>
+					<div class="sheet-timing">
+						<input type="text" name="attr_skill01_timing" placeholder="사용 타이밍" value="자기 차례" readonly />
+					</div>
+					<div class="sheet-attack">
+						공격다이스 : <input type="number" name="attr_skill01_attack" placeholder="공격다이스" value="2" max="5" min="0"/>
+					</div>
+					<div class="sheet-effect">
+						<textarea name="attr_skill01_view" placeholder="정경묘사" readonly>스텔라나이트의 뛰어난 신체 능력에서 나오는 예리한 공격.</textarea>
+						<textarea name="attr_skill01_effect" placeholder="효과" readonly>"캐릭터 한 명에게 [공격 판정: 주사위 2개]를 행한다"와 "자기가 한 칸 이동한다"를 원하는 순서로 1회씩 할 수 있다.</textarea>
+					</div>
+				</div>
+			</div>
+
+			<div class="sheet-skill-item">
+				<input type="checkbox" name="attr_skill02_flag" class="sheet-skillflag" value="1"/>
+				<span class="sheet-skillflag-label sheet-ty2"></span>
+				
+				<button type="roll" value="&{template:stellaDice}{{name=@{character_name}}}{{title=@{skill02_name}}}{{sub=@{skill02_subname}}}{{number=[[2]]}}{{timing=@{skill02_timing}}}{{subtitle=@{skill02_view}}}{{effect=@{skill02_effect}}}{{type=@{skill02_type}}}{{counter=[[@{skill02_attack}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}"><img src="https://i.imgur.com/3vFgJdR.png" alt="다이스" /></button>
+				
+				<div class="sheet-skill-data">
+					<div class="sheet-name">
+						<input type="text" name="attr_skill02_name" placeholder="스킬명" value="" />
+					</div>
+					<div class="sheet-subname">
+						<input type="text" name="attr_skill02_subname" placeholder="이명" value="" />
+					</div>
+					<div class="sheet-type">
+						<input type="text" name="attr_skill02_type" placeholder="종류" value="" />
+					</div>
+					<div class="sheet-timing">
+						<input type="text" name="attr_skill02_timing" placeholder="사용 타이밍" value="" />
+					</div>
+					<div class="sheet-attack">
+						공격다이스 : <input type="number" name="attr_skill02_attack" placeholder="공격다이스" value="0" max="5" min="0"/>
+					</div>
+					<div class="sheet-effect">
+						<textarea name="attr_skill02_view" placeholder="정경묘사"></textarea>
+						<textarea name="attr_skill02_effect" placeholder="효과"></textarea>
+					</div>
+				</div>
+			</div>
+
+			<div class="sheet-skill-item">
+				<input type="checkbox" name="attr_skill03_flag" class="sheet-skillflag" value="1"/>
+				<span class="sheet-skillflag-label sheet-ty3"></span>
+				
+				<button type="roll" value="&{template:stellaDice}{{name=@{character_name}}}{{title=@{skill03_name}}}{{sub=@{skill03_subname}}}{{number=[[3]]}}{{timing=@{skill03_timing}}}{{subtitle=@{skill03_view}}}{{effect=@{skill03_effect}}}{{type=@{skill03_type}}}{{counter=[[@{skill03_attack}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}"><img src="https://i.imgur.com/3vFgJdR.png" alt="다이스" /></button>
+				
+				<div class="sheet-skill-data">
+					<div class="sheet-name">
+						<input type="text" name="attr_skill03_name" placeholder="스킬명" value="" />
+					</div>
+					<div class="sheet-subname">
+						<input type="text" name="attr_skill03_subname" placeholder="이명" value="" />
+					</div>
+					<div class="sheet-type">
+						<input type="text" name="attr_skill03_type" placeholder="종류" value="" />
+					</div>
+					<div class="sheet-timing">
+						<input type="text" name="attr_skill03_timing" placeholder="사용 타이밍" value="" />
+					</div>
+					<div class="sheet-attack">
+						공격다이스 : <input type="number" name="attr_skill03_attack" placeholder="공격다이스" value="0" max="5" min="0"/>
+					</div>
+					<div class="sheet-effect">
+						<textarea name="attr_skill03_view" placeholder="정경묘사"></textarea>
+						<textarea name="attr_skill03_effect" placeholder="효과"></textarea>
+					</div>
+				</div>
+			</div>
+
+			<div class="sheet-skill-item">
+				<input type="checkbox" name="attr_skill04_flag" class="sheet-skillflag" value="1"/>
+				<span class="sheet-skillflag-label sheet-ty4"></span>
+				
+				<button type="roll" value="&{template:stellaDice}{{name=@{character_name}}}{{title=@{skill04_name}}}{{sub=@{skill04_subname}}}{{number=[[4]]}}{{timing=@{skill04_timing}}}{{subtitle=@{skill04_view}}}{{effect=@{skill04_effect}}}{{type=@{skill04_type}}}{{counter=[[@{skill04_attack}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}"><img src="https://i.imgur.com/3vFgJdR.png" alt="다이스" /></button>
+				
+				<div class="sheet-skill-data">
+					<div class="sheet-name">
+						<input type="text" name="attr_skill04_name" placeholder="스킬명" value="" />
+					</div>
+					<div class="sheet-subname">
+						<input type="text" name="attr_skill04_subname" placeholder="이명" value="" />
+					</div>
+					<div class="sheet-type">
+						<input type="text" name="attr_skill04_type" placeholder="종류" value="" />
+					</div>
+					<div class="sheet-timing">
+						<input type="text" name="attr_skill04_timing" placeholder="사용 타이밍" value="" />
+					</div>
+					<div class="sheet-attack">
+						공격다이스 : <input type="number" name="attr_skill04_attack" placeholder="공격다이스" value="0" max="5" min="0"/>
+					</div>
+					<div class="sheet-effect">
+						<textarea name="attr_skill04_view" placeholder="정경묘사"></textarea>
+						<textarea name="attr_skill04_effect" placeholder="효과"></textarea>
+					</div>
+				</div>
+			</div>
+
+			<div class="sheet-skill-item">
+				<input type="checkbox" name="attr_skill05_flag" class="sheet-skillflag" value="1"/>
+				<span class="sheet-skillflag-label sheet-ty5"></span>
+				
+				<button type="roll" value="&{template:stellaDice}{{name=@{character_name}}}{{title=@{skill05_name}}}{{sub=@{skill05_subname}}}{{number=[[5]]}}{{timing=@{skill05_timing}}}{{subtitle=@{skill05_view}}}{{effect=@{skill05_effect}}}{{type=@{skill05_type}}}{{counter=[[@{skill05_attack}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}"><img src="https://i.imgur.com/3vFgJdR.png" alt="다이스" /></button>
+				
+				<div class="sheet-skill-data">
+					<div class="sheet-name">
+						<input type="text" name="attr_skill05_name" placeholder="스킬명" value="" />
+					</div>
+					<div class="sheet-subname">
+						<input type="text" name="attr_skill05_subname" placeholder="이명" value="" />
+					</div>
+					<div class="sheet-type">
+						<input type="text" name="attr_skill05_type" placeholder="종류" value="" />
+					</div>
+					<div class="sheet-timing">
+						<input type="text" name="attr_skill05_timing" placeholder="사용 타이밍" value="" />
+					</div>
+					<div class="sheet-attack">
+						공격다이스 : <input type="number" name="attr_skill05_attack" placeholder="공격다이스" value="0" max="5" min="0"/>
+					</div>
+					<div class="sheet-effect">
+						<textarea name="attr_skill05_view" placeholder="정경묘사"></textarea>
+						<textarea name="attr_skill05_effect" placeholder="효과"></textarea>
+					</div>
+				</div>
+			</div>
+
+			<div class="sheet-skill-item">
+				<input type="checkbox" name="attr_skill06_flag" class="sheet-skillflag" value="1"/>
+				<span class="sheet-skillflag-label sheet-ty6"></span>
+				
+				<button type="roll" value="&{template:stellaDice}{{name=@{character_name}}}{{title=@{skill06_name}}}{{sub=@{skill06_subname}}}{{number=[[6]]}}{{timing=@{skill06_timing}}}{{subtitle=@{skill06_view}}}{{effect=@{skill06_effect}}}{{type=@{skill06_type}}}{{counter=[[@{skill06_attack}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}"><img src="https://i.imgur.com/3vFgJdR.png" alt="다이스" /></button>
+				
+				<div class="sheet-skill-data">
+					<div class="sheet-name">
+						<input type="text" name="attr_skill06_name" placeholder="스킬명" value="" />
+					</div>
+					<div class="sheet-subname">
+						<input type="text" name="attr_skill06_subname" placeholder="이명" value="" />
+					</div>
+					<div class="sheet-type">
+						<input type="text" name="attr_skill06_type" placeholder="종류" value="" />
+					</div>
+					<div class="sheet-timing">
+						<input type="text" name="attr_skill06_timing" placeholder="사용 타이밍" value="" />
+					</div>
+					<div class="sheet-attack">
+						공격다이스 : <input type="number" name="attr_skill06_attack" placeholder="공격다이스" value="0" max="5" min="0"/>
+					</div>
+					<div class="sheet-effect">
+						<textarea name="attr_skill06_view" placeholder="정경묘사"></textarea>
+						<textarea name="attr_skill06_effect" placeholder="효과"></textarea>
+					</div>
+				</div>
+			</div>
+
+			<div class="sheet-skill-item">
+				<input type="checkbox" name="attr_skill07_flag" class="sheet-skillflag" value="1"/>
+				<span class="sheet-skillflag-label sheet-ty7"></span>
+				<button type="roll" value="&{template:stellaDice}{{name=@{character_name}}}{{title=@{skill07_name}}}{{sub=@{skill07_subname}}}{{number=[[7]]}}{{timing=@{skill07_timing}}}{{subtitle=@{skill07_view}}}{{effect=@{skill07_effect}}}{{type=@{skill07_type}}}{{counter=[[@{skill07_attack}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}"><img src="https://i.imgur.com/3vFgJdR.png" alt="다이스" /></button>
+				
+				<div class="sheet-skill-data">
+					<div class="sheet-name">
+						<input type="text" name="attr_skill07_name" placeholder="스킬명" value="" />
+					</div>
+					<div class="sheet-subname">
+						<input type="text" name="attr_skill07_subname" placeholder="이명" value="" />
+					</div>
+					<div class="sheet-type">
+						<input type="text" name="attr_skill07_type" placeholder="종류" value="" />
+					</div>
+					<div class="sheet-timing">
+						<input type="text" name="attr_skill07_timing" placeholder="사용 타이밍" value="" />
+					</div>
+					<div class="sheet-attack">
+						공격다이스 : <input type="number" name="attr_skill07_attack" placeholder="공격다이스" value="0" max="5" min="0"/>
+					</div>
+					<div class="sheet-effect">
+						<textarea name="attr_skill07_view" placeholder="정경묘사"></textarea>
+						<textarea name="attr_skill07_effect" placeholder="효과"></textarea>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+	<div class="sheet-memobox">
+		<textarea name="attr_memo"></textarea>
+	</div>
+</div>
+
+<script type="text/worker">
+on("change:b_table change:s_table", function() {
+	getAttrs(["b_table","s_table"], function(values) {
+		switch(values.b_table) {
+			case "1": setAttrs({b_tit_table:"희망표"}); break;
+			case "2": setAttrs({b_tit_table:"절망표"}); break;
+			case "3": setAttrs({b_tit_table:"당신의 이야기"}); break;
+			case "4": setAttrs({b_tit_table:"당신의 이야기(이세계)"}); break;
+			case "5": setAttrs({b_tit_table:"소원표"}); break;
+			default: setAttrs({b_tit_table:""}); break;
+		}
+		switch(values.s_table) {
+			case "1": setAttrs({s_tit_table:"희망표"}); break;
+			case "2": setAttrs({s_tit_table:"절망표"}); break;
+			case "3": setAttrs({s_tit_table:"당신의 이야기"}); break;
+			case "4": setAttrs({s_tit_table:"당신의 이야기(이세계)"}); break;
+			case "5": setAttrs({s_tit_table:"소원표"}); break;
+			default: setAttrs({s_tit_table:""}); break;
+		}
+	});
+});
+</script>
+
+
+<rolltemplate class="sheet-rolltemplate-stellaDice">
+	<div class="sheet-templateBox">
+		<div class="sheet-acc-01"><img src="https://i.imgur.com/zyxZFhB.png" alt="" /></div>
+		<div class="sheet-acc-02"><img src="https://i.imgur.com/I0a33OY.png" alt="" /></div>
+		<div class="sheet-acc-03"><img src="https://i.imgur.com/maNdvtz.png" alt="" /></div>
+		<div class="sheet-acc-04"><img src="https://i.imgur.com/ARkKGEs.png" alt="" /></div>
+
+		{{#name}}
+			<div class="sheet-name"><span>{{name}}</span><img src="https://i.imgur.com/P82xBrw.png" alt="" /></div>
+		{{/name}}
+
+		<div class="sheet-con">
+			<div class="sheet-con-inner">
+				{{#number}}
+					<div class="sheet-number">
+						{{#^rollLess() number 8}}
+							<img src="https://i.imgur.com/G1rZ6zg.png" alt="-" />
+						{{/^rollLess() number 8}}
+						{{#rollTotal() number 1}}
+							<img src="https://i.imgur.com/0Zmpfwm.png" alt="1" />
+						{{/rollTotal() number 1}}
+						{{#rollTotal() number 2}}
+							<img src="https://i.imgur.com/3myxZ0l.png" alt="2" />
+						{{/rollTotal() number 2}}
+						{{#rollTotal() number 3}}
+							<img src="https://i.imgur.com/TXzW0Cy.png" alt="3" />
+						{{/rollTotal() number 3}}
+						{{#rollTotal() number 4}}
+							<img src="https://i.imgur.com/rK3Jnsd.png" alt="4" />
+						{{/rollTotal() number 4}}
+						{{#rollTotal() number 5}}
+							<img src="https://i.imgur.com/8tuDmf2.png" alt="5" />
+						{{/rollTotal() number 5}}
+						{{#rollTotal() number 6}}
+							<img src="https://i.imgur.com/p7yYac5.png" alt="6" />
+						{{/rollTotal() number 6}}
+						{{#rollTotal() number 7}}
+							<img src="https://i.imgur.com/YhfPzVM.png" alt="7" />
+						{{/rollTotal() number 7}}
+					</div>
+				{{/number}}
+
+				{{#title}}<div class="sheet-subject">{{title}}{{#sub}} <span>{{sub}}</span>{{/sub}}</div>{{/title}}
+
+				{{#table}}
+					<!-- 각종 표 굴림 영역 -->
+					{{#rollTotal() table 1}}
+						<!-- 희망 표 -->
+						{{#rollLess() roll1 4}}
+							{{#rollTotal() roll2 1}}
+								<div class="sheet-txt sheet-bak">보다 나은 세계</div>
+								<div class="sheet-txt">세계는 더 좋은 곳이 된다. 분명, 계속, 더더욱.</div>
+							{{/rollTotal() roll2 1}}
+							{{#rollTotal() roll2 2}}
+								<div class="sheet-txt sheet-bak">아직은 부족하다</div>
+								<div class="sheet-txt">더 높이, 더 강하게, 당신의 미래는 빛나고 있다.</div>
+							{{/rollTotal() roll2 2}}
+							{{#rollTotal() roll2 3}}
+								<div class="sheet-txt sheet-bak">멈춰서 있을 틈은 없다!</div>
+								<div class="sheet-txt">가만히 있는 시간이 아깝다. 더, 더, 세계를 달려나가자!</div>
+							{{/rollTotal() roll2 3}}
+							{{#rollTotal() roll2 4}}
+								<div class="sheet-txt sheet-bak">내가 지킬게</div>
+								<div class="sheet-txt">내가 꼭 지켜 줄게. 너를 다치게 하는 모든 것으로부터.</div>
+							{{/rollTotal() roll2 4}}
+							{{#rollTotal() roll2 5}}
+								<div class="sheet-txt sheet-bak">미래는 희망으로 가득차 있다</div>
+								<div class="sheet-txt">멋진 일들도 살아 있어야 일어나는 거다!</div>
+							{{/rollTotal() roll2 5}}
+							{{#rollTotal() roll2 6}}
+								<div class="sheet-txt sheet-bak">자애의 손</div>
+								<div class="sheet-txt">닿는 곳까지, 당신은 손을 뻗쳐 나간다.</div>
+							{{/rollTotal() roll2 6}}
+						{{/rollLess() roll1 4}}
+						{{#^rollLess() roll1 4}}
+							{{#rollTotal() roll2 1}}
+								<div class="sheet-txt sheet-bak">이 몸을 희생해서라도</div>
+								<div class="sheet-txt">세계는 그보다 더 반짝이는 곳이야! 그것을 전하기 위해, 당신은 자기희생도 불사한다.</div>
+							{{/rollTotal() roll2 1}}
+							{{#rollTotal() roll2 2}}
+								<div class="sheet-txt sheet-bak">손을 내밀자</div>
+								<div class="sheet-txt">구하고 싶은 것, 돕고 싶은 것, 소중한 것, 무엇 하나 버릴 수 없어!</div>
+							{{/rollTotal() roll2 2}}
+							{{#rollTotal() roll2 3}}
+								<div class="sheet-txt sheet-bak">무한의 사랑</div>
+								<div class="sheet-txt">사랑을 붓자, 이 가슴에서 넘칠 것 같은 이 사랑을!</div>
+							{{/rollTotal() roll2 3}}
+							{{#rollTotal() roll2 4}}
+								<div class="sheet-txt sheet-bak">당신을 왕으로</div>
+								<div class="sheet-txt">절망을 아는 파트너야말로 세계의 왕이 되기에 어울린다. 내가 너를 왕으로 만들겠어!</div>
+							{{/rollTotal() roll2 4}}
+							{{#rollTotal() roll2 5}}
+								<div class="sheet-txt sheet-bak">구세주</div>
+								<div class="sheet-txt">나는 분명 세계를 구할 수 있다. 누구라도 구해내고 말겠어.</div>
+							{{/rollTotal() roll2 5}}
+							{{#rollTotal() roll2 6}}
+								<div class="sheet-txt sheet-bak">이렇게나 좋아하는 사람을 위해!</div>
+								<div class="sheet-txt">세계는 희망으로 가득하다. 당신을 더 행복하게 만들고 싶어!</div>
+							{{/rollTotal() roll2 6}}
+						{{/^rollLess() roll1 4}}
+					{{/rollTotal() table 1}}
+
+					{{#rollTotal() table 2}}
+						<!-- 절망 표 -->
+						{{#rollLess() roll1 4}}
+							{{#rollTotal() roll2 1}}
+								<div class="sheet-txt sheet-bak">부조리한 세계</div>
+								<div class="sheet-txt">당신은 세계가 얼마나 부조리한지를 꺠달았다.</div>
+							{{/rollTotal() roll2 1}}
+							{{#rollTotal() roll2 2}}
+								<div class="sheet-txt sheet-bak">손이 닿지 않아</div>
+								<div class="sheet-txt">당신은 목표가 있었다. 그러나 더 이상 도달할 수 없다.</div>
+							{{/rollTotal() roll2 2}}
+							{{#rollTotal() roll2 3}}
+								<div class="sheet-txt sheet-bak">정체한 세계</div>
+								<div class="sheet-txt">아무리 발악해도 세계는 변치 않는다. 이 절망에서 벗어날 수 없다.</div>
+							{{/rollTotal() roll2 3}}
+							{{#rollTotal() roll2 4}}
+								<div class="sheet-txt sheet-bak">왜 날 괴롭히는 거야</div>
+								<div class="sheet-txt">당신은 학대받으며 살아 왔다. 지켜주는 사람 따위 어디에도 없었다.</div>
+							{{/rollTotal() roll2 4}}
+							{{#rollTotal() roll2 5}}
+								<div class="sheet-txt sheet-bak">과거는 절망으로 가득차 있다</div>
+								<div class="sheet-txt">계속, 계속, 나쁜 일밖에, 괴로운 일밖에 없었다.</div>
+							{{/rollTotal() roll2 5}}
+							{{#rollTotal() roll2 6}}
+								<div class="sheet-txt sheet-bak">주위의 시선</div>
+								<div class="sheet-txt">세계가 당신을 보는 눈은 한 없이 차갑기만 했다.</div>
+							{{/rollTotal() roll2 6}}
+						{{/rollLess() roll1 4}}
+						{{#^rollLess() roll1 4}}
+							{{#rollTotal() roll2 1}}
+								<div class="sheet-txt sheet-bak">큰 사고</div>
+								<div class="sheet-txt">그것은 참혹한 사고였다. 아니, '사고'라는 말로는 부족한 사건이었다.</div>
+							{{/rollTotal() roll2 1}}
+							{{#rollTotal() roll2 2}}
+								<div class="sheet-txt sheet-bak">눈 앞에서 사라진 것</div>
+								<div class="sheet-txt">당신의 눈 앞에서 소중한 것이 사라지고 말았다.</div>
+							{{/rollTotal() roll2 2}}
+							{{#rollTotal() roll2 3}}
+								<div class="sheet-txt sheet-bak">상실</div>
+								<div class="sheet-txt">무엇보다도 소중하게 여기던 것이 이제 다시는 돌아올 수 없게 되었다.</div>
+							{{/rollTotal() roll2 3}}
+							{{#rollTotal() roll2 4}}
+								<div class="sheet-txt sheet-bak">몰락</div>
+								<div class="sheet-txt">당신인지 당신의 부모인지가 몰락하여, 당신은 한때의 영화를 순식간에 잃었다.</div>
+							{{/rollTotal() roll2 4}}
+							{{#rollTotal() roll2 5}}
+								<div class="sheet-txt sheet-bak">구원은 없어</div>
+								<div class="sheet-txt">바닥의 바닥까지 떨어져 버렸다. 이제 나를 구해 줄 사람은 아무도...</div>
+							{{/rollTotal() roll2 5}}
+							{{#rollTotal() roll2 6}}
+								<div class="sheet-txt sheet-bak">가짜였다</div>
+								<div class="sheet-txt">당신은 행복했다. 그렇다고 생각했다. 그러나 그것은 모두 지어낸 것이다. 당신은 속고 있었다.</div>
+							{{/rollTotal() roll2 6}}
+						{{/^rollLess() roll1 4}}
+					{{/rollTotal() table 2}}
+
+					{{#rollTotal() table 3}}
+						<!-- 당신의 이야기 표 -->
+						{{#rollBetween() roll1 1 2}}
+							{{#rollTotal() roll2 1}}
+								<div class="sheet-txt sheet-bak">숙련된 스텔라나이트</div>
+								<div class="sheet-txt">당신은 이미 여러 차례 스텔라배틀에서 승리한 숙련자이다. [<b>훈장</b>: 3~7 중 원하는 만큼] [<b>왜곡의 공명</b>: 1]</div>
+							{{/rollTotal() roll2 1}}
+							{{#rollTotal() roll2 2}}
+								<div class="sheet-txt sheet-bak">권력자의 혈육</div>
+								<div class="sheet-txt">통치정부나 기업의 상층부, 또는 학원조직의 운영자의 집안 사람이다.</div>
+							{{/rollTotal() roll2 2}}
+							{{#rollTotal() roll2 3}}
+								<div class="sheet-txt sheet-bak">천재</div>
+								<div class="sheet-txt">당신은 의심의 여지 없는 천재다.</div>
+							{{/rollTotal() roll2 3}}
+							{{#rollTotal() roll2 4}}
+								<div class="sheet-txt sheet-bak">천애고아</div>
+								<div class="sheet-txt">당신은 양친이 없다. 속성배양조에서 만들어진 존재인지, 아니면 부모를 잃었는지...</div>
+							{{/rollTotal() roll2 4}}
+							{{#rollTotal() roll2 5}}
+								<div class="sheet-txt sheet-bak">구원의 손</div>
+								<div class="sheet-txt">당신은 누군가에게 도움을 받았다. 그렇기 때문에 여기에 있다.</div>
+							{{/rollTotal() roll2 5}}
+							{{#rollTotal() roll2 6}}
+								<div class="sheet-txt sheet-bak">결손</div>
+								<div class="sheet-txt">마음, 몸, 소중한 보물, 가족... 당신은 무언가를 잃었고, 그 상태로 지금에 이르렀다.</div>
+							{{/rollTotal() roll2 6}}
+						{{/rollBetween() roll1 1 2}}
+						{{#rollBetween() roll1 3 4}}
+							{{#rollTotal() roll2 1}}
+								<div class="sheet-txt sheet-bak">소중한 것</div>
+								<div class="sheet-txt">소중하게 여기는 것이 있다.</div>
+							{{/rollTotal() roll2 1}}
+							{{#rollTotal() roll2 2}}
+								<div class="sheet-txt sheet-bak">마음에 드는 장소</div>
+								<div class="sheet-txt">좋아하는 장소가 있다. 비밀 장소일 수도 있고, 누군가와 함께 오고 싶은 곳일 수도 있다.</div>
+							{{/rollTotal() roll2 2}}
+							{{#rollTotal() roll2 3}}
+								<div class="sheet-txt sheet-bak">하인 또는 전사</div>
+								<div class="sheet-txt">당신이 복종해야 할 상대가 있다. 금전적 관계일 수도, 집안 관계일 수도, 은혜 때문일 수도 있다.</div>
+							{{/rollTotal() roll2 3}}
+							{{#rollTotal() roll2 4}}
+								<div class="sheet-txt sheet-bak">파트너 정말 좋아!!!!</div>
+								<div class="sheet-txt">나는─! 내 파트너가─!! 정말 좋아─!!!</div>
+							{{/rollTotal() roll2 4}}
+							{{#rollTotal() roll2 5}}
+								<div class="sheet-txt sheet-bak">이상형이 되자</div>
+								<div class="sheet-txt">파트너의 이상형이 되기 위하여! 전진!</div>
+							{{/rollTotal() roll2 5}}
+							{{#rollTotal() roll2 6}}
+								<div class="sheet-txt sheet-bak">세계에 대한 불만</div>
+								<div class="sheet-txt">이 세계는 이대로 안 된다! 내가 뜯어고치고야 말겠다!</div>
+							{{/rollTotal() roll2 6}}
+						{{/rollBetween() roll1 3 4}}
+						{{#rollBetween() roll1 5 6}}
+							{{#rollTotal() roll2 1}}
+								<div class="sheet-txt sheet-bak">정체</div>
+								<div class="sheet-txt">모든 것이 시시하다. 충실감이 없다. 움직이지 않는 세계에 염증을 느끼고 있다.</div>
+							{{/rollTotal() roll2 1}}
+							{{#rollTotal() roll2 2}}
+								<div class="sheet-txt sheet-bak">소원의 노예</div>
+								<div class="sheet-txt">소원을 이루기 위해서라면 수단과 방법을 가리지 않는다. 내가 살아있는 것은 순전히 소원 때문이다.</div>
+							{{/rollTotal() roll2 2}}
+							{{#rollTotal() roll2 3}}
+								<div class="sheet-txt sheet-bak">범죄자의 자식</div>
+								<div class="sheet-txt">당신의 부모는 모종의 범죄를 저질렀다. 그 악명이 자식인 당신에게까지도 영향을 미치고 있다.</div>
+							{{/rollTotal() roll2 3}}
+							{{#rollTotal() roll2 4}}
+								<div class="sheet-txt sheet-bak">탐구자</div>
+								<div class="sheet-txt">세계의 진실, 감춰진 진실, 만물의 진리... 당신이 추구하는 것은 끝이 없다.</div>
+							{{/rollTotal() roll2 4}}
+							{{#rollTotal() roll2 5}}
+								<div class="sheet-txt sheet-bak">정의</div>
+								<div class="sheet-txt">곤경에 처한 사람을 두고 보지 못한다. 악을 용서하지 못한다. 이 가슴에 깃든 정의의 마음이.</div>
+							{{/rollTotal() roll2 5}}
+							{{#rollTotal() roll2 6}}
+								<div class="sheet-txt sheet-bak">서약학생회(커베넌터)</div>
+								<div class="sheet-txt">당신은 한 번 이클립스가 되어 토벌당했다. 그러나 소원을 포기할 수 없었다. 그래서 당신은 이 가면을 쓰고 계속 싸우고 있다. [<b>훈장</b>: 0~5 중 원하는 만큼] [<b>왜곡의 공명</b>: 0~2 중 원하는 만큼]</div>
+							{{/rollTotal() roll2 6}}
+						{{/rollBetween() roll1 5 6}}
+					{{/rollTotal() table 3}}
+
+					{{#rollTotal() table 4}}
+						<!-- 당신의 이야기 표 (이세계) -->
+						{{#rollBetween() roll1 1 2}}
+							{{#rollTotal() roll2 1}}
+								<div class="sheet-txt sheet-bak">끝없는 전장</div>
+								<div class="sheet-txt">당신은 끝이 보이지 않는 전쟁의 세계에서 이곳에 흘러들어왔다.</div>
+							{{/rollTotal() roll2 1}}
+							{{#rollTotal() roll2 2}}
+								<div class="sheet-txt sheet-bak">멸망의 세계</div>
+								<div class="sheet-txt">전쟁이나 환경오염으로 세계가 멸망한 후 당신은 이곳에 흘러들어왔다.</div>
+							{{/rollTotal() roll2 2}}
+							{{#rollTotal() roll2 3}}
+								<div class="sheet-txt sheet-bak">수인들의 세계</div>
+								<div class="sheet-txt">당신의 세계에서는 짐승의 특징을 갖춘 자를 사람이라 불렀다. 당신이 가진 짐승의 특징은 아셀트레이에서는 기이하게 비친다.</div>
+							{{/rollTotal() roll2 3}}
+							{{#rollTotal() roll2 4}}
+								<div class="sheet-txt sheet-bak">모형정원의 세계</div>
+								<div class="sheet-txt">도시인지 저택인지, 당신이 살고 있던 세계는 극도로 작았다. 가족과 보내는 평화로운 나날은 그저 영원히 계속될 줄 알았지만 어느날 돌연 무너졌고, 당신은 이곳에 도착했다.</div>
+							{{/rollTotal() roll2 4}}
+							{{#rollTotal() roll2 5}}
+								<div class="sheet-txt sheet-bak">영원한 미궁의 세계</div>
+								<div class="sheet-txt">무한히 계속되는 미궁의 세계. 모두가 그곳을 여향하는 탐험가였다. 구세계의 유산이라고도 불리는 그 별은 통째로 미궁이었고, 언제나 가슴 뛰는 모험이 벌어졌다. 그런 나날은 어느날 갑자기 끝나 버렸다. 당신이 도착한 곳은 아셀트레이라 불리는 지금의 세계였다.</div>
+							{{/rollTotal() roll2 5}}
+							{{#rollTotal() roll2 6}}
+								<div class="sheet-txt sheet-bak">순례자의 세계</div>
+								<div class="sheet-txt">광대한 자연과 석조 도시의 세계, 누구나 여행자인 세계에서 당신은 이곳에 도착했다. 아셀트레이의 문명은 당신에게 완전히 생소한 것일터이다. 그러나 광대한 옛 세계로 돌아가는 것은 이제 불가능하다.</div>
+							{{/rollTotal() roll2 6}}
+						{{/rollBetween() roll1 1 2}}
+						{{#rollBetween() roll1 3 4}}
+							{{#rollTotal() roll2 1}}
+								<div class="sheet-txt sheet-bak">영원의 빅토리아나</div>
+								<div class="sheet-txt">200년에 걸쳐 빅토리아 여왕의 통치가 계속되는, 햇볕이 들지 않는 세계. 증기 안개가 거리를 덮고 밤이면 밤마다 괴인들이 활보하는 세계에서 당신은 이곳에 흘러들어왔다. 당신 처지에서 보면 이곳은 평화로운 세계다. 그러나 소원이 부딪치는 스텔라배틀의 화려함은 옛 시절을 떠올리게 만든다.</div>
+							{{/rollTotal() roll2 1}}
+							{{#rollTotal() roll2 2}}
+								<div class="sheet-txt sheet-bak">검격난무의 세계</div>
+								<div class="sheet-txt">우리라면 전국시대라고 부를 극동의 어느 시대가 영원히 반복되는 세계에서 당신은 이곳에 흘러들어왔다. 당신의 칼솜씨는 스텔라배틀에서 승리하는 데에도 충분히 유용할 것이다.</div>
+							{{/rollTotal() roll2 2}}
+							{{#rollTotal() roll2 3}}
+								<div class="sheet-txt sheet-bak">어스름 덮인 숲의 세계</div>
+								<div class="sheet-txt">끝도 시작도 없는 광대한 숲에 감싸인 세계. 안개와 바람, 짐승의 울음이 가득한 세계에서, 당신은 이곳에 흘러들어왔다. 당신의 모습을 보고 엘프니 요정이니 하는 사람도 있을지 모르지만, 당신과는 관계 없는 얘기다.</div>
+							{{/rollTotal() roll2 3}}
+							{{#rollTotal() roll2 4}}
+								<div class="sheet-txt sheet-bak">인류의 갈림길</div>
+								<div class="sheet-txt">이곳도, 고향도, 크게 다르지는 않다. 당신의 고향은 지구보다 먼 저 로아테라에게 멸망한 세계. 당신은 주저 없이 이곳을 지킨다. 그러나 그보다도, 당신에게 이곳에서 만난 유일한 파트너 쪽이 더 소중하다.</div>
+							{{/rollTotal() roll2 4}}
+							{{#rollTotal() roll2 5}}
+								<div class="sheet-txt sheet-bak">인형극의 세계</div>
+								<div class="sheet-txt">당신의 세계에 사는 사람들은 원래 인간이라 불렸던 듯하다. 모든 주민이 인형이 되어버린 당신의 고향은 나름대로 평화롭고 즐거운 곳이었다. 그러나 그런 나날도 갑자기 끝나버렸다. 인형 그 자체인 당신의 모습은 때때로 기이하게 여겨지기도 한다.</div>
+							{{/rollTotal() roll2 5}}
+							{{#rollTotal() roll2 6}}
+								<div class="sheet-txt sheet-bak">괴수침략의 세계</div>
+								<div class="sheet-txt">거대한 괴수들과 맞서 싸우는 투쟁의 나날이 반복되던 세계에서 당신은 이곳에 흘러들어왔다. 그리고 이 세계에서 온 침략자 로아테라가 아셀트레이를 노리고 있다는 것의 의미를, 당신은 매우 잘 알고 있다.</div>
+							{{/rollTotal() roll2 6}}
+						{{/rollBetween() roll1 3 4}}
+						{{#rollBetween() roll1 5 6}}
+							{{#rollTotal() roll2 1}}
+								<div class="sheet-txt sheet-bak">증기기관의 세계</div>
+								<div class="sheet-txt">증기가관기술이 이상하게 발달한 세계에서 당신은 이곳에 흘러들어왔다. 아셀트레이의 기술 수준은 고향과 비슷한 것 같지만, 당신 처지에서 보면 사용 방법을 도무지 알 수 없는 신비한 기술이다.</div>
+							{{/rollTotal() roll2 1}}
+							{{#rollTotal() roll2 2}}
+								<div class="sheet-txt sheet-bak">극동환상의 세계</div>
+								<div class="sheet-txt">옛 지구의 일본에 전해지는 오니나 요괴가 실제로 존재하는 세계에서 당신은 이곳에 흘러들어왔다. 당신 처지에서 보면 스텔라나이트들의 힘은 그런 괴물들을 웃도는 듯하다.</div>
+							{{/rollTotal() roll2 2}}
+							{{#rollTotal() roll2 3}}
+								<div class="sheet-txt sheet-bak">이단생물의 세계</div>
+								<div class="sheet-txt">바이오 기술이건 교배의 결과이건, 다양한 생물과 인류가 융합한 세계에서 당신은 이곳에 도착했다. 당신은 새나 짐승, 해양생물의 특징을 가지고 있다.</div>
+							{{/rollTotal() roll2 3}}
+							{{#rollTotal() roll2 4}}
+								<div class="sheet-txt sheet-bak">이단과학의 세계</div>
+								<div class="sheet-txt">사람과 기계의 경계, 개인과 전체의 구별이 모호한 세계에서 당신은 이곳에 흘러들어왔다.</div>
+							{{/rollTotal() roll2 4}}
+							{{#rollTotal() roll2 5}}
+								<div class="sheet-txt sheet-bak">선진과학의 세계</div>
+								<div class="sheet-txt">지구의 과학이 끝없이 뻗어나간 세계에서 당신은 이곳에 흘러들어왔다. 아름답게 다듬어진 도시, 행인들이 모두 웃고 있는, 만인이 행복했던 세계에서.</div>
+							{{/rollTotal() roll2 5}}
+							{{#rollTotal() roll2 6}}
+								<div class="sheet-txt sheet-bak">초목의 세계</div>
+								<div class="sheet-txt">식물과 사람이 융합한 세계에서, 당신은 이곳에 흘러들어왔다. 당신은 몸이 통째로 식물 그 자체일 수도 있고, 눈구멍에서 꽃이 피어나 있을 수도 있다.</div>
+							{{/rollTotal() roll2 6}}
+						{{/rollBetween() roll1 5 6}}
+					{{/rollTotal() table 4}}
+
+					{{#rollTotal() table 5}}
+						<!-- 소원표 -->
+						{{#rollBetween() roll1 1 2}}
+							{{#rollTotal() roll2 1}}
+								<div class="sheet-txt sheet-bak">미지를 개척하는 자</div>
+								<div class="sheet-txt">누구도 모르는 세계, 누구도 모르는 우주, 누구도 모르는 별로 여행을 떠난다! 【소원의 단계: 4】</div>
+							{{/rollTotal() roll2 1}}
+							{{#rollTotal() roll2 2}}
+								<div class="sheet-txt sheet-bak">고향의 부흥</div>
+								<div class="sheet-txt">당신의 고향인 이세계, 또는 지구를 부흥시킨다. 【소원의 단계: 4 (한 층 규모)】 【소원의 단계: 7 (행성 규모)】</div>
+							{{/rollTotal() roll2 2}}
+							{{#rollTotal() roll2 3}}
+								<div class="sheet-txt sheet-bak">복수</div>
+								<div class="sheet-txt">이 원한만은 꼭 갚아야 한다. 【소원의 단계: 2】</div>
+							{{/rollTotal() roll2 3}}
+							{{#rollTotal() roll2 4}}
+								<div class="sheet-txt sheet-bak">누구에게도 상처받지 않는 세계</div>
+								<div class="sheet-txt">누구도 우리들을 건드릴 수 없는 세계였으면 좋겠다. 【소원의 단계: 7 (행성 규모)】 【소원의 단계: 8 (우주 규모)】</div>
+							{{/rollTotal() roll2 4}}
+							{{#rollTotal() roll2 5}}
+								<div class="sheet-txt sheet-bak">빛나는 세계</div>
+								<div class="sheet-txt">세계를 밝고 즐겁게 하고 싶다. 내가 빛이 되는 거야! 【소원의 단계: 3 (자기의 변화)】 【소원의 단계: 7 (세계 자체의 변혁)】</div>
+							{{/rollTotal() roll2 5}}
+							{{#rollTotal() roll2 6}}
+								<div class="sheet-txt sheet-bak">맛있는 밥</div>
+								<div class="sheet-txt">둘이서 맛있는 밥을 먹자. 그게 세상에서 가장 소중한 거야! 【소원의 단계: 2 (맛있는 밥을 먹을 뿐)】 【소원의 단계: 4 (둘이서 처한 상황의 개선)】</div>
+							{{/rollTotal() roll2 6}}
+						{{/rollBetween() roll1 1 2}}
+						{{#rollBetween() roll1 3 4}}
+							{{#rollTotal() roll2 1}}
+								<div class="sheet-txt sheet-bak">나만의 것</div>
+								<div class="sheet-txt">독차지하고 싶은 것이 있다. 【소원의 단계: 5】</div>
+							{{/rollTotal() roll2 1}}
+							{{#rollTotal() roll2 2}}
+								<div class="sheet-txt sheet-bak">새로운 존재</div>
+								<div class="sheet-txt">이 세계에 존재하지 않지만 존재했으면 하는 것. 나는 그것을 원한다. 【소원의 단계: 6】</div>
+							{{/rollTotal() roll2 2}}
+							{{#rollTotal() roll2 3}}
+								<div class="sheet-txt sheet-bak">갖고 싶은 것</div>
+								<div class="sheet-txt">꼭 손에 넣고 싶은 것이 있다. 【소원의 단계: 1~10 (갖고 싶은 것의 종류에 따라 변동)】</div>
+							{{/rollTotal() roll2 3}}
+							{{#rollTotal() roll2 4}}
+								<div class="sheet-txt sheet-bak">되찾는다</div>
+								<div class="sheet-txt">당신들은 무언가를 빼앗겼다. 그것을 되찾는 것이 유일한 소원이다. 【소원의 단계: 4 (노력에 따라서는 언젠가 손에 닿는 것)】 【소원의 단계: 6 (보통은 되찾을 수 없는 것)】</div>
+							{{/rollTotal() roll2 4}}
+							{{#rollTotal() roll2 5}}
+								<div class="sheet-txt sheet-bak">누구보다 높고 먼 곳으로!</div>
+								<div class="sheet-txt">새장 같은 이곳이 싫어. 하늘 끝까지 갈 거야! 【소원의 단계: 4 (적층도시 내)】 【소원의 단계: 8 (우주 규모)】</div>
+							{{/rollTotal() roll2 5}}
+							{{#rollTotal() roll2 6}}
+								<div class="sheet-txt sheet-bak">당신을 자유롭게</div>
+								<div class="sheet-txt">소중한 것이 붙잡혀 묶여 있다. 내 힘으로 그것을 풀어주고 싶다! 【소원의 단계: 4 (노력에 따라서는 언젠가 이루어질 수 있는 것)】 【소원의 단계: 6 (기적의 영역)】</div>
+							{{/rollTotal() roll2 6}}
+						{{/rollBetween() roll1 3 4}}
+						{{#rollBetween() roll1 5 6}}
+							{{#rollTotal() roll2 1}}
+								<div class="sheet-txt sheet-bak">누군가의 웃는 얼굴</div>
+								<div class="sheet-txt">누군가의 웃는 얼굴을 위해 싸워도 안 될 것 없잖아? 【소원의 단계: 1~6 (대상의 상태에 따라 변동)】</div>
+							{{/rollTotal() roll2 1}}
+							{{#rollTotal() roll2 2}}
+								<div class="sheet-txt sheet-bak">다른 세계로</div>
+								<div class="sheet-txt">이 세계 말고, 다른 세계에 가고 싶다. 【소원의 단계: 7 (행성 규모)】 【소원의 단계: 8 (우주 규모)】</div>
+							{{/rollTotal() roll2 2}}
+							{{#rollTotal() roll2 3}}
+								<div class="sheet-txt sheet-bak">세계에 평화를</div>
+								<div class="sheet-txt">평온한 나날을 원해도 될 정도의 세계로, 이 세계를 평온이 가득한 곳으로... 【소원의 단계: 7】</div>
+							{{/rollTotal() roll2 3}}
+							{{#rollTotal() roll2 4}}
+								<div class="sheet-txt sheet-bak">세계를 다시 태어나게 한다</div>
+								<div class="sheet-txt">세계를 근본부터 다시 만들 필요가 있다! 【소원의 단계: 8】</div>
+							{{/rollTotal() roll2 4}}
+							{{#rollTotal() roll2 5}}
+								<div class="sheet-txt sheet-bak">세계를 정복한다</div>
+								<div class="sheet-txt">우리들이 왕이 될거야! 【소원의 단계: 7】</div>
+							{{/rollTotal() roll2 5}}
+							{{#rollTotal() roll2 6}}
+								<div class="sheet-txt sheet-bak">계약자</div>
+								<div class="sheet-txt">당신의 소원은 이미 이루어졌다. 지금도 싸우고 있는 이유는 여신과 계약을 했기 때문이다. 【소원의 단계: 없음】</div>
+							{{/rollTotal() roll2 6}}
+						{{/rollBetween() roll1 5 6}}
+					{{/rollTotal() table 5}}
+				{{/table}}
+
+				{{#counter}}
+					{{#^rollTotal() counter 0}}
+					<!-- 차지 주사위 -->
+					<div class="sheet-dice">
+						{{roll1}}
+						{{#rollGreater() counter 1}}
+							{{roll2}}
+						{{/rollGreater() counter 1}}
+						{{#rollGreater() counter 2}}
+							{{roll3}}
+						{{/rollGreater() counter 2}}
+						{{#rollGreater() counter 3}}
+							{{roll4}}
+						{{/rollGreater() counter 3}}
+						{{#rollGreater() counter 4}}
+							{{roll5}}
+						{{/rollGreater() counter 4}}
+						{{#rollGreater() counter 5}}
+							{{roll6}}
+						{{/rollGreater() counter 5}}
+						{{#rollGreater() counter 6}}
+							{{roll7}}
+						{{/rollGreater() counter 6}}
+						{{#rollGreater() counter 7}}
+							{{roll8}}
+						{{/rollGreater() counter 7}}
+						{{#rollGreater() counter 8}}
+							{{roll9}}
+						{{/rollGreater() counter 8}}
+						{{#rollGreater() counter 9}}
+							{{roll10}}
+						{{/rollGreater() counter 9}}
+					</div>
+					{{/^rollTotal() counter 0}}
+				{{/counter}}
+
+				{{#dice}}
+					<div class="sheet-dice">
+						{{dice}}
+					</div>
+				{{/dice}}
+
+				{{#timing}}
+					<div class="sheet-info">
+						{{#type}}
+							<span>{{type}}</span>
+						{{/type}}
+							<span>{{timing}}</span>
+					</div>
+				{{/timing}}
+				{{#^timing}}
+					{{#type}}
+						<span>{{type}}</span>
+					{{/type}}
+				{{/^timing}}
+
+				{{#subtitle}}
+					<div class="sheet-txt sheet-bak">
+						{{subtitle}}
+					</div>
+				{{/subtitle}}
+				{{#content}}
+					<div class="sheet-txt">
+						{{content}}
+					</div>
+				{{/content}}
+				{{#effect}}
+					<div class="sheet-txt">
+						{{effect}}
+					</div>
+				{{/effect}}
+			</div>
+		</div>
+	</div>
+</rolltemplate>
+
+

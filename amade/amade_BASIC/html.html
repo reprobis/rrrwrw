@@ -1,0 +1,1951 @@
+
+<input type="hidden" name="attr_theme_red" class="sheet-theme-red" value="1" />
+<input type="hidden" name="attr_theme_blue" class="sheet-theme-blue" value="" />
+<input type="hidden" name="attr_theme_green" class="sheet-theme-green" value="" />
+<input type="hidden" name="attr_theme_white" class="sheet-theme-white" value="" />
+<input type="hidden" name="attr_theme_black" class="sheet-theme-black" value="" />
+
+<div class="sheet-amadeus-wrap">
+	<div class="sheet-amadeus-header">
+		
+		<div class="sheet-level-reborn">
+			<div class="sheet-level">
+				Lv.<input type="text" name="attr_level" />
+			</div>
+			<div class="sheet-theme">
+				<select name="attr_property">
+					<option value="0">적</option>
+					<option value="1">청</option>
+					<option value="2">녹</option>
+					<option value="3">백</option>
+					<option value="4">흑</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="sheet-character-profile">
+			<div class="sheet-prof-name">
+				<input type="text" name="attr_character_name" title="캐릭터 이름" placeholder="캐릭터 이름"/>
+			</div>
+			<div class="sheet-prof-job">
+				<span class="sheet-label">직업</span>
+
+				<input type="text" name="attr_job" title="직업" />
+
+				<span class="sheet-prof-job-use">
+					<input type="checkbox" name="attr_job_use" />
+					<span class="sheet-check-label"></span>
+				</span>
+			</div>
+
+			<div class="sheet-prof-age">
+				<input type="text" name="attr_age" title="나이" />세
+			</div>
+			<div class="sheet-prof-gender">
+				<input type="text" name="attr_gender" title="성별" placeholder="성별" />
+			</div>
+
+			<div class="sheet-prof-god">
+				<span class="sheet-label">신군</span>
+				<input type="text" name="attr_god" />
+			</div>
+
+			<div class="sheet-prof-pgod">
+				<span class="sheet-label">부모신</span>
+				<input type="text" name="attr_pgod" />
+			</div>
+
+			<div class="sheet-prof-back">
+				<span class="sheet-label">배경</span>
+				<input type="text" name="attr_back" />
+
+				<span class="sheet-label">예언</span>
+				<input type="text" name="attr_prophecy" />
+
+				<span class="sheet-label">관계</span>
+				<input type="text" name="attr_situation" />
+			</div>
+		</div>
+
+		<div class="sheet-character-cost">
+			<span class="sheet-cost-item">
+				<span class="sheet-label">소지금</span>
+				<input type="text" name="attr_cost" placeholder="0"/>
+				<span class="sheet-cost-first">
+					<span class="sheet-label">최초 소지금</span>
+					<input type="text" name="attr_cost_first" placeholder="0" readonly/>
+				</span>
+			</span>
+			<span class="sheet-cost-item">
+				<span class="sheet-label">경험</span>
+				<input type="text" name="attr_exp" placeholder="0"/>
+			</span>
+		</div>
+	</div>
+
+	<div class="sheet-function-box">
+		<div class="sheet-function-item">
+			<input type="hidden" name="attr_function_01" value="무용" />
+			<input type="hidden" name="attr_function_01_dice" value="0" />
+			<div class="sheet-function-title">
+				<button type="roll" value="&{template:AmadeFuncDice}{{subject=무용}}{{name=@{character_name}}}{{rank=@{function_01_rank}}}{{dice=[[@{function_01_dice}]]}}{{mod=@{function_01_mode}}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{target=[[@{target}]]}}{{target_mod=[[@{target}-(@{function_01_mode})]]}}">무용</button>
+			</div>
+			<div class="sheet-function-rank">
+				<select name="attr_function_01_rank">
+					<option value="" selected>-</option>
+					<option value="S">S</option>
+					<option value="A">A</option>
+					<option value="B">B</option>
+					<option value="C">C</option>
+					<option value="D">D</option>
+				</select>
+			</div>
+			<div class="sheet-function-mode">
+				<select name="attr_function_01_mode">
+					<option value="+3">+++</option>
+					<option value="+2">++</option>
+					<option value="+1">+</option>
+					<option value="0" selected> </option>
+					<option value="-1">-</option>
+					<option value="-2">--</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="sheet-function-item">
+			<input type="hidden" name="attr_function_02" value="기술" />
+			<input type="hidden" name="attr_function_02_dice" value="0" />
+			<div class="sheet-function-title">
+				<button type="roll" value="&{template:AmadeFuncDice}{{subject=기술}}{{name=@{character_name}}}{{rank=@{function_02_rank}}}{{dice=[[@{function_02_dice}]]}}{{mod=@{function_02_mode}}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{target=[[@{target}]]}}{{target_mod=[[@{target}-(@{function_02_mode})]]}}">기술</button>
+			</div>
+			<div class="sheet-function-rank">
+				<select name="attr_function_02_rank">
+					<option value="" selected>-</option>
+					<option value="S">S</option>
+					<option value="A">A</option>
+					<option value="B">B</option>
+					<option value="C">C</option>
+					<option value="D">D</option>
+				</select>
+			</div>
+			<div class="sheet-function-mode">
+				<select name="attr_function_02_mode">
+					<option value="+3">+++</option>
+					<option value="+2">++</option>
+					<option value="+1">+</option>
+					<option value="0" selected> </option>
+					<option value="-1">-</option>
+					<option value="-2">--</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="sheet-function-item">
+			<input type="hidden" name="attr_function_03" value="두뇌" />
+			<input type="hidden" name="attr_function_03_dice" value="0" />
+			<div class="sheet-function-title">
+				<button type="roll" value="&{template:AmadeFuncDice}{{subject=두뇌}}{{name=@{character_name}}}{{rank=@{function_03_rank}}}{{dice=[[@{function_03_dice}]]}}{{mod=@{function_03_mode}}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{target=[[@{target}]]}}{{target_mod=[[@{target}-(@{function_03_mode})]]}}">두뇌</button>
+			</div>
+			<div class="sheet-function-rank">
+				<select name="attr_function_03_rank">
+					<option value="" selected>-</option>
+					<option value="S">S</option>
+					<option value="A">A</option>
+					<option value="B">B</option>
+					<option value="C">C</option>
+					<option value="D">D</option>
+				</select>
+			</div>
+			<div class="sheet-function-mode">
+				<select name="attr_function_03_mode">
+					<option value="+3">+++</option>
+					<option value="+2">++</option>
+					<option value="+1">+</option>
+					<option value="0" selected> </option>
+					<option value="-1">-</option>
+					<option value="-2">--</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="sheet-function-item">
+			<input type="hidden" name="attr_function_04" value="영력" />
+			<input type="hidden" name="attr_function_04_dice" value="0" />
+			<div class="sheet-function-title">
+				<button type="roll" value="&{template:AmadeFuncDice}{{subject=영력}}{{name=@{character_name}}}{{rank=@{function_04_rank}}}{{dice=[[@{function_04_dice}]]}}{{mod=@{function_04_mode}}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{target=[[@{target}]]}}{{target_mod=[[@{target}-(@{function_04_mode})]]}}">영력</button>
+			</div>
+			<div class="sheet-function-rank">
+				<select name="attr_function_04_rank">
+					<option value="" selected>-</option>
+					<option value="S">S</option>
+					<option value="A">A</option>
+					<option value="B">B</option>
+					<option value="C">C</option>
+					<option value="D">D</option>
+				</select>
+			</div>
+			<div class="sheet-function-mode">
+				<select name="attr_function_04_mode">
+					<option value="+3">+++</option>
+					<option value="+2">++</option>
+					<option value="+1">+</option>
+					<option value="0" selected> </option>
+					<option value="-1">-</option>
+					<option value="-2">--</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="sheet-function-item">
+			<input type="hidden" name="attr_function_05" value="애정" />
+			<input type="hidden" name="attr_function_05_dice" value="0" />
+			<div class="sheet-function-title">
+				<button type="roll" value="&{template:AmadeFuncDice}{{subject=애정}}{{name=@{character_name}}}{{rank=@{function_05_rank}}}{{dice=[[@{function_05_dice}]]}}{{mod=@{function_05_mode}}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{target=[[@{target}]]}}{{target_mod=[[@{target}-(@{function_05_mode})]]}}">애정</button>
+			</div>
+			<div class="sheet-function-rank">
+				<select name="attr_function_05_rank">
+					<option value="" selected>-</option>
+					<option value="S">S</option>
+					<option value="A">A</option>
+					<option value="B">B</option>
+					<option value="C">C</option>
+					<option value="D">D</option>
+				</select>
+			</div>
+			<div class="sheet-function-mode">
+				<select name="attr_function_05_mode">
+					<option value="+3">+++</option>
+					<option value="+2">++</option>
+					<option value="+1">+</option>
+					<option value="0" selected> </option>
+					<option value="-1">-</option>
+					<option value="-2">--</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="sheet-function-item">
+			<input type="hidden" name="attr_function_06" value="일상" />
+			<input type="hidden" name="attr_function_06_dice" value="0" />
+			<div class="sheet-function-title">
+				<button type="roll" value="&{template:AmadeFuncDice}{{subject=일상}}{{name=@{character_name}}}{{rank=@{function_06_rank}}}{{dice=[[@{function_06_dice}]]}}{{mod=@{function_06_mode}}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{target=[[@{target}]]}}{{target_mod=[[@{target}-(@{function_06_mode})]]}}">일상</button>
+			</div>
+			<div class="sheet-function-rank">
+				<select name="attr_function_06_rank">
+					<option value="" selected>-</option>
+					<option value="S">S</option>
+					<option value="A">A</option>
+					<option value="B">B</option>
+					<option value="C">C</option>
+					<option value="D">D</option>
+				</select>
+			</div>
+			<div class="sheet-function-mode">
+				<select name="attr_function_06_mode">
+					<option value="+3">+++</option>
+					<option value="+2">++</option>
+					<option value="+1">+</option>
+					<option value="0" selected> </option>
+					<option value="-1">-</option>
+					<option value="-2">--</option>
+				</select>
+			</div>
+		</div>
+	</div>
+
+	<div class="sheet-layout-wrap">
+
+		<div class="sheet-layout-left">
+			<div class="sheet-tit-box">
+				<div class="sheet-tit">
+					<span>목표치</span>
+				</div>
+				<div class="sheet-con sheet-type-a">
+					<input type="text" name="attr_target" value="4" />
+				</div>
+			</div>
+			
+			<div class="sheet-gift-header sheet-table-header">
+				<div class="sheet-gift-name">기프트명</div>
+				<div class="sheet-gift-type">분류</div>
+				<div class="sheet-gift-cond">조건</div>
+				<div class="sheet-gift-call">판정</div>
+			</div>
+
+			<div>
+				<div class="sheet-gift-item">
+					<input type="checkbox" class="sheet-flag" name="attr_gift_01_flag" value="1"/>
+					<input type="checkbox" class="sheet-disable" name="attr_gift_01_disable" value="1"/>
+					<div class="sheet-inner">
+						<div class="sheet-gift-control">
+							<button class="sheet-old-roll" type="roll" value="&{template:AmadeDice}{{subject=@{gift_01_name}}}{{name=@{character_name}}}{{target=[[@{target}]]}}{{type=@{gift_01_type}}}{{cond=@{gift_01_cond}}}{{status=@{gift_01_call}}}{{tag=@{gift_01_tag}}}{{effect=@{gift_01_effect}}}{{status_rank=@{gift_01_rank}}}{{status_mod=@{gift_01_mod}}}{{dice=[[@{gift_01_dice}]]}}{{target_mod=[[@{target}-(@{gift_01_mod})]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}"></button>
+						</div>
+						<div class="sheet-gift-name">
+							<input type="text" name="attr_gift_01_name" value="부모신의 은혜" />
+						</div>
+						<div class="sheet-gift-type">
+							<select name="attr_gift_01_type">
+								<option value="보조" selected>보조</option>
+								<option value="상주">상주</option>
+								<option value="술식">술식</option>
+							</select>
+						</div>
+						<div class="sheet-gift-cond">
+							<input type="text" name="attr_gift_01_cond" value="※" />
+						</div>
+						<div class="sheet-gift-call">
+							<input type="hidden" name="attr_gift_01_rank" value="" />
+							<input type="hidden" name="attr_gift_01_dice" value="" />
+							<input type="hidden" name="attr_gift_01_mod" value="" />
+							<input type="text" name="attr_gift_01_call" value="" />
+						</div>
+						<div class="sheet-gift-other">
+							<div class="sheet-gift-other-item">
+								<div class="sheet-label">태그</div>
+								<input type="text" name="attr_gift_01_tag" value="" />
+							</div>
+							<div class="sheet-gift-other-item">
+								<div class="sheet-label">효과</div>
+								<textarea name="attr_gift_01_effect">자신이 판정을 행할 때, 그 판정이 자신의 부모신과 관계된 것이라면, 판정 주사위 굴리기 전에 사용할 수 있다. 자신의 【생명력】을 2점 소비할 때마다, 그 판정의 달성치가 1점 상승한다. 단, 【생명력】은 [자신의 속성과 같은 영역의 각성단계×2]점까지 소비할 수 있다.	</textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="sheet-gift-item">
+					<input type="checkbox" class="sheet-flag" name="attr_gift_02_flag" value="1"/>
+					<input type="checkbox" class="sheet-disable" name="attr_gift_02_disable" value="1"/>
+					<div class="sheet-inner">
+						<div class="sheet-gift-control">
+							<button class="sheet-old-roll" type="roll" value="&{template:AmadeDice}{{subject=@{gift_02_name}}}{{name=@{character_name}}}{{target=[[@{target}]]}}{{type=@{gift_02_type}}}{{cond=@{gift_02_cond}}}{{status=@{gift_02_call}}}{{tag=@{gift_02_tag}}}{{effect=@{gift_02_effect}}}{{status_rank=@{gift_02_rank}}}{{status_mod=@{gift_02_mod}}}{{dice=[[@{gift_02_dice}]]}}{{target_mod=[[@{target}-(@{gift_02_mod})]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}"></button>
+						</div>
+						<div class="sheet-gift-name">
+							<input type="text" name="attr_gift_02_name" value="" />
+						</div>
+						<div class="sheet-gift-type">
+							<select name="attr_gift_02_type">
+								<option value="보조" selected>보조</option>
+								<option value="상주">상주</option>
+								<option value="술식">술식</option>
+							</select>
+						</div>
+						<div class="sheet-gift-cond">
+							<input type="text" name="attr_gift_02_cond" value="" />
+						</div>
+						<div class="sheet-gift-call">
+							<input type="hidden" name="attr_gift_02_rank" value="" />
+							<input type="hidden" name="attr_gift_02_dice" value="" />
+							<input type="hidden" name="attr_gift_02_mod" value="" />
+							<input type="text" name="attr_gift_02_call" value="" />
+						</div>
+						<div class="sheet-gift-other">
+							<div class="sheet-gift-other-item">
+								<div class="sheet-label">태그</div>
+								<input type="text" name="attr_gift_02_tag" value="" />
+							</div>
+							<div class="sheet-gift-other-item">
+								<div class="sheet-label">효과</div>
+								<textarea name="attr_gift_02_effect"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="sheet-gift-item">
+					<input type="checkbox" class="sheet-flag" name="attr_gift_03_flag" value="1"/>
+					<input type="checkbox" class="sheet-disable" name="attr_gift_03_disable" value="1"/>
+					<div class="sheet-inner">
+						<div class="sheet-gift-control">
+							<button class="sheet-old-roll" type="roll" value="&{template:AmadeDice}{{subject=@{gift_03_name}}}{{name=@{character_name}}}{{target=[[@{target}]]}}{{type=@{gift_03_type}}}{{cond=@{gift_03_cond}}}{{status=@{gift_03_call}}}{{tag=@{gift_03_tag}}}{{effect=@{gift_03_effect}}}{{status_rank=@{gift_03_rank}}}{{status_mod=@{gift_03_mod}}}{{dice=[[@{gift_03_dice}]]}}{{target_mod=[[@{target}-(@{gift_03_mod})]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}"></button>
+						</div>
+						<div class="sheet-gift-name">
+							<input type="text" name="attr_gift_03_name" value="" />
+						</div>
+						<div class="sheet-gift-type">
+							<select name="attr_gift_03_type">
+								<option value="보조" selected>보조</option>
+								<option value="상주">상주</option>
+								<option value="술식">술식</option>
+							</select>
+						</div>
+						<div class="sheet-gift-cond">
+							<input type="text" name="attr_gift_03_cond" value="" />
+						</div>
+						<div class="sheet-gift-call">
+							<input type="hidden" name="attr_gift_03_rank" value="" />
+							<input type="hidden" name="attr_gift_03_dice" value="" />
+							<input type="hidden" name="attr_gift_03_mod" value="" />
+							<input type="text" name="attr_gift_03_call" value="" />
+						</div>
+						<div class="sheet-gift-other">
+							<div class="sheet-gift-other-item">
+								<div class="sheet-label">태그</div>
+								<input type="text" name="attr_gift_03_tag" value="" />
+							</div>
+							<div class="sheet-gift-other-item">
+								<div class="sheet-label">효과</div>
+								<textarea name="attr_gift_03_effect"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="sheet-gift-item">
+					<input type="checkbox" class="sheet-flag" name="attr_gift_04_flag" value="1"/>
+					<input type="checkbox" class="sheet-disable" name="attr_gift_04_disable" value="1"/>
+					<div class="sheet-inner">
+						<div class="sheet-gift-control">
+							<button class="sheet-old-roll" type="roll" value="&{template:AmadeDice}{{subject=@{gift_04_name}}}{{name=@{character_name}}}{{target=[[@{target}]]}}{{type=@{gift_04_type}}}{{cond=@{gift_04_cond}}}{{status=@{gift_04_call}}}{{tag=@{gift_04_tag}}}{{effect=@{gift_04_effect}}}{{status_rank=@{gift_04_rank}}}{{status_mod=@{gift_04_mod}}}{{dice=[[@{gift_04_dice}]]}}{{target_mod=[[@{target}-(@{gift_04_mod})]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}"></button>
+						</div>
+						<div class="sheet-gift-name">
+							<input type="text" name="attr_gift_04_name" value="" />
+						</div>
+						<div class="sheet-gift-type">
+							<select name="attr_gift_04_type">
+								<option value="보조" selected>보조</option>
+								<option value="상주">상주</option>
+								<option value="술식">술식</option>
+							</select>
+						</div>
+						<div class="sheet-gift-cond">
+							<input type="text" name="attr_gift_04_cond" value="" />
+						</div>
+						<div class="sheet-gift-call">
+							<input type="hidden" name="attr_gift_04_rank" value="" />
+							<input type="hidden" name="attr_gift_04_dice" value="" />
+							<input type="hidden" name="attr_gift_04_mod" value="" />
+							<input type="text" name="attr_gift_04_call" value="" />
+						</div>
+						<div class="sheet-gift-other">
+							<div class="sheet-gift-other-item">
+								<div class="sheet-label">태그</div>
+								<input type="text" name="attr_gift_04_tag" value="" />
+							</div>
+							<div class="sheet-gift-other-item">
+								<div class="sheet-label">효과</div>
+								<textarea name="attr_gift_04_effect"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="sheet-gift-item">
+					<input type="checkbox" class="sheet-flag" name="attr_gift_05_flag" value="1"/>
+					<input type="checkbox" class="sheet-disable" name="attr_gift_05_disable" value="1"/>
+					<div class="sheet-inner">
+						<div class="sheet-gift-control">
+							<button class="sheet-old-roll" type="roll" value="&{template:AmadeDice}{{subject=@{gift_05_name}}}{{name=@{character_name}}}{{target=[[@{target}]]}}{{type=@{gift_05_type}}}{{cond=@{gift_05_cond}}}{{status=@{gift_05_call}}}{{tag=@{gift_05_tag}}}{{effect=@{gift_05_effect}}}{{status_rank=@{gift_05_rank}}}{{status_mod=@{gift_05_mod}}}{{dice=[[@{gift_05_dice}]]}}{{target_mod=[[@{target}-(@{gift_05_mod})]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}"></button>
+						</div>
+						<div class="sheet-gift-name">
+							<input type="text" name="attr_gift_05_name" value="" />
+						</div>
+						<div class="sheet-gift-type">
+							<select name="attr_gift_05_type">
+								<option value="보조" selected>보조</option>
+								<option value="상주">상주</option>
+								<option value="술식">술식</option>
+							</select>
+						</div>
+						<div class="sheet-gift-cond">
+							<input type="text" name="attr_gift_05_cond" value="" />
+						</div>
+						<div class="sheet-gift-call">
+							<input type="hidden" name="attr_gift_05_rank" value="" />
+							<input type="hidden" name="attr_gift_05_dice" value="" />
+							<input type="hidden" name="attr_gift_05_mod" value="" />
+							<input type="text" name="attr_gift_05_call" value="" />
+						</div>
+						<div class="sheet-gift-other">
+							<div class="sheet-gift-other-item">
+								<div class="sheet-label">태그</div>
+								<input type="text" name="attr_gift_05_tag" value="" />
+							</div>
+							<div class="sheet-gift-other-item">
+								<div class="sheet-label">효과</div>
+								<textarea name="attr_gift_05_effect"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="sheet-gift-item">
+					<input type="checkbox" class="sheet-flag" name="attr_gift_06_flag" value="1"/>
+					<input type="checkbox" class="sheet-disable" name="attr_gift_06_disable" value="1"/>
+					<div class="sheet-inner">
+						<div class="sheet-gift-control">
+							<button class="sheet-old-roll" type="roll" value="&{template:AmadeDice}{{subject=@{gift_06_name}}}{{name=@{character_name}}}{{target=[[@{target}]]}}{{type=@{gift_06_type}}}{{cond=@{gift_06_cond}}}{{status=@{gift_06_call}}}{{tag=@{gift_06_tag}}}{{effect=@{gift_06_effect}}}{{status_rank=@{gift_06_rank}}}{{status_mod=@{gift_06_mod}}}{{dice=[[@{gift_06_dice}]]}}{{target_mod=[[@{target}-(@{gift_06_mod})]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}"></button>
+						</div>
+						<div class="sheet-gift-name">
+							<input type="text" name="attr_gift_06_name" value="" />
+						</div>
+						<div class="sheet-gift-type">
+							<select name="attr_gift_06_type">
+								<option value="보조" selected>보조</option>
+								<option value="상주">상주</option>
+								<option value="술식">술식</option>
+							</select>
+						</div>
+						<div class="sheet-gift-cond">
+							<input type="text" name="attr_gift_06_cond" value="" />
+						</div>
+						<div class="sheet-gift-call">
+							<input type="hidden" name="attr_gift_06_rank" value="" />
+							<input type="hidden" name="attr_gift_06_dice" value="" />
+							<input type="hidden" name="attr_gift_06_mod" value="" />
+							<input type="text" name="attr_gift_06_call" value="" />
+						</div>
+						<div class="sheet-gift-other">
+							<div class="sheet-gift-other-item">
+								<div class="sheet-label">태그</div>
+								<input type="text" name="attr_gift_06_tag" value="" />
+							</div>
+							<div class="sheet-gift-other-item">
+								<div class="sheet-label">효과</div>
+								<textarea name="attr_gift_06_effect"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="sheet-gift-item">
+					<input type="checkbox" class="sheet-flag" name="attr_gift_07_flag" value="1"/>
+					<input type="checkbox" class="sheet-disable" name="attr_gift_07_disable" value="1"/>
+					<div class="sheet-inner">
+						<div class="sheet-gift-control">
+							<button class="sheet-old-roll" type="roll" value="&{template:AmadeDice}{{subject=@{gift_07_name}}}{{name=@{character_name}}}{{target=[[@{target}]]}}{{type=@{gift_07_type}}}{{cond=@{gift_07_cond}}}{{status=@{gift_07_call}}}{{tag=@{gift_07_tag}}}{{effect=@{gift_07_effect}}}{{status_rank=@{gift_07_rank}}}{{status_mod=@{gift_07_mod}}}{{dice=[[@{gift_07_dice}]]}}{{target_mod=[[@{target}-(@{gift_07_mod})]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}"></button>
+						</div>
+						<div class="sheet-gift-name">
+							<input type="text" name="attr_gift_07_name" value="" />
+						</div>
+						<div class="sheet-gift-type">
+							<select name="attr_gift_07_type">
+								<option value="보조" selected>보조</option>
+								<option value="상주">상주</option>
+								<option value="술식">술식</option>
+							</select>
+						</div>
+						<div class="sheet-gift-cond">
+							<input type="text" name="attr_gift_07_cond" value="" />
+						</div>
+						<div class="sheet-gift-call">
+							<input type="hidden" name="attr_gift_07_rank" value="" />
+							<input type="hidden" name="attr_gift_07_dice" value="" />
+							<input type="hidden" name="attr_gift_07_mod" value="" />
+							<input type="text" name="attr_gift_07_call" value="" />
+						</div>
+						<div class="sheet-gift-other">
+							<div class="sheet-gift-other-item">
+								<div class="sheet-label">태그</div>
+								<input type="text" name="attr_gift_07_tag" value="" />
+							</div>
+							<div class="sheet-gift-other-item">
+								<div class="sheet-label">효과</div>
+								<textarea name="attr_gift_07_effect"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="sheet-gift-item">
+					<input type="checkbox" class="sheet-flag" name="attr_gift_08_flag" value="1"/>
+					<input type="checkbox" class="sheet-disable" name="attr_gift_08_disable" value="1"/>
+					<div class="sheet-inner">
+						<div class="sheet-gift-control">
+							<button class="sheet-old-roll" type="roll" value="&{template:AmadeDice}{{subject=@{gift_08_name}}}{{name=@{character_name}}}{{target=[[@{target}]]}}{{type=@{gift_08_type}}}{{cond=@{gift_08_cond}}}{{status=@{gift_08_call}}}{{tag=@{gift_08_tag}}}{{effect=@{gift_08_effect}}}{{status_rank=@{gift_08_rank}}}{{status_mod=@{gift_08_mod}}}{{dice=[[@{gift_08_dice}]]}}{{target_mod=[[@{target}-(@{gift_08_mod})]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}"></button>
+						</div>
+						<div class="sheet-gift-name">
+							<input type="text" name="attr_gift_08_name" value="" />
+						</div>
+						<div class="sheet-gift-type">
+							<select name="attr_gift_08_type">
+								<option value="보조" selected>보조</option>
+								<option value="상주">상주</option>
+								<option value="술식">술식</option>
+							</select>
+						</div>
+						<div class="sheet-gift-cond">
+							<input type="text" name="attr_gift_08_cond" value="" />
+						</div>
+						<div class="sheet-gift-call">
+							<input type="hidden" name="attr_gift_08_rank" value="" />
+							<input type="hidden" name="attr_gift_08_dice" value="" />
+							<input type="hidden" name="attr_gift_08_mod" value="" />
+							<input type="text" name="attr_gift_08_call" value="" />
+						</div>
+						<div class="sheet-gift-other">
+							<div class="sheet-gift-other-item">
+								<div class="sheet-label">태그</div>
+								<input type="text" name="attr_gift_08_tag" value="" />
+							</div>
+							<div class="sheet-gift-other-item">
+								<div class="sheet-label">효과</div>
+								<textarea name="attr_gift_08_effect"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="sheet-gift-item">
+					<input type="checkbox" class="sheet-flag" name="attr_gift_09_flag" value="1"/>
+					<input type="checkbox" class="sheet-disable" name="attr_gift_09_disable" value="1"/>
+					<div class="sheet-inner">
+						<div class="sheet-gift-control">
+							<button class="sheet-old-roll" type="roll" value="&{template:AmadeDice}{{subject=@{gift_09_name}}}{{name=@{character_name}}}{{target=[[@{target}]]}}{{type=@{gift_09_type}}}{{cond=@{gift_09_cond}}}{{status=@{gift_09_call}}}{{tag=@{gift_09_tag}}}{{effect=@{gift_09_effect}}}{{status_rank=@{gift_09_rank}}}{{status_mod=@{gift_09_mod}}}{{dice=[[@{gift_09_dice}]]}}{{target_mod=[[@{target}-(@{gift_09_mod})]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}"></button>
+						</div>
+						<div class="sheet-gift-name">
+							<input type="text" name="attr_gift_09_name" value="" />
+						</div>
+						<div class="sheet-gift-type">
+							<select name="attr_gift_09_type">
+								<option value="보조" selected>보조</option>
+								<option value="상주">상주</option>
+								<option value="술식">술식</option>
+							</select>
+						</div>
+						<div class="sheet-gift-cond">
+							<input type="text" name="attr_gift_09_cond" value="" />
+						</div>
+						<div class="sheet-gift-call">
+							<input type="hidden" name="attr_gift_09_rank" value="" />
+							<input type="hidden" name="attr_gift_09_dice" value="" />
+							<input type="hidden" name="attr_gift_09_mod" value="" />
+							<input type="text" name="attr_gift_09_call" value="" />
+						</div>
+						<div class="sheet-gift-other">
+							<div class="sheet-gift-other-item">
+								<div class="sheet-label">태그</div>
+								<input type="text" name="attr_gift_09_tag" value="" />
+							</div>
+							<div class="sheet-gift-other-item">
+								<div class="sheet-label">효과</div>
+								<textarea name="attr_gift_09_effect"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="sheet-gift-item">
+					<input type="checkbox" class="sheet-flag" name="attr_gift_10_flag" value="1"/>
+					<input type="checkbox" class="sheet-disable" name="attr_gift_10_disable" value="1"/>
+					<div class="sheet-inner">
+						<div class="sheet-gift-control">
+							<button class="sheet-old-roll" type="roll" value="&{template:AmadeDice}{{subject=@{gift_10_name}}}{{name=@{character_name}}}{{target=[[@{target}]]}}{{type=@{gift_10_type}}}{{cond=@{gift_10_cond}}}{{status=@{gift_10_call}}}{{tag=@{gift_10_tag}}}{{effect=@{gift_10_effect}}}{{status_rank=@{gift_10_rank}}}{{status_mod=@{gift_10_mod}}}{{dice=[[@{gift_10_dice}]]}}{{target_mod=[[@{target}-(@{gift_10_mod})]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}"></button>
+						</div>
+						<div class="sheet-gift-name">
+							<input type="text" name="attr_gift_10_name" value="" />
+						</div>
+						<div class="sheet-gift-type">
+							<select name="attr_gift_10_type">
+								<option value="보조" selected>보조</option>
+								<option value="상주">상주</option>
+								<option value="술식">술식</option>
+							</select>
+						</div>
+						<div class="sheet-gift-cond">
+							<input type="text" name="attr_gift_10_cond" value="" />
+						</div>
+						<div class="sheet-gift-call">
+							<input type="hidden" name="attr_gift_10_rank" value="" />
+							<input type="hidden" name="attr_gift_10_dice" value="" />
+							<input type="hidden" name="attr_gift_10_mod" value="" />
+							<input type="text" name="attr_gift_10_call" value="" />
+						</div>
+						<div class="sheet-gift-other">
+							<div class="sheet-gift-other-item">
+								<div class="sheet-label">태그</div>
+								<input type="text" name="attr_gift_10_tag" value="" />
+							</div>
+							<div class="sheet-gift-other-item">
+								<div class="sheet-label">효과</div>
+								<textarea name="attr_gift_10_effect"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<fieldset class="repeating_gifts">
+					<div class="sheet-gift-item">
+						<input type="checkbox" class="sheet-flag" name="attr_gift_re_flag" value="1"/>
+						<input type="checkbox" class="sheet-disable" name="attr_gift_re_disable" value="1"/>
+						<div class="sheet-inner">
+							<div class="sheet-gift-control">
+								<button class="sheet-old-roll" type="roll" value="&{template:AmadeDice}{{subject=@{gift_re_name}}}{{name=@{character_name}}}{{target=[[@{target}]]}}{{type=@{gift_re_type}}}{{cond=@{gift_re_cond}}}{{status=@{gift_re_call}}}{{tag=@{gift_re_tag}}}{{effect=@{gift_re_effect}}}{{status_rank=@{gift_re_rank}}}{{status_mod=@{gift_re_mod}}}{{dice=[[@{gift_re_dice}]]}}{{target_mod=[[@{target}-(@{gift_re_mod})]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}"></button>
+							</div>
+							<div class="sheet-gift-name">
+								<input type="text" name="attr_gift_re_name" value="" />
+							</div>
+							<div class="sheet-gift-type">
+								<select name="attr_gift_re_type">
+									<option value="보조" selected>보조</option>
+									<option value="상주">상주</option>
+									<option value="술식">술식</option>
+								</select>
+							</div>
+							<div class="sheet-gift-cond">
+								<input type="text" name="attr_gift_re_cond" value="" />
+							</div>
+							<div class="sheet-gift-call">
+								<input type="hidden" name="attr_gift_re_rank" value="" />
+							<input type="hidden" name="attr_gift_re_dice" value="" />
+							<input type="hidden" name="attr_gift_re_mod" value="" />
+							<input type="text" name="attr_gift_re_call" value="" />
+							</div>
+							<div class="sheet-gift-other">
+								<div class="sheet-gift-other-item">
+									<div class="sheet-label">태그</div>
+									<input type="text" name="attr_gift_re_tag" value="" />
+								</div>
+								<div class="sheet-gift-other-item">
+									<div class="sheet-label">효과</div>
+									<textarea name="attr_gift_re_effect"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+
+		<div class="sheet-layout-right">
+			<div class="sheet-tit-box">
+				<div class="sheet-tit">
+					<span>생명력</span>
+				</div>
+				<div class="sheet-con sheet-type-b">
+					<div class="sheet-hp-item">
+						<span>최대치</span>
+						<input type="text" name="attr_hp_max" value="0" readonly/>
+					</div>
+					<div class="sheet-hp-item">
+						<span>활력</span>
+						<input type="text" name="attr_hp_add" value="0" />
+					</div>
+					<div class="sheet-hp-item sheet-on">
+						<span>현재치</span>
+						<input type="text" name="attr_hp" value="0" />
+						<input type="text" name="attr_hp_now" value="0" class="sheet-small" readonly/>
+					</div>
+				</div>
+			</div>
+
+			<div class="sheet-status-box">
+				<div class="sheet-status-item">
+					<input type="checkbox" name="attr_status_01" value="1" />
+					<span class="sheet-status-label">절망</span>
+				</div>
+				<div class="sheet-status-item">
+					<input type="checkbox" name="attr_status_02" value="1" />
+					<span class="sheet-status-label">분노</span>
+				</div>
+				<div class="sheet-status-item">
+					<input type="checkbox" name="attr_status_03" value="1" />
+					<span class="sheet-status-label">겁쟁이</span>
+					<span class="sheet-count">
+						<input type="text" name="attr_status_03_count" value="" />
+					</span>
+				</div>
+				<div class="sheet-status-item">
+					<input type="checkbox" name="attr_status_04" value="1" />
+					<span class="sheet-status-label">타락</span>
+				</div>
+				<div class="sheet-status-item">
+					<input type="checkbox" name="attr_status_05" value="1" />
+					<span class="sheet-status-label">치욕</span>
+				</div>
+				<div class="sheet-status-item">
+					<input type="checkbox" name="attr_status_06" value="1" />
+					<span class="sheet-status-label">중상</span>
+					<span class="sheet-count">
+						<input type="text" name="attr_status_06_count" value="" />
+					</span>
+				</div>
+			</div>
+
+			<div class="sheet-inventory">
+				<div class="sheet-tit">아이템</div>
+				<div class="sheet-inven-header sheet-table-header">
+					<div class="sheet-inven-name">아이템명</div>
+					<div class="sheet-inven-type">분류</div>
+					<div class="sheet-inven-spec">위력</div>
+					<div class="sheet-inven-effec">특수기능</div>
+				</div>
+
+				<div class="sheet-inven-item">
+					<input type="checkbox" class="sheet-disable" name="attr_inven_01_disable" value="1">
+					<div class="sheet-inner">
+						<div class="sheet-inven-name">
+							<input type="text" name="attr_inven_01_name" value="" />
+						</div>
+						<div class="sheet-inven-type">
+							<select name="attr_inven_01_type">
+								<option value="상비">상비</option>
+								<option value="소비">소비</option>
+							</select>
+						</div>
+						<div class="sheet-inven-spec">
+							<input type="text" name="attr_inven_01_spec" value="0" />
+							<button class="sheet-old-roll" type="roll" value="&{template:AmadeSmallDice}{{subject=@{inven_01_name}}}{{name=@{character_name}}}{{roll=[[@{inven_01_spec}]]}}{{type=@{inven_01_type}}}{{effect=@{inven_01_effect}}}"></button>
+						</div>
+						<div class="sheet-inven-effec">
+							<input type="text" name="attr_inven_01_effect" value="" />
+						</div>
+					</div>
+				</div>
+				<div class="sheet-inven-item">
+					<input type="checkbox" class="sheet-disable" name="attr_inven_02_disable" value="1">
+					<div class="sheet-inner">
+						<div class="sheet-inven-name">
+							<input type="text" name="attr_inven_02_name" value="" />
+						</div>
+						<div class="sheet-inven-type">
+							<select name="attr_inven_02_type">
+								<option value="상비">상비</option>
+								<option value="소비">소비</option>
+							</select>
+						</div>
+						<div class="sheet-inven-spec">
+							<input type="text" name="attr_inven_02_spec" value="0" />
+							<button class="sheet-old-roll" type="roll" value="&{template:AmadeSmallDice}{{subject=@{inven_02_name}}}{{name=@{character_name}}}{{roll=[[@{inven_02_spec}]]}}{{type=@{inven_02_type}}}{{effect=@{inven_02_effect}}}"></button>
+						</div>
+						<div class="sheet-inven-effec">
+							<input type="text" name="attr_inven_02_effect" value="" />
+						</div>
+					</div>
+				</div>
+				<div class="sheet-inven-item">
+					<input type="checkbox" class="sheet-disable" name="attr_inven_03_disable" value="1">
+					<div class="sheet-inner">
+						<div class="sheet-inven-name">
+							<input type="text" name="attr_inven_03_name" value="" />
+						</div>
+						<div class="sheet-inven-type">
+							<select name="attr_inven_03_type">
+								<option value="상비">상비</option>
+								<option value="소비">소비</option>
+							</select>
+						</div>
+						<div class="sheet-inven-spec">
+							<input type="text" name="attr_inven_03_spec" value="0" />
+							<button class="sheet-old-roll" type="roll" value="&{template:AmadeSmallDice}{{subject=@{inven_03_name}}}{{name=@{character_name}}}{{roll=[[@{inven_03_spec}]]}}{{type=@{inven_03_type}}}{{effect=@{inven_03_effect}}}"></button>
+						</div>
+						<div class="sheet-inven-effec">
+							<input type="text" name="attr_inven_03_effect" value="" />
+						</div>
+					</div>
+				</div>
+
+				<div class="sheet-inven-item sheet-food">
+					<div class="sheet-inven-name">
+						식료
+						<input type="text" name="attr_inven_food" value="0" />
+						개
+					</div>
+					<div class="sheet-inven-type">
+						소비
+					</div>
+					<div class="sheet-inven-effec">
+						휴식 시 사용.【생명력】 1점 회복
+					</div>
+				</div>
+			</div>
+
+			<div class="sheet-people">
+				<div class="sheet-design-tit">인물</div>
+				<div class="sheet-people-header sheet-table-header">
+					<div class="sheet-people-name">인물명</div>
+					<div class="sheet-people-real">진실</div>
+					<div class="sheet-people-mine">마음</div>
+					<div class="sheet-people-effec">관계</div>
+				</div>
+
+				<div>
+					<div class="sheet-people-item">
+						<div class="sheet-people-name">
+							<input type="text" name="attr_people_01_name" value="" />
+						</div>
+						<div class="sheet-people-real">
+							<input type="checkbox" name="attr_people_01_real" value="1" />
+							<span class="sheet-people-check"></span>
+						</div>
+						<div class="sheet-people-mine">
+							<input type="text" name="attr_people_01_mine" value="" />
+						</div>
+						<div class="sheet-people-effec">
+							<input type="text" name="attr_people_01_effec" value="" />
+						</div>
+					</div>
+					<div class="sheet-people-item">
+						<div class="sheet-people-name">
+							<input type="text" name="attr_people_02_name" value="" />
+						</div>
+						<div class="sheet-people-real">
+							<input type="checkbox" name="attr_people_02_real" value="1" />
+							<span class="sheet-people-check"></span>
+						</div>
+						<div class="sheet-people-mine">
+							<input type="text" name="attr_people_02_mine" value="" />
+						</div>
+						<div class="sheet-people-effec">
+							<input type="text" name="attr_people_02_effec" value="" />
+						</div>
+					</div>
+					<div class="sheet-people-item">
+						<div class="sheet-people-name">
+							<input type="text" name="attr_people_03_name" value="" />
+						</div>
+						<div class="sheet-people-real">
+							<input type="checkbox" name="attr_people_03_real" value="1" />
+							<span class="sheet-people-check"></span>
+						</div>
+						<div class="sheet-people-mine">
+							<input type="text" name="attr_people_03_mine" value="" />
+						</div>
+						<div class="sheet-people-effec">
+							<input type="text" name="attr_people_03_effec" value="" />
+						</div>
+					</div>
+					<div class="sheet-people-item">
+						<div class="sheet-people-name">
+							<input type="text" name="attr_people_04_name" value="" />
+						</div>
+						<div class="sheet-people-real">
+							<input type="checkbox" name="attr_people_04_real" value="1" />
+							<span class="sheet-people-check"></span>
+						</div>
+						<div class="sheet-people-mine">
+							<input type="text" name="attr_people_04_mine" value="" />
+						</div>
+						<div class="sheet-people-effec">
+							<input type="text" name="attr_people_04_effec" value="" />
+						</div>
+					</div>
+					<fieldset class="repeating_people">
+						<div class="sheet-people-item">
+							<div class="sheet-people-name">
+								<input type="text" name="attr_people_name" value="" />
+							</div>
+							<div class="sheet-people-real">
+								<input type="checkbox" name="attr_people_real" value="1" />
+								<span class="sheet-people-check"></span>
+							</div>
+							<div class="sheet-people-mine">
+								<input type="text" name="attr_people_mine" value="" />
+							</div>
+							<div class="sheet-people-effec">
+								<input type="text" name="attr_people_effec" value="" />
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+
+			<div class="sheet-coop">
+				<div class="sheet-design-tit">협력자</div>
+				<div class="sheet-coop-header sheet-table-header">
+					<div class="sheet-coop-name">인물명</div>
+					<div class="sheet-coop-mine">마음</div>
+					<div class="sheet-coop-effec">관계</div>
+				</div>
+				<div>
+					<div class="sheet-coop-item">
+						<div class="sheet-coop-name">
+							<input type="text" name="attr_coop_01_name" value="" />
+						</div>
+						<div class="sheet-coop-mine">
+							<input type="text" name="attr_coop_01_mine" value="" />
+						</div>
+						<div class="sheet-coop-effec">
+							<input type="text" name="attr_coop_01_effec" value="" />
+						</div>
+					</div>
+					<div class="sheet-coop-item">
+						<div class="sheet-coop-name">
+							<input type="text" name="attr_coop_02_name" value="" />
+						</div>
+						<div class="sheet-coop-mine">
+							<input type="text" name="attr_coop_02_mine" value="" />
+						</div>
+						<div class="sheet-coop-effec">
+							<input type="text" name="attr_coop_02_effec" value="" />
+						</div>
+					</div>
+					<fieldset class="repeating_coop">
+						<div class="sheet-coop-item">
+							<div class="sheet-coop-name">
+								<input type="text" name="attr_coop_name" value="" />
+							</div>
+							<div class="sheet-coop-mine">
+								<input type="text" name="attr_coop_mine" value="" />
+							</div>
+							<div class="sheet-coop-effec">
+								<input type="text" name="attr_coop_effec" value="" />
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="sheet-layout-both">
+		<textarea name="attr_memo"></textarea>
+	</div>
+</div>
+
+<script type="text/worker">
+// 호기심 체크
+on("change:property", function() {
+	getAttrs(["property"], function(values) {
+		switch(values.property) {
+			case "0" : 
+				// 0. 적
+				setAttrs({theme_red:'1'});
+				setAttrs({theme_blue:''});
+				setAttrs({theme_green:''});
+				setAttrs({theme_white:''});
+				setAttrs({theme_black:''});
+			break;
+			case "1" : 
+				// 1. 청
+				setAttrs({theme_red:''});
+				setAttrs({theme_blue:'1'});
+				setAttrs({theme_green:''});
+				setAttrs({theme_white:''});
+				setAttrs({theme_black:''});
+			break;
+			case "2" : 
+				// 2. 녹
+				setAttrs({theme_red:''});
+				setAttrs({theme_blue:''});
+				setAttrs({theme_green:'1'});
+				setAttrs({theme_white:''});
+				setAttrs({theme_black:''});
+			break;
+			case "3" : 
+				// 3. 백
+				setAttrs({theme_red:''});
+				setAttrs({theme_blue:''});
+				setAttrs({theme_green:''});
+				setAttrs({theme_white:'1'});
+				setAttrs({theme_black:''});
+			break;
+			case "4" : 
+				// 4. 흑
+				setAttrs({theme_red:''});
+				setAttrs({theme_blue:''});
+				setAttrs({theme_green:''});
+				setAttrs({theme_white:''});
+				setAttrs({theme_black:'1'});
+			break;
+		}
+	});
+})
+
+on("change:property", function() {
+	getAttrs(["property"], function(values) {
+		switch(values.property) {
+			case "0" : 
+				// 0. 적
+				setAttrs({theme_red:'1'});
+				setAttrs({theme_blue:''});
+				setAttrs({theme_green:''});
+				setAttrs({theme_white:''});
+				setAttrs({theme_black:''});
+			break;
+			case "1" : 
+				// 1. 청
+				setAttrs({theme_red:''});
+				setAttrs({theme_blue:'1'});
+				setAttrs({theme_green:''});
+				setAttrs({theme_white:''});
+				setAttrs({theme_black:''});
+			break;
+			case "2" : 
+				// 2. 녹
+				setAttrs({theme_red:''});
+				setAttrs({theme_blue:''});
+				setAttrs({theme_green:'1'});
+				setAttrs({theme_white:''});
+				setAttrs({theme_black:''});
+			break;
+			case "3" : 
+				// 3. 백
+				setAttrs({theme_red:''});
+				setAttrs({theme_blue:''});
+				setAttrs({theme_green:''});
+				setAttrs({theme_white:'1'});
+				setAttrs({theme_black:''});
+			break;
+			case "4" : 
+				// 4. 흑
+				setAttrs({theme_red:''});
+				setAttrs({theme_blue:''});
+				setAttrs({theme_green:''});
+				setAttrs({theme_white:''});
+				setAttrs({theme_black:'1'});
+			break;
+		}
+	});
+})
+
+on("change:function_01_rank change:function_02_rank change:function_03_rank change:function_04_rank change:function_05_rank change:function_06_rank change:function_01_mode change:function_02_mode change:function_03_mode change:function_04_mode change:function_05_mode change:function_06_mode change:hp_add change:gift_01_call change:gift_02_call change:gift_03_call change:gift_04_call change:gift_05_call change:gift_06_call change:gift_07_call change:gift_08_call change:gift_09_call change:gift_10_call change:gift_re_call",
+	function() {
+		getAttrs(["function_01_rank","function_02_rank","function_03_rank","function_04_rank","function_05_rank","function_06_rank","function_01_mode","function_02_mode","function_03_mode","function_04_mode","function_05_mode","function_06_mode","hp_add","hp_now","gift_01_call","gift_02_call","gift_03_call","gift_04_call","gift_05_call","gift_06_call","gift_07_call","gift_08_call","gift_09_call","gift_10_call","gift_re_call"],
+			function(values) {
+				var rank_01 = values.function_01_rank;
+				var rank_02 = values.function_02_rank;
+				var rank_03 = values.function_03_rank;
+				var rank_04 = values.function_04_rank;
+				var rank_05 = values.function_05_rank;
+				var rank_06 = values.function_06_rank;
+
+				var mode_01 = values.function_01_mode;
+				var mode_02 = values.function_02_mode;
+				var mode_03 = values.function_03_mode;
+				var mode_04 = values.function_04_mode;
+				var mode_05 = values.function_05_mode;
+				var mode_06 = values.function_06_mode;
+
+				var add_hp = values.hp_add;
+
+				// 생명력 자동 계산 (최대치 : hp_max = hp_add(무용 + 영력) + hp_now)
+				// S랭크 10, A랭크 7, B랭크 5, C랭크 3, D랭크 1
+				// 모드3 6, 모드2 3, 모드1 1, 없음 0, 모드-1 -1, 모드-2 -2
+				var now_hp_val = count_hpRank(rank_01, mode_01) + count_hpRank(rank_04, mode_04);
+				setAttrs({hp_now: now_hp_val});
+				setAttrs({hp_max: now_hp_val + (add_hp * 1)});
+
+				// 소지금 자동 계산 (최초 소지금 : cost_first (사랑 + 일상))
+				var now_cost_val = count_costRank(rank_05, mode_05) + count_costRank(rank_06, mode_06);
+				setAttrs({cost_first: now_cost_val});
+
+				// 주사위 갯수 랭크 셋팅
+				var d_rank_01 = set_rankDice(rank_01); //무용
+				var d_rank_02 = set_rankDice(rank_02); //기술
+				var d_rank_03 = set_rankDice(rank_03); //두뇌
+				var d_rank_04 = set_rankDice(rank_04); //영력
+				var d_rank_05 = set_rankDice(rank_05); //애정
+				var d_rank_06 = set_rankDice(rank_06); //일상
+
+				setAttrs({function_01_dice: d_rank_01});
+				setAttrs({function_02_dice: d_rank_02});
+				setAttrs({function_03_dice: d_rank_03});
+				setAttrs({function_04_dice: d_rank_04});
+				setAttrs({function_05_dice: d_rank_05});
+				setAttrs({function_06_dice: d_rank_06});
+
+				// 기프트 셋팅
+				setAttrs({gift_01_rank: ""}); setAttrs({gift_01_dice: "0"}); setAttrs({gift_01_mod: "0"});
+				setAttrs({gift_02_rank: ""}); setAttrs({gift_02_dice: "0"}); setAttrs({gift_02_mod: "0"});
+				setAttrs({gift_03_rank: ""}); setAttrs({gift_03_dice: "0"}); setAttrs({gift_03_mod: "0"});
+				setAttrs({gift_04_rank: ""}); setAttrs({gift_04_dice: "0"}); setAttrs({gift_04_mod: "0"});
+				setAttrs({gift_05_rank: ""}); setAttrs({gift_05_dice: "0"}); setAttrs({gift_05_mod: "0"});
+				setAttrs({gift_06_rank: ""}); setAttrs({gift_06_dice: "0"}); setAttrs({gift_06_mod: "0"});
+				setAttrs({gift_07_rank: ""}); setAttrs({gift_07_dice: "0"}); setAttrs({gift_07_mod: "0"});
+				setAttrs({gift_08_rank: ""}); setAttrs({gift_08_dice: "0"}); setAttrs({gift_08_mod: "0"});
+				setAttrs({gift_09_rank: ""}); setAttrs({gift_09_dice: "0"}); setAttrs({gift_09_mod: "0"});
+				setAttrs({gift_10_rank: ""}); setAttrs({gift_10_dice: "0"}); setAttrs({gift_10_mod: "0"});
+				setAttrs({gift_re_rank: ""}); setAttrs({gift_re_dice: "0"}); setAttrs({gift_re_mod: "0"});
+
+				switch(values.gift_01_call) {
+					case "무용" : setAttrs({gift_01_rank: rank_01}); setAttrs({gift_01_dice: d_rank_01}); setAttrs({gift_01_mod: mode_01});
+					break;
+					case "기술" : setAttrs({gift_01_rank: rank_02}); setAttrs({gift_01_dice: d_rank_02}); setAttrs({gift_01_mod: mode_02});
+					break;
+					case "두뇌" : setAttrs({gift_01_rank: rank_03}); setAttrs({gift_01_dice: d_rank_03}); setAttrs({gift_01_mod: mode_03});
+					break;
+					case "영력" : setAttrs({gift_01_rank: rank_04}); setAttrs({gift_01_dice: d_rank_04}); setAttrs({gift_01_mod: mode_04});
+					break;
+					case "애정" : setAttrs({gift_01_rank: rank_05}); setAttrs({gift_01_dice: d_rank_05}); setAttrs({gift_01_mod: mode_05});
+					break;
+					case "일상" : setAttrs({gift_01_rank: rank_06}); setAttrs({gift_01_dice: d_rank_06}); setAttrs({gift_01_mod: mode_06});
+					break;
+				}
+				switch(values.gift_02_call) {
+					case "무용" : setAttrs({gift_02_rank: rank_01}); setAttrs({gift_02_dice: d_rank_01}); setAttrs({gift_02_mod: mode_01});
+					break;
+					case "기술" : setAttrs({gift_02_rank: rank_02}); setAttrs({gift_02_dice: d_rank_02}); setAttrs({gift_02_mod: mode_02});
+					break;
+					case "두뇌" : setAttrs({gift_02_rank: rank_03}); setAttrs({gift_02_dice: d_rank_03}); setAttrs({gift_02_mod: mode_03});
+					break;
+					case "영력" : setAttrs({gift_02_rank: rank_04}); setAttrs({gift_02_dice: d_rank_04}); setAttrs({gift_02_mod: mode_04});
+					break;
+					case "애정" : setAttrs({gift_02_rank: rank_05}); setAttrs({gift_02_dice: d_rank_05}); setAttrs({gift_02_mod: mode_05});
+					break;
+					case "일상" : setAttrs({gift_02_rank: rank_06}); setAttrs({gift_02_dice: d_rank_06}); setAttrs({gift_02_mod: mode_06});
+					break;
+				}
+				switch(values.gift_03_call) {
+					case "무용" : setAttrs({gift_03_rank: rank_01}); setAttrs({gift_03_dice: d_rank_01}); setAttrs({gift_03_mod: mode_01});
+					break;
+					case "기술" : setAttrs({gift_03_rank: rank_02}); setAttrs({gift_03_dice: d_rank_02}); setAttrs({gift_03_mod: mode_02});
+					break;
+					case "두뇌" : setAttrs({gift_03_rank: rank_03}); setAttrs({gift_03_dice: d_rank_03}); setAttrs({gift_03_mod: mode_03});
+					break;
+					case "영력" : setAttrs({gift_03_rank: rank_04}); setAttrs({gift_03_dice: d_rank_04}); setAttrs({gift_03_mod: mode_04});
+					break;
+					case "애정" : setAttrs({gift_03_rank: rank_05}); setAttrs({gift_03_dice: d_rank_05}); setAttrs({gift_03_mod: mode_05});
+					break;
+					case "일상" : setAttrs({gift_03_rank: rank_06}); setAttrs({gift_03_dice: d_rank_06}); setAttrs({gift_03_mod: mode_06});
+					break;
+				}
+				switch(values.gift_04_call) {
+					case "무용" : setAttrs({gift_04_rank: rank_01}); setAttrs({gift_04_dice: d_rank_01}); setAttrs({gift_04_mod: mode_01});
+					break;
+					case "기술" : setAttrs({gift_04_rank: rank_02}); setAttrs({gift_04_dice: d_rank_02}); setAttrs({gift_04_mod: mode_02});
+					break;
+					case "두뇌" : setAttrs({gift_04_rank: rank_03}); setAttrs({gift_04_dice: d_rank_03}); setAttrs({gift_04_mod: mode_03});
+					break;
+					case "영력" : setAttrs({gift_04_rank: rank_04}); setAttrs({gift_04_dice: d_rank_04}); setAttrs({gift_04_mod: mode_04});
+					break;
+					case "애정" : setAttrs({gift_04_rank: rank_05}); setAttrs({gift_04_dice: d_rank_05}); setAttrs({gift_04_mod: mode_05});
+					break;
+					case "일상" : setAttrs({gift_04_rank: rank_06}); setAttrs({gift_04_dice: d_rank_06}); setAttrs({gift_04_mod: mode_06});
+					break;
+				}
+				switch(values.gift_05_call) {
+					case "무용" : setAttrs({gift_05_rank: rank_01}); setAttrs({gift_05_dice: d_rank_01}); setAttrs({gift_05_mod: mode_01});
+					break;
+					case "기술" : setAttrs({gift_05_rank: rank_02}); setAttrs({gift_05_dice: d_rank_02}); setAttrs({gift_05_mod: mode_02});
+					break;
+					case "두뇌" : setAttrs({gift_05_rank: rank_03}); setAttrs({gift_05_dice: d_rank_03}); setAttrs({gift_05_mod: mode_03});
+					break;
+					case "영력" : setAttrs({gift_05_rank: rank_04}); setAttrs({gift_05_dice: d_rank_04}); setAttrs({gift_05_mod: mode_04});
+					break;
+					case "애정" : setAttrs({gift_05_rank: rank_05}); setAttrs({gift_05_dice: d_rank_05}); setAttrs({gift_05_mod: mode_05});
+					break;
+					case "일상" : setAttrs({gift_05_rank: rank_06}); setAttrs({gift_05_dice: d_rank_06}); setAttrs({gift_05_mod: mode_06});
+					break;
+				}
+				switch(values.gift_06_call) {
+					case "무용" : setAttrs({gift_06_rank: rank_01}); setAttrs({gift_06_dice: d_rank_01}); setAttrs({gift_06_mod: mode_01});
+					break;
+					case "기술" : setAttrs({gift_06_rank: rank_02}); setAttrs({gift_06_dice: d_rank_02}); setAttrs({gift_06_mod: mode_02});
+					break;
+					case "두뇌" : setAttrs({gift_06_rank: rank_03}); setAttrs({gift_06_dice: d_rank_03}); setAttrs({gift_06_mod: mode_03});
+					break;
+					case "영력" : setAttrs({gift_06_rank: rank_04}); setAttrs({gift_06_dice: d_rank_04}); setAttrs({gift_06_mod: mode_04});
+					break;
+					case "애정" : setAttrs({gift_06_rank: rank_05}); setAttrs({gift_06_dice: d_rank_05}); setAttrs({gift_06_mod: mode_05});
+					break;
+					case "일상" : setAttrs({gift_06_rank: rank_06}); setAttrs({gift_06_dice: d_rank_06}); setAttrs({gift_06_mod: mode_06});
+					break;
+				}
+				switch(values.gift_07_call) {
+					case "무용" : setAttrs({gift_07_rank: rank_01}); setAttrs({gift_07_dice: d_rank_01}); setAttrs({gift_07_mod: mode_01});
+					break;
+					case "기술" : setAttrs({gift_07_rank: rank_02}); setAttrs({gift_07_dice: d_rank_02}); setAttrs({gift_07_mod: mode_02});
+					break;
+					case "두뇌" : setAttrs({gift_07_rank: rank_03}); setAttrs({gift_07_dice: d_rank_03}); setAttrs({gift_07_mod: mode_03});
+					break;
+					case "영력" : setAttrs({gift_07_rank: rank_04}); setAttrs({gift_07_dice: d_rank_04}); setAttrs({gift_07_mod: mode_04});
+					break;
+					case "애정" : setAttrs({gift_07_rank: rank_05}); setAttrs({gift_07_dice: d_rank_05}); setAttrs({gift_07_mod: mode_05});
+					break;
+					case "일상" : setAttrs({gift_07_rank: rank_06}); setAttrs({gift_07_dice: d_rank_06}); setAttrs({gift_07_mod: mode_06});
+					break;
+				}
+				switch(values.gift_08_call) {
+					case "무용" : setAttrs({gift_08_rank: rank_01}); setAttrs({gift_08_dice: d_rank_01}); setAttrs({gift_08_mod: mode_01});
+					break;
+					case "기술" : setAttrs({gift_08_rank: rank_02}); setAttrs({gift_08_dice: d_rank_02}); setAttrs({gift_08_mod: mode_02});
+					break;
+					case "두뇌" : setAttrs({gift_08_rank: rank_03}); setAttrs({gift_08_dice: d_rank_03}); setAttrs({gift_08_mod: mode_03});
+					break;
+					case "영력" : setAttrs({gift_08_rank: rank_04}); setAttrs({gift_08_dice: d_rank_04}); setAttrs({gift_08_mod: mode_04});
+					break;
+					case "애정" : setAttrs({gift_08_rank: rank_05}); setAttrs({gift_08_dice: d_rank_05}); setAttrs({gift_08_mod: mode_05});
+					break;
+					case "일상" : setAttrs({gift_08_rank: rank_06}); setAttrs({gift_08_dice: d_rank_06}); setAttrs({gift_08_mod: mode_06});
+					break;
+				}
+				switch(values.gift_09_call) {
+					case "무용" : setAttrs({gift_09_rank: rank_01}); setAttrs({gift_09_dice: d_rank_01}); setAttrs({gift_09_mod: mode_01});
+					break;
+					case "기술" : setAttrs({gift_09_rank: rank_02}); setAttrs({gift_09_dice: d_rank_02}); setAttrs({gift_09_mod: mode_02});
+					break;
+					case "두뇌" : setAttrs({gift_09_rank: rank_03}); setAttrs({gift_09_dice: d_rank_03}); setAttrs({gift_09_mod: mode_03});
+					break;
+					case "영력" : setAttrs({gift_09_rank: rank_04}); setAttrs({gift_09_dice: d_rank_04}); setAttrs({gift_09_mod: mode_04});
+					break;
+					case "애정" : setAttrs({gift_09_rank: rank_05}); setAttrs({gift_09_dice: d_rank_05}); setAttrs({gift_09_mod: mode_05});
+					break;
+					case "일상" : setAttrs({gift_09_rank: rank_06}); setAttrs({gift_09_dice: d_rank_06}); setAttrs({gift_09_mod: mode_06});
+					break;
+				}
+				switch(values.gift_10_call) {
+					case "무용" : setAttrs({gift_10_rank: rank_01}); setAttrs({gift_10_dice: d_rank_01}); setAttrs({gift_10_mod: mode_01});
+					break;
+					case "기술" : setAttrs({gift_10_rank: rank_02}); setAttrs({gift_10_dice: d_rank_02}); setAttrs({gift_10_mod: mode_02});
+					break;
+					case "두뇌" : setAttrs({gift_10_rank: rank_03}); setAttrs({gift_10_dice: d_rank_03}); setAttrs({gift_10_mod: mode_03});
+					break;
+					case "영력" : setAttrs({gift_10_rank: rank_04}); setAttrs({gift_10_dice: d_rank_04}); setAttrs({gift_10_mod: mode_04});
+					break;
+					case "애정" : setAttrs({gift_10_rank: rank_05}); setAttrs({gift_10_dice: d_rank_05}); setAttrs({gift_10_mod: mode_05});
+					break;
+					case "일상" : setAttrs({gift_10_rank: rank_06}); setAttrs({gift_10_dice: d_rank_06}); setAttrs({gift_10_mod: mode_06});
+					break;
+				}
+				switch(values.gift_re_call) {
+					case "무용" : setAttrs({gift_re_rank: rank_01}); setAttrs({gift_re_dice: d_rank_01}); setAttrs({gift_re_mod: mode_01});
+					break;
+					case "기술" : setAttrs({gift_re_rank: rank_02}); setAttrs({gift_re_dice: d_rank_02}); setAttrs({gift_re_mod: mode_02});
+					break;
+					case "두뇌" : setAttrs({gift_re_rank: rank_03}); setAttrs({gift_re_dice: d_rank_03}); setAttrs({gift_re_mod: mode_03});
+					break;
+					case "영력" : setAttrs({gift_re_rank: rank_04}); setAttrs({gift_re_dice: d_rank_04}); setAttrs({gift_re_mod: mode_04});
+					break;
+					case "애정" : setAttrs({gift_re_rank: rank_05}); setAttrs({gift_re_dice: d_rank_05}); setAttrs({gift_re_mod: mode_05});
+					break;
+					case "일상" : setAttrs({gift_re_rank: rank_06}); setAttrs({gift_re_dice: d_rank_06}); setAttrs({gift_re_mod: mode_06});
+					break;
+				}
+			}
+		);
+	}
+);
+
+function set_rankDice(rank) {
+	var Result = 0;
+	switch(rank) {
+		case "S" : Result = 4;		break;
+		case "A" : Result = 3;		break;
+		case "B" : Result = 2;		break;
+		case "C" : Result = 1;		break;
+		case "D" : Result = 99;		break;
+	}
+	return Result;
+}
+
+function count_hpRank(rank, mod) {
+	var Result = 0;
+	switch(rank) {
+		case "S" : Result += 10;	break;
+		case "A" : Result += 7;		break;
+		case "B" : Result += 5;		break;
+		case "C" : Result += 3;		break;
+		case "D" : Result += 1;		break;
+	}
+	switch(mod) {
+		case "+3" :	Result += 6;	break;
+		case "+2" :	Result += 3;	break;
+		case "+1" :	Result += 1;	break;
+		case "" :	Result += 0;	break;
+		case "-1" :	Result += -1;	break;
+		case "-2" :	Result += -2;	break;
+	}
+	return Result;
+}
+function count_costRank(rank, mod) {
+	var Result = 0;
+	switch(rank) {
+		case "S" : Result += 5;	break;
+		case "A" : Result += 5;		break;
+		case "B" : Result += 4;		break;
+		case "C" : Result += 3;		break;
+		case "D" : Result += 2;		break;
+	}
+	switch(mod) {
+		case "+3" :	Result += 3;	break;
+		case "+2" :	Result += 2;	break;
+		case "+1" :	Result += 1;	break;
+		case "" :	Result += 0;	break;
+		case "-1" :	Result += -1;	break;
+		case "-2" :	Result += -2;	break;
+	}
+	return Result;
+}
+
+</script>
+
+<rolltemplate class="sheet-rolltemplate-AmadeFuncDice">
+<div class="sheet-amade-d-func">
+
+	<div class="sheet-inner-top">
+		<div class="sheet-inner">
+			{{#name}}
+				<div class="sheet-name">
+					{{name}}
+				</div>
+			{{/name}}
+			<div class="sheet-tit">
+				{{#subject}}{{subject}}{{/subject}}
+				{{#rank}}<em class="sheet-rank-{{rank}}">{{rank}}</em>{{/rank}}
+			</div>
+		</div>
+	</div>
+
+	<div class="sheet-inner-bottom">
+		<div class="sheet-inner">
+			<div class="sheet-desc">
+				<span>목표치 : {{target}}</span><span>모드 : {{mod}}</span>
+			</div>
+
+			<div class="sheet-dice">
+				{{#rollTotal() dice 99}}
+					<!-- D랭크 -->
+					{{#rollGreater() roll1 roll2}}
+						<!-- Roll2이 Roll2보다 클때 -->
+						<!-- Roll2 를 사용한다 -->
+						<div class="sheet-rolls">
+							{{#rollTotal() roll2 1}}
+								<div class="sheet-fumble">{{roll2}}</div>
+							{{/rollTotal() roll2 1}}
+							{{#rollTotal() roll2 2}}
+								<div class="sheet-red">{{roll2}}</div>
+							{{/rollTotal() roll2 2}}
+							{{#rollTotal() roll2 3}}
+								<div class="sheet-blue">{{roll2}}</div>
+							{{/rollTotal() roll2 3}}
+							{{#rollTotal() roll2 4}}
+								<div class="sheet-green">{{roll2}}</div>
+							{{/rollTotal() roll2 4}}
+							{{#rollTotal() roll2 5}}
+								<div class="sheet-white">{{roll2}}</div>
+							{{/rollTotal() roll2 5}}
+							{{#rollTotal() roll2 6}}
+								<div class="sheet-critical">{{roll2}}</div>
+							{{/rollTotal() roll2 6}}
+
+							{{#rollLess() roll2 target_mod}}
+								{{#rollTotal() roll2 6}}
+									<div class="sheet-result-succed">성공</div>
+								{{/rollTotal() roll2 6}}
+								<div class="sheet-result-fail">실패</div>
+							{{/rollLess() roll2 target_mod}}
+							{{#^rollLess() roll2 target_mod}}
+								{{#rollTotal() roll2 1}}
+									<div class="sheet-result-fail">실패</div>
+								{{/rollTotal() roll2 1}}
+								<div class="sheet-result-succed">성공</div>
+							{{/^rollLess() roll2 target_mod}}
+						</div>
+						
+						<div class="sheet-rolls">
+							<!-- 사용안하는 다이스 -->
+							<div class="sheet-disable">{{roll1}}</div>
+							<div class="sheet-result-disable">사용불가</div>
+						</div>
+					{{/rollGreater() roll1 roll2}}
+					{{#^rollGreater() roll1 roll2}}
+						<!-- Roll1이 Roll2보다 같거나 작을 때 -->
+						<!-- Roll1 를 사용한다 -->
+						<div class="sheet-rolls">
+							{{#rollTotal() roll1 1}}
+								<div class="sheet-fumble">{{roll1}}</div>
+							{{/rollTotal() roll1 1}}
+							{{#rollTotal() roll1 2}}
+								<div class="sheet-red">{{roll1}}</div>
+							{{/rollTotal() roll1 2}}
+							{{#rollTotal() roll1 3}}
+								<div class="sheet-blue">{{roll1}}</div>
+							{{/rollTotal() roll1 3}}
+							{{#rollTotal() roll1 4}}
+								<div class="sheet-green">{{roll1}}</div>
+							{{/rollTotal() roll1 4}}
+							{{#rollTotal() roll1 5}}
+								<div class="sheet-white">{{roll1}}</div>
+							{{/rollTotal() roll1 5}}
+							{{#rollTotal() roll1 6}}
+								<div class="sheet-critical">{{roll1}}</div>
+							{{/rollTotal() roll1 6}}
+
+							{{#rollLess() roll1 target_mod}}
+								{{#rollTotal() roll1 6}}
+									<div class="sheet-result-succed">성공</div>
+								{{/rollTotal() roll1 6}}
+								<div class="sheet-result-fail">실패</div>
+							{{/rollLess() roll1 target_mod}}
+							{{#^rollLess() roll1 target_mod}}
+								{{#rollTotal() roll1 1}}
+									<div class="sheet-result-fail">실패</div>
+								{{/rollTotal() roll1 1}}
+								<div class="sheet-result-succed">성공</div>
+							{{/^rollLess() roll1 target_mod}}
+						</div>
+						<!-- 사용안하는 다이스 -->
+						<div class="sheet-rolls">
+							<!-- 사용안하는 다이스 -->
+							<div class="sheet-disable">{{roll2}}</div>
+							<div class="sheet-result-disable">사용불가</div>
+						</div>
+					{{/^rollGreater() roll1 roll2}}
+					<!-- // D랭크 -->
+				{{/rollTotal() dice 99}}
+
+				{{#rollLess() dice 90}}
+					<div class="sheet-rolls">
+						{{#rollTotal() roll1 1}}
+							<div class="sheet-fumble">{{roll1}}</div>
+						{{/rollTotal() roll1 1}}
+						{{#rollTotal() roll1 2}}
+							<div class="sheet-red">{{roll1}}</div>
+						{{/rollTotal() roll1 2}}
+						{{#rollTotal() roll1 3}}
+							<div class="sheet-blue">{{roll1}}</div>
+						{{/rollTotal() roll1 3}}
+						{{#rollTotal() roll1 4}}
+							<div class="sheet-green">{{roll1}}</div>
+						{{/rollTotal() roll1 4}}
+						{{#rollTotal() roll1 5}}
+							<div class="sheet-white">{{roll1}}</div>
+						{{/rollTotal() roll1 5}}
+						{{#rollTotal() roll1 6}}
+							<div class="sheet-critical">{{roll1}}</div>
+						{{/rollTotal() roll1 6}}
+
+						{{#rollLess() roll1 target_mod}}
+							{{#rollTotal() roll1 6}}
+								<div class="sheet-result-succed">성공</div>
+							{{/rollTotal() roll1 6}}
+							<div class="sheet-result-fail">실패</div>
+						{{/rollLess() roll1 target_mod}}
+						{{#^rollLess() roll1 target_mod}}
+							{{#rollTotal() roll1 1}}
+								<div class="sheet-result-fail">실패</div>
+							{{/rollTotal() roll1 1}}
+							<div class="sheet-result-succed">성공</div>
+						{{/^rollLess() roll1 target_mod}}
+					</div>
+					
+					{{#rollGreater() dice 1}}
+					<div class="sheet-rolls">
+						<!-- 2번째 주사위 사용한다. -->
+						{{#rollTotal() roll2 1}}
+							<div class="sheet-fumble">{{roll2}}</div>
+						{{/rollTotal() roll2 1}}
+						{{#rollTotal() roll2 2}}
+							<div class="sheet-red">{{roll2}}</div>
+						{{/rollTotal() roll2 2}}
+						{{#rollTotal() roll2 3}}
+							<div class="sheet-blue">{{roll2}}</div>
+						{{/rollTotal() roll2 3}}
+						{{#rollTotal() roll2 4}}
+							<div class="sheet-green">{{roll2}}</div>
+						{{/rollTotal() roll2 4}}
+						{{#rollTotal() roll2 5}}
+							<div class="sheet-white">{{roll2}}</div>
+						{{/rollTotal() roll2 5}}
+						{{#rollTotal() roll2 6}}
+							<div class="sheet-critical">{{roll2}}</div>
+						{{/rollTotal() roll2 6}}
+
+						{{#rollLess() roll2 target_mod}}
+							{{#rollTotal() roll2 6}}
+								<div class="sheet-result-succed">성공</div>
+							{{/rollTotal() roll2 6}}
+							<div class="sheet-result-fail">실패</div>
+						{{/rollLess() roll2 target_mod}}
+						{{#^rollLess() roll2 target_mod}}
+							{{#rollTotal() roll2 1}}
+								<div class="sheet-result-fail">실패</div>
+							{{/rollTotal() roll2 1}}
+							<div class="sheet-result-succed">성공</div>
+						{{/^rollLess() roll2 target_mod}}
+					</div>
+					{{/rollGreater() dice 1}}
+
+					{{#rollGreater() dice 2}}
+					<div class="sheet-rolls">
+						<!-- 3번째 주사위 사용한다. -->
+						{{#rollTotal() roll3 1}}
+							<div class="sheet-fumble">{{roll3}}</div>
+						{{/rollTotal() roll3 1}}
+						{{#rollTotal() roll3 2}}
+							<div class="sheet-red">{{roll3}}</div>
+						{{/rollTotal() roll3 2}}
+						{{#rollTotal() roll3 3}}
+							<div class="sheet-blue">{{roll3}}</div>
+						{{/rollTotal() roll3 3}}
+						{{#rollTotal() roll3 4}}
+							<div class="sheet-green">{{roll3}}</div>
+						{{/rollTotal() roll3 4}}
+						{{#rollTotal() roll3 5}}
+							<div class="sheet-white">{{roll3}}</div>
+						{{/rollTotal() roll3 5}}
+						{{#rollTotal() roll3 6}}
+							<div class="sheet-critical">{{roll3}}</div>
+						{{/rollTotal() roll3 6}}
+
+						{{#rollLess() roll3 target_mod}}
+							{{#rollTotal() roll3 6}}
+								<div class="sheet-result-succed">성공</div>
+							{{/rollTotal() roll3 6}}
+							<div class="sheet-result-fail">실패</div>
+						{{/rollLess() roll3 target_mod}}
+						{{#^rollLess() roll3 target_mod}}
+							{{#rollTotal() roll3 1}}
+								<div class="sheet-result-fail">실패</div>
+							{{/rollTotal() roll3 1}}
+							<div class="sheet-result-succed">성공</div>
+						{{/^rollLess() roll3 target_mod}}
+					</div>
+					{{/rollGreater() dice 2}}
+
+					{{#rollGreater() dice 3}}
+					<div class="sheet-rolls">
+						<!-- 4번째 주사위 사용한다. -->
+						{{#rollTotal() roll4 1}}
+							<div class="sheet-fumble">{{roll4}}</div>
+						{{/rollTotal() roll4 1}}
+						{{#rollTotal() roll4 2}}
+							<div class="sheet-red">{{roll4}}</div>
+						{{/rollTotal() roll4 2}}
+						{{#rollTotal() roll4 3}}
+							<div class="sheet-blue">{{roll4}}</div>
+						{{/rollTotal() roll4 3}}
+						{{#rollTotal() roll4 4}}
+							<div class="sheet-green">{{roll4}}</div>
+						{{/rollTotal() roll4 4}}
+						{{#rollTotal() roll4 5}}
+							<div class="sheet-white">{{roll4}}</div>
+						{{/rollTotal() roll4 5}}
+						{{#rollTotal() roll4 6}}
+							<div class="sheet-critical">{{roll4}}</div>
+						{{/rollTotal() roll4 6}}
+
+						{{#rollLess() roll4 target_mod}}
+							{{#rollTotal() roll4 6}}
+								<div class="sheet-result-succed">성공</div>
+							{{/rollTotal() roll4 6}}
+							<div class="sheet-result-fail">실패</div>
+						{{/rollLess() roll4 target_mod}}
+						{{#^rollLess() roll4 target_mod}}
+							{{#rollTotal() roll4 1}}
+								<div class="sheet-result-fail">실패</div>
+							{{/rollTotal() roll4 1}}
+							<div class="sheet-result-succed">성공</div>
+						{{/^rollLess() roll4 target_mod}}
+					</div>
+					{{/rollGreater() dice 3}}
+				{{/rollLess() dice 90}}
+			</div>
+		</div>
+	</div>
+</div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-AmadeSmallDice">
+<div class="sheet-amade-d-small">
+	<div class="sheet-inner-all">
+		<div class="sheet-inner">
+			{{#name}}
+				<div class="sheet-name">
+					{{name}}
+				</div>
+			{{/name}}
+			<div class="sheet-tit">
+				{{#subject}}{{subject}}{{/subject}}
+			</div>
+			{{#roll}}
+				{{#^rollTotal() roll 0}}
+				<div class="sheet-dice">
+					<div class="sheet-rolls">
+						{{roll}}
+					</div>
+				</div>
+				{{/^rollTotal() roll 0}}
+			{{/roll}}
+			{{#effect}}
+			<div class="sheet-text">
+				{{effect}}
+			</div>
+			{{/effect}}
+		</div>
+	</div>
+</div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-AmadeDice">
+<div class="sheet-amade-d">
+
+	<div class="sheet-inner-top">
+		<div class="sheet-inner">
+			{{#name}}
+				<div class="sheet-name">
+					{{name}}
+				</div>
+			{{/name}}
+			<div class="sheet-tit">
+				{{#subject}}{{subject}}{{/subject}}
+				{{#status}}<em class="sheet-rank-{{status_rank}}"><span>{{status}}</span> {{status_rank}}</em>{{/status}}
+			</div>
+		</div>
+	</div>
+
+	{{#status}}
+		<div class="sheet-inner-mid">
+			<div class="sheet-inner">
+				<div class="sheet-desc">
+					<span>목표치 : {{target}}</span><span>모드 : {{status_mod}}</span>
+				</div>
+				<div class="sheet-dice">
+					{{#rollTotal() dice 99}}
+						<!-- D랭크 -->
+						{{#rollGreater() roll1 roll2}}
+							<!-- Roll2이 Roll2보다 클때 -->
+							<!-- Roll2 를 사용한다 -->
+							<div class="sheet-rolls">
+								{{#rollTotal() roll2 1}}
+									<div class="sheet-fumble">{{roll2}}</div>
+								{{/rollTotal() roll2 1}}
+								{{#rollTotal() roll2 2}}
+									<div class="sheet-red">{{roll2}}</div>
+								{{/rollTotal() roll2 2}}
+								{{#rollTotal() roll2 3}}
+									<div class="sheet-blue">{{roll2}}</div>
+								{{/rollTotal() roll2 3}}
+								{{#rollTotal() roll2 4}}
+									<div class="sheet-green">{{roll2}}</div>
+								{{/rollTotal() roll2 4}}
+								{{#rollTotal() roll2 5}}
+									<div class="sheet-white">{{roll2}}</div>
+								{{/rollTotal() roll2 5}}
+								{{#rollTotal() roll2 6}}
+									<div class="sheet-critical">{{roll2}}</div>
+								{{/rollTotal() roll2 6}}
+
+								{{#rollLess() roll2 target_mod}}
+									{{#rollTotal() roll2 6}}
+										<div class="sheet-result-succed">성공</div>
+									{{/rollTotal() roll2 6}}
+									<div class="sheet-result-fail">실패</div>
+								{{/rollLess() roll2 target_mod}}
+								{{#^rollLess() roll2 target_mod}}
+									{{#rollTotal() roll2 1}}
+										<div class="sheet-result-fail">실패</div>
+									{{/rollTotal() roll2 1}}
+									<div class="sheet-result-succed">성공</div>
+								{{/^rollLess() roll2 target_mod}}
+							</div>
+							
+							<div class="sheet-rolls">
+								<!-- 사용안하는 다이스 -->
+								<div class="sheet-disable">{{roll1}}</div>
+								<div class="sheet-result-disable">사용불가</div>
+							</div>
+						{{/rollGreater() roll1 roll2}}
+						{{#^rollGreater() roll1 roll2}}
+							<!-- Roll1이 Roll2보다 같거나 작을 때 -->
+							<!-- Roll1 를 사용한다 -->
+							<div class="sheet-rolls">
+								{{#rollTotal() roll1 1}}
+									<div class="sheet-fumble">{{roll1}}</div>
+								{{/rollTotal() roll1 1}}
+								{{#rollTotal() roll1 2}}
+									<div class="sheet-red">{{roll1}}</div>
+								{{/rollTotal() roll1 2}}
+								{{#rollTotal() roll1 3}}
+									<div class="sheet-blue">{{roll1}}</div>
+								{{/rollTotal() roll1 3}}
+								{{#rollTotal() roll1 4}}
+									<div class="sheet-green">{{roll1}}</div>
+								{{/rollTotal() roll1 4}}
+								{{#rollTotal() roll1 5}}
+									<div class="sheet-white">{{roll1}}</div>
+								{{/rollTotal() roll1 5}}
+								{{#rollTotal() roll1 6}}
+									<div class="sheet-critical">{{roll1}}</div>
+								{{/rollTotal() roll1 6}}
+
+								{{#rollLess() roll1 target_mod}}
+									{{#rollTotal() roll1 6}}
+										<div class="sheet-result-succed">성공</div>
+									{{/rollTotal() roll1 6}}
+									<div class="sheet-result-fail">실패</div>
+								{{/rollLess() roll1 target_mod}}
+								{{#^rollLess() roll1 target_mod}}
+									{{#rollTotal() roll1 1}}
+										<div class="sheet-result-fail">실패</div>
+									{{/rollTotal() roll1 1}}
+									<div class="sheet-result-succed">성공</div>
+								{{/^rollLess() roll1 target_mod}}
+							</div>
+							<!-- 사용안하는 다이스 -->
+							<div class="sheet-rolls">
+								<!-- 사용안하는 다이스 -->
+								<div class="sheet-disable">{{roll2}}</div>
+								<div class="sheet-result-disable">사용불가</div>
+							</div>
+						{{/^rollGreater() roll1 roll2}}
+						<!-- // D랭크 -->
+					{{/rollTotal() dice 99}}
+
+					{{#rollLess() dice 90}}
+						<div class="sheet-rolls">
+							{{#rollTotal() roll1 1}}
+								<div class="sheet-fumble">{{roll1}}</div>
+							{{/rollTotal() roll1 1}}
+							{{#rollTotal() roll1 2}}
+								<div class="sheet-red">{{roll1}}</div>
+							{{/rollTotal() roll1 2}}
+							{{#rollTotal() roll1 3}}
+								<div class="sheet-blue">{{roll1}}</div>
+							{{/rollTotal() roll1 3}}
+							{{#rollTotal() roll1 4}}
+								<div class="sheet-green">{{roll1}}</div>
+							{{/rollTotal() roll1 4}}
+							{{#rollTotal() roll1 5}}
+								<div class="sheet-white">{{roll1}}</div>
+							{{/rollTotal() roll1 5}}
+							{{#rollTotal() roll1 6}}
+								<div class="sheet-critical">{{roll1}}</div>
+							{{/rollTotal() roll1 6}}
+
+							{{#rollLess() roll1 target_mod}}
+								{{#rollTotal() roll1 6}}
+									<div class="sheet-result-succed">성공</div>
+								{{/rollTotal() roll1 6}}
+								<div class="sheet-result-fail">실패</div>
+							{{/rollLess() roll1 target_mod}}
+							{{#^rollLess() roll1 target_mod}}
+								{{#rollTotal() roll1 1}}
+									<div class="sheet-result-fail">실패</div>
+								{{/rollTotal() roll1 1}}
+								<div class="sheet-result-succed">성공</div>
+							{{/^rollLess() roll1 target_mod}}
+						</div>
+						
+						{{#rollGreater() dice 1}}
+						<div class="sheet-rolls">
+							<!-- 2번째 주사위 사용한다. -->
+							{{#rollTotal() roll2 1}}
+								<div class="sheet-fumble">{{roll2}}</div>
+							{{/rollTotal() roll2 1}}
+							{{#rollTotal() roll2 2}}
+								<div class="sheet-red">{{roll2}}</div>
+							{{/rollTotal() roll2 2}}
+							{{#rollTotal() roll2 3}}
+								<div class="sheet-blue">{{roll2}}</div>
+							{{/rollTotal() roll2 3}}
+							{{#rollTotal() roll2 4}}
+								<div class="sheet-green">{{roll2}}</div>
+							{{/rollTotal() roll2 4}}
+							{{#rollTotal() roll2 5}}
+								<div class="sheet-white">{{roll2}}</div>
+							{{/rollTotal() roll2 5}}
+							{{#rollTotal() roll2 6}}
+								<div class="sheet-critical">{{roll2}}</div>
+							{{/rollTotal() roll2 6}}
+
+							{{#rollLess() roll2 target_mod}}
+								{{#rollTotal() roll2 6}}
+									<div class="sheet-result-succed">성공</div>
+								{{/rollTotal() roll2 6}}
+								<div class="sheet-result-fail">실패</div>
+							{{/rollLess() roll2 target_mod}}
+							{{#^rollLess() roll2 target_mod}}
+								{{#rollTotal() roll2 1}}
+									<div class="sheet-result-fail">실패</div>
+								{{/rollTotal() roll2 1}}
+								<div class="sheet-result-succed">성공</div>
+							{{/^rollLess() roll2 target_mod}}
+						</div>
+						{{/rollGreater() dice 1}}
+
+						{{#rollGreater() dice 2}}
+						<div class="sheet-rolls">
+							<!-- 3번째 주사위 사용한다. -->
+							{{#rollTotal() roll3 1}}
+								<div class="sheet-fumble">{{roll3}}</div>
+							{{/rollTotal() roll3 1}}
+							{{#rollTotal() roll3 2}}
+								<div class="sheet-red">{{roll3}}</div>
+							{{/rollTotal() roll3 2}}
+							{{#rollTotal() roll3 3}}
+								<div class="sheet-blue">{{roll3}}</div>
+							{{/rollTotal() roll3 3}}
+							{{#rollTotal() roll3 4}}
+								<div class="sheet-green">{{roll3}}</div>
+							{{/rollTotal() roll3 4}}
+							{{#rollTotal() roll3 5}}
+								<div class="sheet-white">{{roll3}}</div>
+							{{/rollTotal() roll3 5}}
+							{{#rollTotal() roll3 6}}
+								<div class="sheet-critical">{{roll3}}</div>
+							{{/rollTotal() roll3 6}}
+
+							{{#rollLess() roll3 target_mod}}
+								{{#rollTotal() roll3 6}}
+									<div class="sheet-result-succed">성공</div>
+								{{/rollTotal() roll3 6}}
+								<div class="sheet-result-fail">실패</div>
+							{{/rollLess() roll3 target_mod}}
+							{{#^rollLess() roll3 target_mod}}
+								{{#rollTotal() roll3 1}}
+									<div class="sheet-result-fail">실패</div>
+								{{/rollTotal() roll3 1}}
+								<div class="sheet-result-succed">성공</div>
+							{{/^rollLess() roll3 target_mod}}
+						</div>
+						{{/rollGreater() dice 2}}
+
+						{{#rollGreater() dice 3}}
+						<div class="sheet-rolls">
+							<!-- 4번째 주사위 사용한다. -->
+							{{#rollTotal() roll4 1}}
+								<div class="sheet-fumble">{{roll4}}</div>
+							{{/rollTotal() roll4 1}}
+							{{#rollTotal() roll4 2}}
+								<div class="sheet-red">{{roll4}}</div>
+							{{/rollTotal() roll4 2}}
+							{{#rollTotal() roll4 3}}
+								<div class="sheet-blue">{{roll4}}</div>
+							{{/rollTotal() roll4 3}}
+							{{#rollTotal() roll4 4}}
+								<div class="sheet-green">{{roll4}}</div>
+							{{/rollTotal() roll4 4}}
+							{{#rollTotal() roll4 5}}
+								<div class="sheet-white">{{roll4}}</div>
+							{{/rollTotal() roll4 5}}
+							{{#rollTotal() roll4 6}}
+								<div class="sheet-critical">{{roll4}}</div>
+							{{/rollTotal() roll4 6}}
+
+							{{#rollLess() roll4 target_mod}}
+								{{#rollTotal() roll4 6}}
+									<div class="sheet-result-succed">성공</div>
+								{{/rollTotal() roll4 6}}
+								<div class="sheet-result-fail">실패</div>
+							{{/rollLess() roll4 target_mod}}
+							{{#^rollLess() roll4 target_mod}}
+								{{#rollTotal() roll4 1}}
+									<div class="sheet-result-fail">실패</div>
+								{{/rollTotal() roll4 1}}
+								<div class="sheet-result-succed">성공</div>
+							{{/^rollLess() roll4 target_mod}}
+						</div>
+						{{/rollGreater() dice 3}}
+					{{/rollLess() dice 90}}
+				</div>
+				{{#tag}}
+				<div class="sheet-tag">
+					{{tag}}
+				</div>
+				{{/tag}}
+			</div>
+		</div>
+	{{/status}}
+
+	{{#effect}}
+	<div class="sheet-inner-bottom">
+		<div class="sheet-inner">
+			{{#^status}}
+				{{#tag}}
+				<div class="sheet-tag">
+					{{tag}}
+				</div>
+				{{/tag}}
+			{{/^status}}
+
+			<div class="sheet-text">
+				{{#type}}<span class="sheet-cate">{{type}}</span>{{/type}}
+				{{effect}}
+			</div>
+		</div>
+	</div>
+	{{/effect}}
+
+</div>
+</rolltemplate>
